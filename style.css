@@ -46,3 +46,19 @@ body {
   border-radius: 50%;
 }
 
+.special-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2vw;
+  color: #fff;
+}
+
+.tile-ember { background-color: #c0392b; }
+.tile-echo { background-color: #8e44ad; }
+.tile-lens { background-color: #2980b9; }
+.tile-mirror { background-color: #f1c40f; color: #000; }
+.tile-mark { background-color: #e67e22; }
+.tile-mapless { background-color: #7f8c8d; }
+.tile-stone { background-color: #27ae60; }
+
