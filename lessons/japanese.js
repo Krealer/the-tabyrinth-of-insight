@@ -55,8 +55,16 @@ function checkAnswer(selected, correct, index) {
 
   course.querySelector(".dialogue-box").insertAdjacentHTML('beforeend', message);
 
-  if (selected === correct && japaneseLessons[index + 1]) {
-    setTimeout(() => loadJapaneseLesson(index + 1), 1000);
+  if (selected === correct) {
+    const key = `jp_lesson_${index}_done`;
+    if (!localStorage.getItem(key)) {
+      localStorage.setItem(key, 'true');
+      if (typeof gainWisdom === 'function') gainWisdom(1);
+    }
+
+    if (japaneseLessons[index + 1]) {
+      setTimeout(() => loadJapaneseLesson(index + 1), 1000);
+    }
   }
 }
 
