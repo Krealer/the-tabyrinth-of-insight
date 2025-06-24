@@ -98,18 +98,17 @@ body {
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  background: #222;
-  color: #fff;
-  padding: 16px;
+  width: auto;
+  max-width: 90vw;
+  background: rgba(20, 20, 20, 0.95);
   border: 2px solid #27ae60;
+  color: #fff;
+  padding: 16px 20px;
   border-radius: 8px;
-  max-width: 90%;
-  max-height: 40vh;
-  overflow-y: auto;
-  font-family: "Segoe UI", sans-serif;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   z-index: 1000;
+  box-shadow: 0 0 10px rgba(39, 174, 96, 0.5);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
 }
 
 .dialogue-box button {
