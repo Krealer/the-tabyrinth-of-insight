@@ -216,8 +216,47 @@ function startJapaneseCourse() {
   document.body.appendChild(hub);
 }
 
-function loadTopic(topic) {
-  alert(`Topic selected: ${topic} (content coming soon)`);
+function loadWritingLessons() {
+  if (!Array.isArray(writingLessons)) {
+    alert("Writing lessons not loaded.");
+    return;
+  }
+
+  const container = document.createElement('div');
+  container.id = 'course-container';
+  document.body.appendChild(container);
+  loadLessonFromSet(writingLessons, 0);
+}
+
+function loadLessonFromSet(lessonSet, index) {
+  const container = document.getElementById('course-container');
+  const lesson = lessonSet[index];
+
+  container.innerHTML = `
+    <div class="dialogue-box" style="max-height: 90vh; overflow-y: auto;">
+      <h2>${lesson.title}</h2>
+      ${lesson.content}
+      <p><strong>${lesson.quiz.question}</strong></p>
+      ${lesson.quiz.options.map(opt => `
+        <button onclick="checkAnswerFromSet('${opt}', '${lesson.quiz.answer}', ${index}, '${lessonSet === writingLessons ? 'writing' : 'unknown'}')">${opt}</button>
+      `).join('')}
+      <br><br>
+      <button onclick="exitCourse()">Leave Course</button>
+    </div>
+  `;
+}
+
+function checkAnswerFromSet(selected, correct, index, topicId) {
+  const box = document.querySelector('.dialogue-box');
+  const feedback = selected === correct
+    ? "<p style='color:lime'>✅ Correct!</p>"
+    : "<p style='color:orangered'>❌ Try again.</p>";
+  box.insertAdjacentHTML('beforeend', feedback);
+
+  const lessonSet = topicId === 'writing' ? writingLessons : [];
+  if (selected === correct && lessonSet[index + 1]) {
+    setTimeout(() => loadLessonFromSet(lessonSet, index + 1), 1000);
+  }
 }
 
 function clearDialogue() {
