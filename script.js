@@ -9,6 +9,7 @@ const TILE_TYPES = {
   MARK:    { symbol: "❓", class: "tile-mark" },
   MAPLESS: { symbol: "🗺️✖️", class: "tile-mapless" },
   STONE:   { symbol: "⚙️", class: "tile-stone" },
+  NPC:     { symbol: "", class: "npc" }
 };
 
 // Base grid filled with ground tiles
@@ -26,6 +27,11 @@ const predefinedSpecialTiles = [
   { x: 14, y: 10, type: 'LENS' }
 ];
 
+// Simple NPC placement
+const predefinedNPCs = [
+  { x: 8, y: 8 }
+];
+
 predefinedWalls.forEach(([x, y]) => {
   if (grid[y] && grid[y][x] !== undefined) {
     grid[y][x] = 'wall';
@@ -35,6 +41,12 @@ predefinedWalls.forEach(([x, y]) => {
 predefinedSpecialTiles.forEach(({ x, y, type }) => {
   if (grid[y] && grid[y][x] !== undefined) {
     grid[y][x] = type;
+  }
+});
+
+predefinedNPCs.forEach(({ x, y }) => {
+  if (grid[y] && grid[y][x] !== undefined) {
+    grid[y][x] = 'NPC';
   }
 });
 
@@ -51,6 +63,9 @@ for (let y = 0; y < gridSize; y++) {
     const tileType = grid[y][x];
     if (tileType === 'wall') {
       div.classList.add('wall');
+    } else if (tileType === 'NPC') {
+      div.classList.add('npc');
+      addNPCInteraction(div);
     } else if (TILE_TYPES[tileType]) {
       const { symbol, class: tileClass } = TILE_TYPES[tileType];
       div.classList.add('truth', tileClass);
@@ -145,4 +160,33 @@ function moveAlongPath(path) {
   }
 
   setTimeout(() => moveAlongPath(path), 60);
+}
+
+function addNPCInteraction(div) {
+  let lastTap = 0;
+  div.addEventListener('click', () => {
+    const now = Date.now();
+    if (now - lastTap < 300) {
+      openDialogue();
+    }
+    lastTap = now;
+  });
+}
+
+function openDialogue() {
+  const oldBox = document.querySelector('.dialogue-box');
+  if (oldBox) oldBox.remove();
+
+  const box = document.createElement('div');
+  box.className = 'dialogue-box';
+  box.innerHTML = `
+    <p><strong>Echo:</strong> “The unexamined life is not worth living.”</p>
+    <button onclick="closeDialogue()">Close</button>
+  `;
+  document.body.appendChild(box);
+}
+
+function closeDialogue() {
+  const box = document.querySelector('.dialogue-box');
+  if (box) box.remove();
 }
