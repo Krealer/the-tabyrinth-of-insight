@@ -1,11 +1,11 @@
 # Grid Game
 
-A simple 30×30 grid-based pathfinding game using HTML, CSS, and JavaScript. No sprites, no dependencies — pure DOM and styles.
+A simple 30×30 grid-based pathfinding game using HTML, CSS, and JavaScript. No sprites, no dependencies — pure DOM and styles. The level layout is now handcrafted rather than randomly generated.
 
 ### Features
 - Responsive design for PC and mobile (click or tap to move)
 - A* smart pathfinding
-- Optional impassable wall tiles (remove for an open grid)
+- Handcrafted layout with optional impassable walls
 - Smooth animation
 
 ### Core Truth Tiles
