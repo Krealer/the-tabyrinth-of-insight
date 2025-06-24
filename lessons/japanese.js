@@ -127,6 +127,42 @@ const japaneseLessons = [
       options: ["たべる", "いく", "のむ"],
       answer: "たべる"
     }
+  },
+  {
+    title: "Lesson 9: Days of the Week",
+    content: `
+      <p>Days of the week in Japanese end with <strong>ようび</strong> (youbi):</p>
+      <ul>
+        <li>Monday – げつようび (getsuyoubi)</li>
+        <li>Tuesday – かようび (kayoubi)</li>
+        <li>Wednesday – すいようび (suiyoubi)</li>
+        <li>Thursday – もくようび (mokuyoubi)</li>
+        <li>Friday – きんようび (kinyoubi)</li>
+      </ul>
+    `,
+    quiz: {
+      question: "What is the Japanese word for Monday?",
+      options: ["げつようび", "きんようび", "すいようび"],
+      answer: "げつようび"
+    }
+  },
+  {
+    title: "Lesson 10: Basic Adjectives",
+    content: `
+      <p>Common Japanese adjectives include:</p>
+      <ul>
+        <li><strong>たかい</strong> (takai) – tall/expensive</li>
+        <li><strong>ちいさい</strong> (chiisai) – small</li>
+        <li><strong>あたらしい</strong> (atarashii) – new</li>
+        <li><strong>ふるい</strong> (furui) – old</li>
+        <li><strong>おいしい</strong> (oishii) – delicious</li>
+      </ul>
+    `,
+    quiz: {
+      question: "What is the Japanese adjective for 'delicious'?",
+      options: ["たかい", "おいしい", "ふるい"],
+      answer: "おいしい"
+    }
   }
 ];
 
