@@ -7,6 +7,27 @@
   gap: 1vw;
 }
 
+@media (max-width: 480px) {
+  #course-container {
+    width: 95vw;
+    padding: 16px;
+  }
+
+  #course-container h2 {
+    font-size: 1.1rem;
+  }
+
+  #course-container p,
+  #course-container li {
+    font-size: 0.95rem;
+  }
+
+  #course-container button {
+    font-size: 0.95rem;
+    padding: 8px 14px;
+  }
+}
+
 /* Scale text and icons down slightly */
 .cell {
   font-size: 0.85rem;
