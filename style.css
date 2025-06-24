@@ -11,6 +11,8 @@ body {
   align-items: center;
   height: 100vh;
   touch-action: manipulation;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.4;
 }
 
 #game-container {
@@ -20,6 +22,10 @@ body {
   gap: 0.2vw;
   max-width: 95vw;
   max-height: 95vh;
+  padding: 1vw;
+  background: #1a1a1a;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 .cell {
@@ -29,6 +35,9 @@ body {
   position: relative;
   cursor: pointer;
   touch-action: manipulation;
+  border-radius: 4px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
 .wall {
@@ -44,6 +53,7 @@ body {
   height: 70%;
   background: white;
   border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
 }
 /* Truth Tile Base Style */
 .cell.truth {
@@ -53,8 +63,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: system-ui, sans-serif;
+  font-family: "Segoe UI", sans-serif, monospace;
   font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 /* Individual Tile Themes */
@@ -76,6 +89,7 @@ body {
   height: 14px;
   background: #27ae60;
   border-radius: 50%;
+  box-shadow: 0 0 4px rgba(39, 174, 96, 0.8);
 }
 
 /* Simple dialogue box */
@@ -90,8 +104,11 @@ body {
   border: 2px solid #27ae60;
   border-radius: 8px;
   max-width: 90%;
-  font-family: sans-serif;
+  max-height: 40vh;
+  overflow-y: auto;
+  font-family: "Segoe UI", sans-serif;
   font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   z-index: 1000;
 }
 
@@ -103,4 +120,5 @@ body {
   padding: 6px 12px;
   cursor: pointer;
   border-radius: 4px;
+  font-family: inherit;
 }
