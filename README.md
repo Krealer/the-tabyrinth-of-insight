@@ -5,7 +5,7 @@ A simple 30×30 grid-based pathfinding game using HTML, CSS, and JavaScript. No 
 ### Features
 - Responsive design for PC and mobile (click or tap to move)
 - A* smart pathfinding
-- Impassable wall tiles
+- Optional impassable wall tiles (remove for an open grid)
 - Smooth animation
 
 ### Core Truth Tiles
@@ -18,6 +18,10 @@ The game includes 7 symbolic tiles representing deep ideas:
 - **❓ Questioner's Mark** – Ask better, get better
 - **🗺️✖️ Mapless Path** – Trust intuition over the map
 - **⚙️ Stone of Momentum** – Action fuels motivation
+
+### NPCs
+The world can contain conversational actors. See `NPCs.md` for the first example,
+"Greenthought," which introduces dialogue-driven exploration.
 
 ### How to Play
 1. Open `index.html` in a browser.
