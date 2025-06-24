@@ -136,3 +136,18 @@ body {
   justify-content: center;
   padding: 1rem;
 }
+
+/* Wisdom HUD */
+#wisdom-hud {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  z-index: 2000;
+  border: 1px solid #27ae60;
+}

@@ -3,6 +3,13 @@ let grid = [];
 let playerPos = { x: 1, y: 1 }; // starting point
 const container = document.getElementById('game-container');
 
+// === Wisdom Point System ===
+let wisdomPoints = 0;
+// Load saved value
+if (localStorage.getItem('wp')) {
+  wisdomPoints = parseInt(localStorage.getItem('wp'), 10);
+}
+
 const TILE_TYPES = {
   GROUND: { symbol: "", class: "ground" },
   NPC:    { symbol: "", class: "npc" }
@@ -166,6 +173,12 @@ function glossarionMore() {
     <button onclick="closeDialogue()">Leave</button>
   `;
 
+  if (localStorage.getItem('jp_lesson_0_done') && localStorage.getItem('jp_lesson_1_done')) {
+    box.innerHTML += `
+      <p><em>“Ah… you have begun the path of the language. It has changed you.”</em></p>
+    `;
+  }
+
   document.body.appendChild(box);
 }
 
@@ -200,3 +213,18 @@ function closeDialogue() {
   const box = document.querySelector('.dialogue-box');
   if (box) box.remove();
 }
+
+// ===== Wisdom Point Helpers =====
+function gainWisdom(amount) {
+  wisdomPoints += amount;
+  localStorage.setItem('wp', wisdomPoints);
+  updateWisdomHUD();
+}
+
+function updateWisdomHUD() {
+  const el = document.getElementById('wp-count');
+  if (el) el.textContent = wisdomPoints;
+}
+
+// Initialize HUD display on load
+updateWisdomHUD();
