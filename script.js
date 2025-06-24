@@ -1,6 +1,17 @@
 const gridSize = 30;
 const container = document.getElementById('game-container');
 
+// Definition for the 7 core tiles of truth
+const TILE_TYPES = {
+  EMBER: { name: 'Ember of Compounding', symbol: '∞', class: 'tile-ember' },
+  ECHO: { name: 'Echo of Silence', symbol: 'Ψ', class: 'tile-echo' },
+  LENS: { name: 'Lens of Attention', symbol: '👁️', class: 'tile-lens' },
+  MIRROR: { name: 'Mirror of Bias', symbol: '🔍', class: 'tile-mirror' },
+  MARK: { name: 'Questioner\u2019s Mark', symbol: '❓', class: 'tile-mark' },
+  MAPLESS: { name: 'Mapless Path', symbol: '🗺️✖️', class: 'tile-mapless' },
+  STONE: { name: 'Stone of Momentum', symbol: '⚙️', class: 'tile-stone' },
+};
+
 let grid = [];
 let playerPos = { x: 1, y: 1 };
 
@@ -28,12 +39,45 @@ for (let y = 0; y < gridSize; y++) {
   grid.push(row);
 }
 
+placeSpecialTiles();
+
+function placeSpecialTiles() {
+  const cells = Array.from(container.children);
+  for (const [key, tile] of Object.entries(TILE_TYPES)) {
+    const count = 1 + Math.floor(Math.random() * 2); // 1 or 2 of each
+    for (let i = 0; i < count; i++) {
+      let placed = false;
+      while (!placed) {
+        const x = Math.floor(Math.random() * gridSize);
+        const y = Math.floor(Math.random() * gridSize);
+        if (grid[y][x] === 'ground' && !(x === playerPos.x && y === playerPos.y)) {
+          grid[y][x] = key;
+          const index = y * gridSize + x;
+          const cell = cells[index];
+          cell.classList.add('special-tile', tile.class);
+          cell.dataset.symbol = tile.symbol;
+          cell.title = tile.name;
+          placed = true;
+        }
+      }
+    }
+  }
+}
+
 function drawPlayer() {
   document.querySelectorAll('.cell').forEach(cell => cell.classList.remove('player'));
   const index = playerPos.y * gridSize + playerPos.x;
   container.children[index].classList.add('player');
 }
 drawPlayer();
+function checkSpecialTile() {
+  const key = grid[playerPos.y][playerPos.x];
+  const tile = TILE_TYPES[key];
+  if (tile) {
+    console.log(`${tile.name} activated`);
+  }
+}
+
 
 // A* Pathfinding
 function heuristic(a, b) {
@@ -103,5 +147,6 @@ function moveAlongPath(path) {
   const next = path.shift();
   playerPos = next;
   drawPlayer();
+  checkSpecialTile();
   setTimeout(() => moveAlongPath(path), 60);
 }
