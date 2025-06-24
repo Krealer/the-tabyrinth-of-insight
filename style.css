@@ -65,3 +65,42 @@ body {
 .tile-mark { background-color: #27ae60; }
 .tile-mapless { background-color: #7f8c8d; }
 .tile-stone { background-color: #f39c12; }
+
+/* NPC circle */
+.npc::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background: #27ae60;
+  border-radius: 50%;
+}
+
+/* Simple dialogue box */
+.dialogue-box {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 16px;
+  border: 2px solid #27ae60;
+  border-radius: 8px;
+  max-width: 90%;
+  font-family: sans-serif;
+  font-size: 0.95rem;
+  z-index: 1000;
+}
+
+.dialogue-box button {
+  margin-top: 12px;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
