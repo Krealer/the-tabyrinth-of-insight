@@ -1,88 +1,53 @@
-const container = document.getElementById('game-container');
 const gridSize = 30;
+let grid = [];
+let playerPos = { x: 1, y: 1 }; // starting point
+const container = document.getElementById('game-container');
 
 const TILE_TYPES = {
-  EMBER:   { symbol: "∞", class: "tile-ember" },
-  ECHO:    { symbol: "Ψ", class: "tile-echo" },
-  LENS:    { symbol: "👁️", class: "tile-lens" },
-  MIRROR:  { symbol: "🔍", class: "tile-mirror" },
-  MARK:    { symbol: "❓", class: "tile-mark" },
-  MAPLESS: { symbol: "🗺️✖️", class: "tile-mapless" },
-  STONE:   { symbol: "⚙️", class: "tile-stone" },
-  NPC:     { symbol: "", class: "npc" }
+  GROUND: { symbol: "", class: "ground" },
+  NPC:    { symbol: "", class: "npc" }
 };
 
-// Base grid filled with ground tiles
-let grid = Array.from({ length: gridSize }, () => Array(gridSize).fill('ground'));
+// Create empty map (all ground)
+grid = Array.from({ length: gridSize }, () =>
+  Array.from({ length: gridSize }, () => 'GROUND')
+);
 
-// Handcrafted walls and truth tiles
-const predefinedWalls = [
-  [4, 4], [5, 4], [6, 4],
-  [6, 5], [6, 6]
-];
+// Place Glossarion
+const glossarionPos = { x: 8, y: 8 };
+grid[glossarionPos.y][glossarionPos.x] = 'NPC';
 
-const predefinedSpecialTiles = [
-  { x: 10, y: 10, type: 'EMBER' },
-  { x: 12, y: 10, type: 'ECHO' },
-  { x: 14, y: 10, type: 'LENS' }
-];
+function drawGrid() {
+  container.innerHTML = '';
 
-// Simple NPC placement
-const predefinedNPCs = [
-  { x: 8, y: 8 }
-];
+  for (let y = 0; y < gridSize; y++) {
+    for (let x = 0; x < gridSize; x++) {
+      const type = grid[y][x];
+      const div = document.createElement('div');
+      div.classList.add('cell');
 
-predefinedWalls.forEach(([x, y]) => {
-  if (grid[y] && grid[y][x] !== undefined) {
-    grid[y][x] = 'wall';
-  }
-});
+      if (type === 'NPC') {
+        div.classList.add('npc');
+        addNPCInteraction(div);
+      }
 
-predefinedSpecialTiles.forEach(({ x, y, type }) => {
-  if (grid[y] && grid[y][x] !== undefined) {
-    grid[y][x] = type;
-  }
-});
-
-predefinedNPCs.forEach(({ x, y }) => {
-  if (grid[y] && grid[y][x] !== undefined) {
-    grid[y][x] = 'NPC';
-  }
-});
-
-let playerPos = { x: 1, y: 1 };
-
-// Build DOM based on predefined layout
-for (let y = 0; y < gridSize; y++) {
-  for (let x = 0; x < gridSize; x++) {
-    const div = document.createElement('div');
-    div.classList.add('cell');
-    div.dataset.x = x;
-    div.dataset.y = y;
-
-    const tileType = grid[y][x];
-    if (tileType === 'wall') {
-      div.classList.add('wall');
-    } else if (tileType === 'NPC') {
-      div.classList.add('npc');
-      addNPCInteraction(div);
-    } else if (TILE_TYPES[tileType]) {
-      const { symbol, class: tileClass } = TILE_TYPES[tileType];
-      div.classList.add('truth', tileClass);
-      div.textContent = symbol;
+      div.dataset.x = x;
+      div.dataset.y = y;
+      div.addEventListener('click', () => handleTileClick(x, y));
+      container.appendChild(div);
     }
-
-    div.addEventListener('click', () => handleTileClick(x, y));
-    container.appendChild(div);
   }
+
+  drawPlayer();
 }
+
+drawGrid();
 
 function drawPlayer() {
   document.querySelectorAll('.cell').forEach(cell => cell.classList.remove('player'));
   const index = playerPos.y * gridSize + playerPos.x;
   container.children[index].classList.add('player');
 }
-drawPlayer();
 
 
 // A* Pathfinding
@@ -102,7 +67,7 @@ function getNeighbors(node) {
     .filter(n =>
       n.x >= 0 && n.y >= 0 &&
       n.x < gridSize && n.y < gridSize &&
-      grid[n.y][n.x] !== 'wall'
+      grid[n.y][n.x] === 'GROUND'
     );
 }
 
@@ -142,7 +107,7 @@ function aStar(start, goal) {
 }
 
 function handleTileClick(x, y) {
-  if (grid[y][x] === 'wall') return;
+  if (grid[y][x] !== 'GROUND') return;
   const path = aStar(playerPos, { x, y });
   if (!path) return;
   moveAlongPath(path);
