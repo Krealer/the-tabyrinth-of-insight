@@ -75,6 +75,58 @@ const japaneseLessons = [
       options: ["I am a teacher", "I am a student", "I am hungry"],
       answer: "I am a student"
     }
+  },
+  {
+    title: "Lesson 6: Saying Yes and No",
+    content: `
+      <p>In Japanese, basic agreement and disagreement are:</p>
+      <ul>
+        <li><strong>はい</strong> (hai) – Yes</li>
+        <li><strong>いいえ</strong> (iie) – No</li>
+      </ul>
+      <p>These are simple but very commonly used in daily speech.</p>
+    `,
+    quiz: {
+      question: "How do you say 'No' in Japanese?",
+      options: ["はい", "いいえ", "すみません"],
+      answer: "いいえ"
+    }
+  },
+  {
+    title: "Lesson 7: Common Questions",
+    content: `
+      <p>These are useful question words in Japanese:</p>
+      <ul>
+        <li><strong>なに</strong> (nani) – What</li>
+        <li><strong>どこ</strong> (doko) – Where</li>
+        <li><strong>いつ</strong> (itsu) – When</li>
+        <li><strong>なぜ</strong> (naze) – Why</li>
+      </ul>
+      <p>Example: なにこれ？ (nani kore?) – What is this?</p>
+    `,
+    quiz: {
+      question: "What does 'なに' mean?",
+      options: ["Why", "What", "Where"],
+      answer: "What"
+    }
+  },
+  {
+    title: "Lesson 8: Basic Verbs",
+    content: `
+      <p>Here are 5 very common Japanese verbs:</p>
+      <ul>
+        <li><strong>たべる</strong> (taberu) – to eat</li>
+        <li><strong>のむ</strong> (nomu) – to drink</li>
+        <li><strong>みる</strong> (miru) – to see/watch</li>
+        <li><strong>いく</strong> (iku) – to go</li>
+        <li><strong>する</strong> (suru) – to do</li>
+      </ul>
+    `,
+    quiz: {
+      question: "What is the Japanese verb for 'to eat'?",
+      options: ["たべる", "いく", "のむ"],
+      answer: "たべる"
+    }
   }
 ];
 
