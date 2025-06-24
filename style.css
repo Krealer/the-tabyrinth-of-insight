@@ -45,20 +45,23 @@ body {
   background: white;
   border-radius: 50%;
 }
-
-.special-tile {
+/* Truth Tile Base Style */
+.cell.truth {
+  font-size: 0.75rem;
+  text-align: center;
+  color: white;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 1.2vw;
-  color: #fff;
+  align-items: center;
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
 }
 
-.tile-ember { background-color: #c0392b; }
-.tile-echo { background-color: #8e44ad; }
+/* Individual Tile Themes */
+.tile-ember { background-color: #d35400; }
+.tile-echo { background-color: #2c3e50; }
 .tile-lens { background-color: #2980b9; }
-.tile-mirror { background-color: #f1c40f; color: #000; }
-.tile-mark { background-color: #e67e22; }
+.tile-mirror { background-color: #8e44ad; }
+.tile-mark { background-color: #27ae60; }
 .tile-mapless { background-color: #7f8c8d; }
-.tile-stone { background-color: #27ae60; }
-
+.tile-stone { background-color: #f39c12; }

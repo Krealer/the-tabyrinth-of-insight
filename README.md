@@ -8,6 +8,17 @@ A simple 30×30 grid-based pathfinding game using HTML, CSS, and JavaScript. No 
 - Impassable wall tiles
 - Smooth animation
 
+### Core Truth Tiles
+The game includes 7 symbolic tiles representing deep ideas:
+
+- **∞ Ember of Compounding** – Growth from consistency
+- **Ψ Echo of Silence** – The power of quiet
+- **👁️ Lens of Attention** – You become what you attend to
+- **🔍 Mirror of Bias** – See through your mental filters
+- **❓ Questioner's Mark** – Ask better, get better
+- **🗺️✖️ Mapless Path** – Trust intuition over the map
+- **⚙️ Stone of Momentum** – Action fuels motivation
+
 ### How to Play
 1. Open `index.html` in a browser.
 2. Click/tap any ground tile — the white player will move toward it.
