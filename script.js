@@ -199,15 +199,20 @@ function startJapaneseCourse() {
   const hub = document.createElement('div');
   hub.id = 'course-hub';
 
+  let writingProgress = getTopicProgress('writing');
+  const totalWriting = topicLessonCounts['writing'];
+
   hub.innerHTML = `
     <div class="hub-box">
       <h2>Japanese Learning Hub</h2>
       <p>What would you like to explore?</p>
       <div class="hub-options">
-        <button onclick="loadTopic('writing')">✍️ Writing Systems</button>
-        <button onclick="loadTopic('vocab')">🧠 Vocabulary</button>
-        <button onclick="loadTopic('grammar')">📐 Grammar</button>
-        <button onclick="loadTopic('quiz')">🔁 Review & Quizzes</button>
+        <button onclick="loadTopic('writing')">
+          ✍️ Writing Systems (${writingProgress}/${totalWriting} complete)
+        </button>
+        <button onclick="alert('Coming soon')">🧠 Vocabulary</button>
+        <button onclick="alert('Coming soon')">📐 Grammar</button>
+        <button onclick="alert('Coming soon')">🔁 Quizzes</button>
         <button onclick="exitCourse()">← Back to Glossarion</button>
       </div>
     </div>
@@ -253,10 +258,28 @@ function checkAnswerFromSet(selected, correct, index, topicId) {
     : "<p style='color:orangered'>❌ Try again.</p>";
   box.insertAdjacentHTML('beforeend', feedback);
 
+  if (selected === correct) {
+    const key = `${topicId}_lesson_${index}_done`;
+    if (!localStorage.getItem(key)) {
+      localStorage.setItem(key, "true");
+    }
+  }
+
   const lessonSet = topicId === 'writing' ? writingLessons : [];
   if (selected === correct && lessonSet[index + 1]) {
     setTimeout(() => loadLessonFromSet(lessonSet, index + 1), 1000);
   }
+}
+
+function getTopicProgress(topicId) {
+  const total = topicLessonCounts[topicId];
+  let completed = 0;
+  for (let i = 0; i < total; i++) {
+    if (localStorage.getItem(`${topicId}_lesson_${i}_done`)) {
+      completed++;
+    }
+  }
+  return completed;
 }
 
 function clearDialogue() {
