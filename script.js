@@ -172,22 +172,23 @@ function glossarionMore() {
 function glossarionTopic(topic) {
   clearDialogue();
 
-  const box = document.createElement('div');
-  box.className = 'dialogue-box';
-
-  let content = '';
   if (topic === 'japanese') {
-    content = `“Ah, Japanese... where sound meets subtlety. A language of layers, where silence holds grammar.”`;
+    startJapaneseCourse();
   } else if (topic === 'russian') {
-    content = `“Russian... a structure of strength. Its words are bricks, its grammar—a cathedral.”`;
+    // Future placeholder
+    alert("Russian course coming soon.");
   }
+}
 
-  box.innerHTML = `
-    <p><strong>Glossarion:</strong> ${content}</p>
-    <button onclick="closeDialogue()">Leave</button>
-  `;
+function startJapaneseCourse() {
+  clearDialogue();
 
-  document.body.appendChild(box);
+  const course = document.createElement('div');
+  course.id = 'course-container';
+  document.body.appendChild(course);
+
+  // Load lesson 1
+  loadJapaneseLesson(0);
 }
 
 function clearDialogue() {
