@@ -11,62 +11,55 @@ const TILE_TYPES = {
   STONE:   { symbol: "⚙️", class: "tile-stone" },
 };
 
-let grid = [];
-let specialTiles = [];
+// Base grid filled with ground tiles
+let grid = Array.from({ length: gridSize }, () => Array(gridSize).fill('ground'));
+
+// Handcrafted walls and truth tiles
+const predefinedWalls = [
+  [4, 4], [5, 4], [6, 4],
+  [6, 5], [6, 6]
+];
+
+const predefinedSpecialTiles = [
+  { x: 10, y: 10, type: 'EMBER' },
+  { x: 12, y: 10, type: 'ECHO' },
+  { x: 14, y: 10, type: 'LENS' }
+];
+
+predefinedWalls.forEach(([x, y]) => {
+  if (grid[y] && grid[y][x] !== undefined) {
+    grid[y][x] = 'wall';
+  }
+});
+
+predefinedSpecialTiles.forEach(({ x, y, type }) => {
+  if (grid[y] && grid[y][x] !== undefined) {
+    grid[y][x] = type;
+  }
+});
+
 let playerPos = { x: 1, y: 1 };
 
-// Helper to avoid placing special tiles on walls or near player
-function isValidSpecialTile(x, y) {
-  if (x === 1 && y === 1) return false;
-  if (grid[y]?.[x] === 'wall') return false;
-  return true;
-}
-
-// Function to place special tiles
-function placeSpecialTiles(type, count) {
-  let placed = 0;
-  while (placed < count) {
-    let x = Math.floor(Math.random() * gridSize);
-    let y = Math.floor(Math.random() * gridSize);
-    if (isValidSpecialTile(x, y) && !specialTiles.find(t => t.x === x && t.y === y)) {
-      specialTiles.push({ x, y, type });
-      placed++;
-    }
-  }
-}
-
-// Place each truth tile 2 times
-for (let key in TILE_TYPES) {
-  placeSpecialTiles(key, 2);
-}
-
-// Generate grid with walls and special tiles
+// Build DOM based on predefined layout
 for (let y = 0; y < gridSize; y++) {
-  let row = [];
   for (let x = 0; x < gridSize; x++) {
     const div = document.createElement('div');
     div.classList.add('cell');
     div.dataset.x = x;
     div.dataset.y = y;
 
-    // Is this a special tile?
-    const special = specialTiles.find(t => t.x === x && t.y === y);
-    if (special) {
-      const { symbol, class: tileClass } = TILE_TYPES[special.type];
+    const tileType = grid[y][x];
+    if (tileType === 'wall') {
+      div.classList.add('wall');
+    } else if (TILE_TYPES[tileType]) {
+      const { symbol, class: tileClass } = TILE_TYPES[tileType];
       div.classList.add('truth', tileClass);
       div.textContent = symbol;
-      row.push(special.type); // track by type key
-    } else if (Math.random() < 0.15 && !(x === 1 && y === 1)) {
-      div.classList.add('wall');
-      row.push('wall');
-    } else {
-      row.push('ground');
     }
 
     div.addEventListener('click', () => handleTileClick(x, y));
     container.appendChild(div);
   }
-  grid.push(row);
 }
 
 function drawPlayer() {
