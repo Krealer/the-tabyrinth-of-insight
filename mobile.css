@@ -78,21 +78,40 @@
     align-items: flex-start;
   }
 
+  .hub-options button {
+    width: 100% !important;
+    max-width: 320px;
+    font-size: 1rem;
+    padding: 14px;
+    margin: 10px auto;
+    border-radius: 8px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    display: block;
+    box-shadow: 0 0 6px rgba(39, 174, 96, 0.5);
+    transition: background 0.3s ease;
+  }
+
+  .hub-options button:hover {
+    background: #219150;
+  }
+
   .hub-box {
-    margin-top: 10vh;
-    width: 95vw;
-    padding: 18px;
-    font-size: 0.95rem;
+    padding: 20px;
+    width: 90vw;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .hub-box h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
-  .hub-options button {
+  .hub-box p {
     font-size: 1rem;
-    padding: 12px;
-    margin: 6px 0;
+    margin-bottom: 1rem;
   }
 }
 
