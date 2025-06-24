@@ -174,16 +174,60 @@ function addNPCInteraction(div) {
 }
 
 function openDialogue() {
-  const oldBox = document.querySelector('.dialogue-box');
-  if (oldBox) oldBox.remove();
+  clearDialogue();
 
   const box = document.createElement('div');
   box.className = 'dialogue-box';
+
   box.innerHTML = `
-    <p><strong>Echo:</strong> “The unexamined life is not worth living.”</p>
-    <button onclick="closeDialogue()">Close</button>
+    <p><strong>Glossarion:</strong> “Ah... the seeker arrives. Do you speak the language of silence, too?”</p>
+    <button onclick="glossarionMore()">Know More</button>
+    <button onclick="closeDialogue()">Leave</button>
   `;
+
   document.body.appendChild(box);
+}
+
+function glossarionMore() {
+  clearDialogue();
+
+  const box = document.createElement('div');
+  box.className = 'dialogue-box';
+
+  box.innerHTML = `
+    <p><strong>Glossarion:</strong> “Language is not merely sound, but structure. Which would you explore?”</p>
+    <button onclick="glossarionTopic('japanese')">Learn Japanese</button>
+    <button onclick="glossarionTopic('russian')">Learn Russian</button>
+    <button onclick="closeDialogue()">Leave</button>
+  `;
+
+  document.body.appendChild(box);
+}
+
+function glossarionTopic(topic) {
+  clearDialogue();
+
+  const box = document.createElement('div');
+  box.className = 'dialogue-box';
+
+  let content = '';
+  if (topic === 'japanese') {
+    content = `“Ah, Japanese... where sound meets subtlety. A language of layers, where silence holds grammar.”`;
+  } else if (topic === 'russian') {
+    content = `“Russian... a structure of strength. Its words are bricks, its grammar—a cathedral.”`;
+  }
+
+  box.innerHTML = `
+    <p><strong>Glossarion:</strong> ${content}</p>
+    <button onclick="closeDialogue()">Leave</button>
+  `;
+
+  document.body.appendChild(box);
+}
+
+function clearDialogue() {
+  const old = document.querySelector('.dialogue-box');
+  if (old) old.remove();
 }
 
 function closeDialogue() {
