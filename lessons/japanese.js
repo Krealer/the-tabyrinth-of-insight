@@ -208,4 +208,6 @@ function checkAnswer(selected, correct, index) {
 function exitCourse() {
   const course = document.getElementById('course-container');
   if (course) course.remove();
+  const hub = document.getElementById('course-hub');
+  if (hub) hub.remove();
 }

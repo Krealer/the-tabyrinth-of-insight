@@ -196,12 +196,28 @@ function glossarionTopic(topic) {
 function startJapaneseCourse() {
   clearDialogue();
 
-  const course = document.createElement('div');
-  course.id = 'course-container';
-  document.body.appendChild(course);
+  const hub = document.createElement('div');
+  hub.id = 'course-hub';
 
-  // Load lesson 1
-  loadJapaneseLesson(0);
+  hub.innerHTML = `
+    <div class="hub-box">
+      <h2>Japanese Learning Hub</h2>
+      <p>What would you like to explore?</p>
+      <div class="hub-options">
+        <button onclick="loadTopic('writing')">✍️ Writing Systems</button>
+        <button onclick="loadTopic('vocab')">🧠 Vocabulary</button>
+        <button onclick="loadTopic('grammar')">📐 Grammar</button>
+        <button onclick="loadTopic('quiz')">🔁 Review & Quizzes</button>
+        <button onclick="exitCourse()">← Back to Glossarion</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(hub);
+}
+
+function loadTopic(topic) {
+  alert(`Topic selected: ${topic} (content coming soon)`);
 }
 
 function clearDialogue() {
