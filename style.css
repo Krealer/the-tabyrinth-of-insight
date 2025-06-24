@@ -124,16 +124,62 @@ body {
 
 #course-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-height: 85vh;
+  overflow-y: auto;
   background: rgba(10, 10, 10, 0.95);
+  border: 2px solid #27ae60;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 0 20px rgba(39, 174, 96, 0.6);
   z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+#course-container h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #27ae60;
+}
+
+#course-container p,
+#course-container ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0.5rem 0;
+}
+
+#course-container ul {
+  padding-left: 1.2rem;
+}
+
+#course-container li {
+  margin-bottom: 0.4rem;
+}
+
+#course-container button {
+  margin: 0.5rem auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #27ae60;
+  color: white;
+  cursor: pointer;
+  width: 90%;
+  max-width: 300px;
+  transition: background 0.3s ease;
+}
+
+#course-container button:hover {
+  background: #1e8c4a;
 }
 
 /* Wisdom HUD */
