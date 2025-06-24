@@ -26,6 +26,55 @@ const japaneseLessons = [
       options: ["あ", "え", "お"],
       answer: "え"
     }
+  },
+  {
+    title: "Lesson 3: Numbers 1–5",
+    content: `
+      <p>Here are the numbers 1 through 5 in Japanese:</p>
+      <ul>
+        <li>1 – いち (ichi)</li>
+        <li>2 – に (ni)</li>
+        <li>3 – さん (san)</li>
+        <li>4 – し / よん (shi / yon)</li>
+        <li>5 – ご (go)</li>
+      </ul>
+    `,
+    quiz: {
+      question: "What is the Japanese word for 4?",
+      options: ["に", "し", "ご"],
+      answer: "し"
+    }
+  },
+  {
+    title: "Lesson 4: Basic Greetings",
+    content: `
+      <p>Common greetings in Japanese:</p>
+      <ul>
+        <li>こんにちは (konnichiwa) – Hello / Good afternoon</li>
+        <li>おはよう (ohayou) – Good morning</li>
+        <li>こんばんは (konbanwa) – Good evening</li>
+        <li>さようなら (sayounara) – Goodbye</li>
+      </ul>
+    `,
+    quiz: {
+      question: "How do you say 'Good morning' in Japanese?",
+      options: ["こんばんは", "おはよう", "こんにちは"],
+      answer: "おはよう"
+    }
+  },
+  {
+    title: "Lesson 5: Sentence Basics",
+    content: `
+      <p>Japanese sentence structure often follows this pattern:</p>
+      <p><strong>Topic + は (wa) + comment</strong></p>
+      <p>Example: わたしはがくせいです。</p>
+      <p>Means: "I am a student." (watashi wa gakusei desu)</p>
+    `,
+    quiz: {
+      question: "What does 'わたしはがくせいです' mean?",
+      options: ["I am a teacher", "I am a student", "I am hungry"],
+      answer: "I am a student"
+    }
   }
 ];
 
