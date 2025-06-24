@@ -1,21 +1,46 @@
-const gridSize = 30;
 const container = document.getElementById('game-container');
+const gridSize = 30;
 
-// Definition for the 7 core tiles of truth
 const TILE_TYPES = {
-  EMBER: { name: 'Ember of Compounding', symbol: '∞', class: 'tile-ember' },
-  ECHO: { name: 'Echo of Silence', symbol: 'Ψ', class: 'tile-echo' },
-  LENS: { name: 'Lens of Attention', symbol: '👁️', class: 'tile-lens' },
-  MIRROR: { name: 'Mirror of Bias', symbol: '🔍', class: 'tile-mirror' },
-  MARK: { name: 'Questioner\u2019s Mark', symbol: '❓', class: 'tile-mark' },
-  MAPLESS: { name: 'Mapless Path', symbol: '🗺️✖️', class: 'tile-mapless' },
-  STONE: { name: 'Stone of Momentum', symbol: '⚙️', class: 'tile-stone' },
+  EMBER:   { symbol: "∞", class: "tile-ember" },
+  ECHO:    { symbol: "Ψ", class: "tile-echo" },
+  LENS:    { symbol: "👁️", class: "tile-lens" },
+  MIRROR:  { symbol: "🔍", class: "tile-mirror" },
+  MARK:    { symbol: "❓", class: "tile-mark" },
+  MAPLESS: { symbol: "🗺️✖️", class: "tile-mapless" },
+  STONE:   { symbol: "⚙️", class: "tile-stone" },
 };
 
 let grid = [];
+let specialTiles = [];
 let playerPos = { x: 1, y: 1 };
 
-// Build grid
+// Helper to avoid placing special tiles on walls or near player
+function isValidSpecialTile(x, y) {
+  if (x === 1 && y === 1) return false;
+  if (grid[y]?.[x] === 'wall') return false;
+  return true;
+}
+
+// Function to place special tiles
+function placeSpecialTiles(type, count) {
+  let placed = 0;
+  while (placed < count) {
+    let x = Math.floor(Math.random() * gridSize);
+    let y = Math.floor(Math.random() * gridSize);
+    if (isValidSpecialTile(x, y) && !specialTiles.find(t => t.x === x && t.y === y)) {
+      specialTiles.push({ x, y, type });
+      placed++;
+    }
+  }
+}
+
+// Place each truth tile 2 times
+for (let key in TILE_TYPES) {
+  placeSpecialTiles(key, 2);
+}
+
+// Generate grid with walls and special tiles
 for (let y = 0; y < gridSize; y++) {
   let row = [];
   for (let x = 0; x < gridSize; x++) {
@@ -24,44 +49,24 @@ for (let y = 0; y < gridSize; y++) {
     div.dataset.x = x;
     div.dataset.y = y;
 
-    // Random walls (skip player's starting point)
-    if (Math.random() < 0.15 && !(x === 1 && y === 1)) {
+    // Is this a special tile?
+    const special = specialTiles.find(t => t.x === x && t.y === y);
+    if (special) {
+      const { symbol, class: tileClass } = TILE_TYPES[special.type];
+      div.classList.add('truth', tileClass);
+      div.textContent = symbol;
+      row.push(special.type); // track by type key
+    } else if (Math.random() < 0.15 && !(x === 1 && y === 1)) {
       div.classList.add('wall');
       row.push('wall');
     } else {
       row.push('ground');
     }
 
-    // Handle click/tap
     div.addEventListener('click', () => handleTileClick(x, y));
     container.appendChild(div);
   }
   grid.push(row);
-}
-
-placeSpecialTiles();
-
-function placeSpecialTiles() {
-  const cells = Array.from(container.children);
-  for (const [key, tile] of Object.entries(TILE_TYPES)) {
-    const count = 1 + Math.floor(Math.random() * 2); // 1 or 2 of each
-    for (let i = 0; i < count; i++) {
-      let placed = false;
-      while (!placed) {
-        const x = Math.floor(Math.random() * gridSize);
-        const y = Math.floor(Math.random() * gridSize);
-        if (grid[y][x] === 'ground' && !(x === playerPos.x && y === playerPos.y)) {
-          grid[y][x] = key;
-          const index = y * gridSize + x;
-          const cell = cells[index];
-          cell.classList.add('special-tile', tile.class);
-          cell.dataset.symbol = tile.symbol;
-          cell.title = tile.name;
-          placed = true;
-        }
-      }
-    }
-  }
 }
 
 function drawPlayer() {
@@ -70,13 +75,6 @@ function drawPlayer() {
   container.children[index].classList.add('player');
 }
 drawPlayer();
-function checkSpecialTile() {
-  const key = grid[playerPos.y][playerPos.x];
-  const tile = TILE_TYPES[key];
-  if (tile) {
-    console.log(`${tile.name} activated`);
-  }
-}
 
 
 // A* Pathfinding
@@ -147,6 +145,11 @@ function moveAlongPath(path) {
   const next = path.shift();
   playerPos = next;
   drawPlayer();
-  checkSpecialTile();
+
+  const tileType = grid[next.y][next.x];
+  if (TILE_TYPES[tileType]) {
+    console.log(`Stepped on: ${tileType} → ${TILE_TYPES[tileType].symbol}`);
+  }
+
   setTimeout(() => moveAlongPath(path), 60);
 }
