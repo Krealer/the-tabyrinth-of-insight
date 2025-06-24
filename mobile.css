@@ -72,3 +72,27 @@
     padding: 12px;
   }
 }
+@media (max-width: 768px) {
+  #course-hub {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .hub-box {
+    margin-top: 10vh;
+    width: 95vw;
+    padding: 18px;
+    font-size: 0.95rem;
+  }
+
+  .hub-box h2 {
+    font-size: 1.4rem;
+  }
+
+  .hub-options button {
+    font-size: 1rem;
+    padding: 12px;
+    margin: 6px 0;
+  }
+}
+
