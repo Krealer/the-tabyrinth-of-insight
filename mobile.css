@@ -1,0 +1,41 @@
+/* === Mobile Overrides === */
+
+/* Smaller cells, less padding */
+#game-container {
+  grid-template-columns: repeat(30, 10vw);
+  grid-template-rows: repeat(30, 10vw);
+  gap: 1vw;
+}
+
+/* Scale text and icons down slightly */
+.cell {
+  font-size: 0.85rem;
+}
+
+/* Truth tile tweaks for legibility */
+.truth {
+  font-size: 0.9rem;
+  text-shadow: none;
+}
+
+/* Player/NPC smaller circles */
+.player::after,
+.npc::after {
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+/* Dialogue box mobile adjustment */
+.dialogue-box {
+  bottom: 5%;
+  padding: 14px;
+  font-size: 0.85rem;
+  max-width: 95vw;
+}
+
+.dialogue-box button {
+  font-size: 0.85rem;
+  padding: 5px 10px;
+}
