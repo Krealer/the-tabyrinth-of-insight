@@ -203,6 +203,8 @@ function startJapaneseCourse() {
   const totalWriting = topicLessonCounts['writing'];
   let vocabProgress = getTopicProgress('vocab');
   const totalVocab = topicLessonCounts['vocab'];
+  let grammarProgress = getTopicProgress('grammar');
+  const totalGrammar = topicLessonCounts['grammar'];
 
   hub.innerHTML = `
     <div class="hub-box">
@@ -215,7 +217,9 @@ function startJapaneseCourse() {
         <button onclick="loadTopic('vocab')">
           🧠 Vocabulary (${vocabProgress}/${totalVocab} complete)
         </button>
-        <button onclick="alert('Coming soon')">📐 Grammar</button>
+        <button onclick="loadTopic('grammar')">
+          📐 Grammar (${grammarProgress}/${totalGrammar} complete)
+        </button>
         <button onclick="alert('Coming soon')">🔁 Quizzes</button>
         <button onclick="exitCourse()">← Back to Glossarion</button>
       </div>
@@ -247,6 +251,18 @@ function loadVocabLessons() {
   container.id = 'course-container';
   document.body.appendChild(container);
   loadLessonFromSet(vocabLessons, 0, 'vocab');
+}
+
+function loadGrammarLessons() {
+  if (!Array.isArray(grammarLessons)) {
+    alert("Grammar lessons not loaded.");
+    return;
+  }
+
+  const container = document.createElement('div');
+  container.id = 'course-container';
+  document.body.appendChild(container);
+  loadLessonFromSet(grammarLessons, 0, 'grammar');
 }
 
 function loadLessonFromSet(lessonSet, index, topicId) {
@@ -283,7 +299,8 @@ function checkAnswerFromSet(selected, correct, index, topicId) {
 
   const lessonSet =
     topicId === 'writing' ? writingLessons :
-    topicId === 'vocab' ? vocabLessons : [];
+    topicId === 'vocab' ? vocabLessons :
+    topicId === 'grammar' ? grammarLessons : [];
   if (selected === correct && lessonSet[index + 1]) {
     setTimeout(() => loadLessonFromSet(lessonSet, index + 1, topicId), 1000);
   }
