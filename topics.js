@@ -1,7 +1,6 @@
 const topicLessonCounts = {
   writing: 3,
-  // vocab: 5,
-  // grammar: 4,
+  vocab: 3
 };
 
 function loadTopic(topicId) {
@@ -12,6 +11,9 @@ function loadTopic(topicId) {
   switch (topicId) {
     case 'writing':
       loadWritingLessons();
+      break;
+    case 'vocab':
+      loadVocabLessons();
       break;
     default:
       alert(`Unknown topic: ${topicId}`);

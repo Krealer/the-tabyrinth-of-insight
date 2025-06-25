@@ -201,6 +201,8 @@ function startJapaneseCourse() {
 
   let writingProgress = getTopicProgress('writing');
   const totalWriting = topicLessonCounts['writing'];
+  let vocabProgress = getTopicProgress('vocab');
+  const totalVocab = topicLessonCounts['vocab'];
 
   hub.innerHTML = `
     <div class="hub-box">
@@ -210,7 +212,9 @@ function startJapaneseCourse() {
         <button onclick="loadTopic('writing')">
           ✍️ Writing Systems (${writingProgress}/${totalWriting} complete)
         </button>
-        <button onclick="alert('Coming soon')">🧠 Vocabulary</button>
+        <button onclick="loadTopic('vocab')">
+          🧠 Vocabulary (${vocabProgress}/${totalVocab} complete)
+        </button>
         <button onclick="alert('Coming soon')">📐 Grammar</button>
         <button onclick="alert('Coming soon')">🔁 Quizzes</button>
         <button onclick="exitCourse()">← Back to Glossarion</button>
@@ -230,10 +234,22 @@ function loadWritingLessons() {
   const container = document.createElement('div');
   container.id = 'course-container';
   document.body.appendChild(container);
-  loadLessonFromSet(writingLessons, 0);
+  loadLessonFromSet(writingLessons, 0, 'writing');
 }
 
-function loadLessonFromSet(lessonSet, index) {
+function loadVocabLessons() {
+  if (!Array.isArray(vocabLessons)) {
+    alert("Vocabulary lessons not loaded.");
+    return;
+  }
+
+  const container = document.createElement('div');
+  container.id = 'course-container';
+  document.body.appendChild(container);
+  loadLessonFromSet(vocabLessons, 0, 'vocab');
+}
+
+function loadLessonFromSet(lessonSet, index, topicId) {
   const container = document.getElementById('course-container');
   const lesson = lessonSet[index];
 
@@ -243,7 +259,7 @@ function loadLessonFromSet(lessonSet, index) {
       ${lesson.content}
       <p><strong>${lesson.quiz.question}</strong></p>
       ${lesson.quiz.options.map(opt => `
-        <button onclick="checkAnswerFromSet('${opt}', '${lesson.quiz.answer}', ${index}, '${lessonSet === writingLessons ? 'writing' : 'unknown'}')">${opt}</button>
+        <button onclick="checkAnswerFromSet('${opt}', '${lesson.quiz.answer}', ${index}, '${topicId}')">${opt}</button>
       `).join('')}
       <br><br>
       <button onclick="exitCourse()">Leave Course</button>
@@ -265,9 +281,11 @@ function checkAnswerFromSet(selected, correct, index, topicId) {
     }
   }
 
-  const lessonSet = topicId === 'writing' ? writingLessons : [];
+  const lessonSet =
+    topicId === 'writing' ? writingLessons :
+    topicId === 'vocab' ? vocabLessons : [];
   if (selected === correct && lessonSet[index + 1]) {
-    setTimeout(() => loadLessonFromSet(lessonSet, index + 1), 1000);
+    setTimeout(() => loadLessonFromSet(lessonSet, index + 1, topicId), 1000);
   }
 }
 
