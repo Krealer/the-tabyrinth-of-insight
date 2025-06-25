@@ -95,50 +95,50 @@ body {
 /* Simple dialogue box */
 .dialogue-box {
   position: fixed;
-  bottom: 10%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: auto;
-  max-width: 90vw;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
   background: rgba(20, 20, 20, 0.95);
   border: 2px solid #27ae60;
   color: #fff;
-  padding: 16px 20px;
-  border-radius: 8px;
+  padding: 24px;
+  border-radius: 10px;
   z-index: 1000;
-  box-shadow: 0 0 10px rgba(39, 174, 96, 0.5);
-  font-size: 0.95rem;
+  box-shadow: 0 0 20px rgba(39, 174, 96, 0.6);
+  font-size: 1.05rem;
+  text-align: center;
   transition: all 0.3s ease;
 }
 
 .dialogue-box button {
-  margin-top: 12px;
+  font-size: 1rem;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
   background: #27ae60;
   color: #fff;
   border: none;
-  padding: 6px 12px;
-  cursor: pointer;
   border-radius: 4px;
+  cursor: pointer;
   font-family: inherit;
 }
 
 #course-container {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90vw;
-  max-height: 85vh;
-  overflow-y: auto;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
   background: rgba(10, 10, 10, 0.95);
-  border: 2px solid #27ae60;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 0 20px rgba(39, 174, 96, 0.6);
   z-index: 10000;
-  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
 }
 
 #course-container h2 {
@@ -201,8 +201,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100dvw; /* viewport width that ignores zoom */
-  height: 100dvh; /* viewport height that ignores zoom */
+  width: 100dvw;
+  height: 100dvh;
   background: rgba(10, 10, 10, 0.95);
   display: flex;
   align-items: center;
@@ -222,39 +222,44 @@ body {
 }
 
 .hub-box {
+  width: 90vw;
   max-width: 500px;
-  width: 100%;
-  padding: 20px;
   background: #111;
   border: 2px solid #27ae60;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(39, 174, 96, 0.6);
+  padding: 24px;
   text-align: center;
+  box-shadow: 0 0 20px rgba(39, 174, 96, 0.5);
 }
 
 .hub-box h2 {
+  font-size: 1.4rem;
   color: #27ae60;
   margin-bottom: 10px;
 }
 
 .hub-box p {
-  margin-bottom: 20px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   color: #ccc;
 }
 
 .hub-options button {
   width: 100%;
-  margin: 8px 0;
-  padding: 12px;
-  background: #27ae60;
-  border: none;
-  color: white;
+  max-width: 320px;
+  margin: 10px auto;
+  display: block;
   font-size: 1rem;
-  border-radius: 6px;
+  padding: 14px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(39, 174, 96, 0.5);
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .hub-options button:hover {
-  background: #1e8c4a;
+  background: #219150;
 }
