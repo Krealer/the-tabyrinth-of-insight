@@ -1,0 +1,18 @@
+/* pc.css – Desktop-only styles */
+
+.hub-box {
+  max-width: 600px;
+  padding: 32px;
+  font-size: 1.1rem;
+}
+
+.hub-options button {
+  font-size: 1.05rem;
+  padding: 16px;
+  max-width: 400px;
+}
+
+#wisdom-hud {
+  font-size: 1.1rem;
+  padding: 10px 16px;
+}
