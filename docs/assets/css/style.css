@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  font-family: system-ui, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  width: 90%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn {
+  display: block;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #27ae60, #219150);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s, box-shadow 0.3s;
+}
+
+.btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 1.1rem;
+  }
+}

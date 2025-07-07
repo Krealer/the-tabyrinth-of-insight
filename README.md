@@ -1,3 +1,10 @@
+# The Tabyrinth of Insight
+
+This repository includes a mobile-first home page in the `docs` directory for GitHub Pages. The landing screen provides quick links to learn Japanese and view a daily quote. The original grid game remains available via `index.html`.
+
+## Quick Start
+1. Open `docs/index.html` locally or enable GitHub Pages using the `/docs` folder.
+
 # Grid Game
 
 A simple 30×30 grid-based pathfinding game using HTML, CSS, and JavaScript. No sprites, no dependencies — pure DOM and styles. The level layout is now handcrafted rather than randomly generated.
