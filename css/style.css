@@ -136,11 +136,30 @@ body {
   gap: 1vh;
 }
 
+.kana-section-title {
+  text-align: center;
+  margin: 2vh 0 1vh;
+  font-size: 1.2rem;
+}
+
+.kana-section {
+  margin-bottom: 3vh;
+}
+
 .char-card {
   background: #1e1e1e;
   border-radius: 8px;
   padding: 1vh;
   text-align: center;
+}
+.char-card.dakuten {
+  background: #263238;
+}
+.char-card.handakuten {
+  background: #3e2723;
+}
+.char-card.youon {
+  background: #283593;
 }
 .char-card .kana {
   font-size: 1.5rem;
