@@ -146,6 +146,38 @@ document.addEventListener('DOMContentLoaded', () => {
                          `<div class="meaning">${k.meaning}</div>`;
         alphabetGrid.appendChild(card);
       });
+    } else if (type === 'hiragana') {
+      const groups = kanaData.hiragana.reduce((acc, k) => {
+        (acc[k.type] = acc[k.type] || []).push(k);
+        return acc;
+      }, {});
+      const order = ['basic', 'dakuten', 'handakuten', 'youon'];
+      const titles = {
+        basic: 'Basic',
+        dakuten: 'Dakuten',
+        handakuten: 'Handakuten',
+        youon: 'Yōon'
+      };
+      order.forEach(key => {
+        if (!groups[key]) return;
+        const section = document.createElement('div');
+        section.className = 'kana-section';
+        const title = document.createElement('h3');
+        title.className = 'kana-section-title';
+        title.textContent = titles[key];
+        section.appendChild(title);
+        const grid = document.createElement('div');
+        grid.className = 'alphabet-grid';
+        groups[key].forEach(k => {
+          const card = document.createElement('div');
+          card.className = `char-card ${key}`;
+          card.innerHTML = `<div class="kana">${k.kana}</div>` +
+                           `<div class="romaji">${k.romaji}</div>`;
+          grid.appendChild(card);
+        });
+        section.appendChild(grid);
+        alphabetGrid.appendChild(section);
+      });
     } else {
       kanaData[type].forEach(k => {
         const card = document.createElement('div');
