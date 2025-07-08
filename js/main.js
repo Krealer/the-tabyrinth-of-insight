@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const quoteBtn = document.querySelector('.quote');
+  const learnBtn = document.querySelector('.learn');
   const wrapper = document.querySelector('.wrapper');
   const quotesView = document.getElementById('quotesView');
+  const lessonsView = document.getElementById('lessonsView');
   const backBtn = document.getElementById('backBtn');
+  const lessonBackBtn = document.getElementById('lessonBackBtn');
 
   fetch('data/quotes.json')
     .then(res => res.json())
@@ -34,6 +37,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+  fetch('data/lessons.json')
+    .then(res => res.json())
+    .then(data => {
+      data.forEach(lesson => {
+        const btn = document.createElement('button');
+        btn.className = 'btn lesson';
+        btn.textContent = lesson.title;
+        lessonsView.insertBefore(btn, lessonBackBtn);
+      });
+    });
+
   quoteBtn.addEventListener('click', (e) => {
     e.preventDefault();
     wrapper.style.display = 'none';
@@ -42,6 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   backBtn.addEventListener('click', () => {
     quotesView.style.display = 'none';
+    wrapper.style.display = 'flex';
+  });
+
+  learnBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    wrapper.style.display = 'none';
+    lessonsView.style.display = 'flex';
+  });
+
+  lessonBackBtn.addEventListener('click', () => {
+    lessonsView.style.display = 'none';
     wrapper.style.display = 'flex';
   });
 });

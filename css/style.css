@@ -42,6 +42,16 @@ body {
 .quote {
   background: linear-gradient(135deg, #2979ff, #651fff);
 }
+#lessonsView {
+  display: none;
+  flex-direction: column;
+  gap: 2vh;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+.lesson {
+  background: linear-gradient(135deg, #ff8a65, #ff7043);
+}
 #quotesView {
   display: none;
   flex-direction: column;
