@@ -176,6 +176,24 @@ body {
 .char-card:active {
   box-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
+
+/* Grid specifically for Kanji characters */
+.kanji-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 1vh;
+}
+
+/* Kanji cards mirror kana tile styling */
+.kanji-card {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 1vh;
+  text-align: center;
+}
+.kanji-card:active {
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
 @media (min-width: 481px) {
   .btn {
     font-size: 1.1rem;

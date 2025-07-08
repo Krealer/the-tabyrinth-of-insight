@@ -166,10 +166,10 @@ document.addEventListener('DOMContentLoaded', () => {
       alphabetGrid.appendChild(title);
 
       const grid = document.createElement('div');
-      grid.className = 'alphabet-grid';
+      grid.className = 'kanji-grid';
       kanjiData.forEach(k => {
         const card = document.createElement('div');
-        card.className = 'char-card';
+        card.className = 'char-card kanji-card';
         const readings = Array.isArray(k.readings) ? k.readings.join(' / ') : k.readings;
         card.innerHTML = `<div class="kana">${k.character}</div>` +
                          `<div class="romaji">${readings}</div>` +
