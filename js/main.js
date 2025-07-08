@@ -138,14 +138,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     alphabetGrid.innerHTML = '';
     if (type === 'kanji') {
+      const title = document.createElement('h3');
+      title.className = 'kana-section-title';
+      title.textContent = 'Grade 1 Kanji';
+      alphabetGrid.appendChild(title);
+
+      const grid = document.createElement('div');
+      grid.className = 'alphabet-grid';
       kanjiData.forEach(k => {
         const card = document.createElement('div');
         card.className = 'char-card';
+        const readings = Array.isArray(k.readings) ? k.readings.join(' / ') : k.readings;
         card.innerHTML = `<div class="kana">${k.character}</div>` +
-                         `<div class="romaji">${k.reading}</div>` +
+                         `<div class="romaji">${readings}</div>` +
                          `<div class="meaning">${k.meaning}</div>`;
-        alphabetGrid.appendChild(card);
+        grid.appendChild(card);
       });
+      alphabetGrid.appendChild(grid);
     } else if (type === 'hiragana' || type === 'katakana') {
       const groups = kanaData[type].reduce((acc, k) => {
         (acc[k.type] = acc[k.type] || []).push(k);
