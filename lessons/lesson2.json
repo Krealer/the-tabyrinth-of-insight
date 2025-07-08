@@ -1,0 +1,12 @@
+[
+  {"type": "multiple-choice", "direction": "kana-to-romaji", "prompt": "あ", "answer": "a", "choices": ["e", "o", "a", "i"]},
+  {"type": "multiple-choice", "direction": "kana-to-romaji", "prompt": "く", "answer": "ku", "choices": ["ki", "ku", "ko", "ka"]},
+  {"type": "multiple-choice", "direction": "kana-to-romaji", "prompt": "て", "answer": "te", "choices": ["ta", "te", "to", "ti"]},
+  {"type": "multiple-choice", "direction": "kana-to-romaji", "prompt": "ね", "answer": "ne", "choices": ["ni", "no", "na", "ne"]},
+  {"type": "multiple-choice", "direction": "kana-to-romaji", "prompt": "も", "answer": "mo", "choices": ["mu", "ma", "mi", "mo"]},
+  {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "ka", "answer": "か", "choices": ["か", "き", "く", "け"]},
+  {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "su", "answer": "す", "choices": ["せ", "す", "さ", "そ"]},
+  {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "ri", "answer": "り", "choices": ["ら", "り", "れ", "る"]},
+  {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "se", "answer": "せ", "choices": ["そ", "せ", "さ", "し"]},
+  {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "nu", "answer": "ぬ", "choices": ["ね", "ぬ", "の", "に"]}
+]
