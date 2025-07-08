@@ -49,13 +49,43 @@ body {
   overflow-y: auto;
   max-height: 80vh;
 }
-.quote-block {
-  padding: 2vh;
+.quote-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 120px;
   margin: 1vh 0;
-  background: #1e1e1e;
+  cursor: pointer;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+.quote-card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh;
   box-shadow: 0 0 10px rgba(255,255,255,0.1);
-  font-size: 1rem;
+  box-sizing: border-box;
+}
+.card-front {
+  background: #1e1e1e;
+  font-weight: bold;
+}
+.card-back {
+  background: #262626;
+  transform: rotateY(180deg);
 }
 .back {
   background: linear-gradient(135deg, #ff1744, #d50000);
@@ -65,7 +95,7 @@ body {
     font-size: 1.1rem;
     padding: 1rem 0;
   }
-  .quote-block {
+  .card-face {
     font-size: 1.1rem;
   }
 }
