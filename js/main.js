@@ -146,8 +146,8 @@ document.addEventListener('DOMContentLoaded', () => {
                          `<div class="meaning">${k.meaning}</div>`;
         alphabetGrid.appendChild(card);
       });
-    } else if (type === 'hiragana') {
-      const groups = kanaData.hiragana.reduce((acc, k) => {
+    } else if (type === 'hiragana' || type === 'katakana') {
+      const groups = kanaData[type].reduce((acc, k) => {
         (acc[k.type] = acc[k.type] || []).push(k);
         return acc;
       }, {});
