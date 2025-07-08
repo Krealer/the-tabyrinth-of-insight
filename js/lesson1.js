@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let current = 0;
   let retryIndex = 0;
   let inRetry = false;
+  let quizMode = 'mix';
 
   let correctFirst = 0;
   let correctSecond = 0;
@@ -30,8 +31,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const retry = document.createElement('button');
     retry.className = 'btn retry-btn';
     retry.textContent = 'Retry';
-    retry.addEventListener('click', startQuiz);
+    retry.addEventListener('click', showModeOptions);
     lesson1Content.appendChild(retry);
+  }
+
+  function showModeOptions() {
+    lesson1Content.innerHTML = '';
+    const title = document.createElement('h3');
+    title.className = 'quiz-prompt';
+    title.textContent = 'Choose question style';
+    lesson1Content.appendChild(title);
+
+    const modes = [
+      { key: 'mix', label: 'Mix' },
+      { key: 'input', label: 'Typing Only' },
+      { key: 'mcq', label: 'Multiple Choice Only' }
+    ];
+    modes.forEach(m => {
+      const btn = document.createElement('button');
+      btn.className = 'btn mode-btn';
+      btn.textContent = m.label;
+      btn.addEventListener('click', () => startQuiz(m.key));
+      lesson1Content.appendChild(btn);
+    });
   }
 
   function handleSubmit(input, q, submitBtn, isRetry) {
@@ -97,6 +119,70 @@ document.addEventListener('DOMContentLoaded', () => {
     lesson1Content.appendChild(next);
   }
 
+  function handleChoice(btn, buttons, q, isRetry) {
+    if (btn.disabled) return;
+    buttons.forEach(b => b.disabled = true);
+    const user = btn.textContent.trim();
+    const correct = user.toLowerCase() === q.answer.toLowerCase();
+
+    if (correct) {
+      btn.classList.add('correct');
+      const msg = document.createElement('div');
+      msg.className = 'quiz-feedback correct';
+      msg.textContent = isRetry ? '✅ Correct on second attempt!' : '✅ Correct!';
+      lesson1Content.appendChild(msg);
+      if (isRetry) correctSecond++; else correctFirst++;
+    } else {
+      btn.classList.add('wrong');
+      const right = buttons.find(b => b.textContent.trim() === q.answer);
+      if (right) right.classList.add('correct');
+      const wrong = document.createElement('div');
+      wrong.className = 'quiz-feedback wrong';
+      wrong.textContent = `❌ Incorrect. Correct answer: ${q.answer}`;
+      lesson1Content.appendChild(wrong);
+      if (!isRetry) {
+        const retryNote = document.createElement('div');
+        retryNote.className = 'quiz-feedback';
+        retryNote.textContent = '🔁 You\u2019ll retry this question later.';
+        lesson1Content.appendChild(retryNote);
+        retryQueue.push(q);
+      } else {
+        const finalNote = document.createElement('div');
+        finalNote.className = 'quiz-feedback wrong';
+        finalNote.textContent = `Still incorrect. Final answer: ${q.answer}`;
+        lesson1Content.appendChild(finalNote);
+      }
+    }
+
+    const next = document.createElement('button');
+    next.className = 'btn next-btn';
+    const lastFirst = !inRetry && current === firstPass.length - 1;
+    const lastRetry = inRetry && retryIndex === retryQueue.length - 1;
+    next.textContent = (lastFirst && retryQueue.length === 0) || lastRetry ? 'Finish' : 'Next';
+    next.addEventListener('click', () => {
+      if (!inRetry) {
+        current++;
+        if (current < firstPass.length) {
+          showQuestion();
+        } else if (retryQueue.length > 0) {
+          inRetry = true;
+          retryIndex = 0;
+          showQuestion();
+        } else {
+          showScore();
+        }
+      } else {
+        retryIndex++;
+        if (retryIndex < retryQueue.length) {
+          showQuestion();
+        } else {
+          showScore();
+        }
+      }
+    });
+    lesson1Content.appendChild(next);
+  }
+
   function showQuestion() {
     lesson1Content.innerHTML = '';
     const q = inRetry ? retryQueue[retryIndex] : firstPass[current];
@@ -105,26 +191,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const promptEl = document.createElement('div');
     promptEl.className = 'quiz-prompt';
     promptEl.textContent = `What is ${q.prompt}?`;
-
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.className = 'quiz-input';
-    input.autofocus = true;
-
-    const submitBtn = document.createElement('button');
-    submitBtn.className = 'btn quiz-submit';
-    submitBtn.textContent = 'Submit';
-    submitBtn.addEventListener('click', () => handleSubmit(input, q, submitBtn, inRetry));
-    input.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') handleSubmit(input, q, submitBtn, inRetry);
-    });
-
     lesson1Content.appendChild(promptEl);
-    lesson1Content.appendChild(input);
-    lesson1Content.appendChild(submitBtn);
+
+    if (q.type === 'input') {
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'quiz-input';
+      input.autofocus = true;
+
+      const submitBtn = document.createElement('button');
+      submitBtn.className = 'btn quiz-submit';
+      submitBtn.textContent = 'Submit';
+      submitBtn.addEventListener('click', () => handleSubmit(input, q, submitBtn, inRetry));
+      input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleSubmit(input, q, submitBtn, inRetry);
+      });
+
+      lesson1Content.appendChild(input);
+      lesson1Content.appendChild(submitBtn);
+    } else if (q.type === 'multiple-choice') {
+      const buttons = [];
+      q.choices.forEach(choice => {
+        const b = document.createElement('button');
+        b.className = 'btn quiz-option';
+        b.textContent = choice;
+        b.addEventListener('click', () => handleChoice(b, buttons, q, inRetry));
+        buttons.push(b);
+        lesson1Content.appendChild(b);
+      });
+    }
   }
 
-  function startQuiz() {
+  function startQuiz(mode = 'mix') {
+    quizMode = mode;
     current = 0;
     retryIndex = 0;
     inRetry = false;
@@ -134,7 +233,10 @@ document.addEventListener('DOMContentLoaded', () => {
     lesson1Content.classList.remove('retry');
     loadQuestions()
       .then(qs => {
-        firstPass = qs.sort(() => Math.random() - 0.5);
+        let filtered = qs;
+        if (quizMode === 'input') filtered = qs.filter(q => q.type === 'input');
+        if (quizMode === 'mcq') filtered = qs.filter(q => q.type === 'multiple-choice');
+        firstPass = filtered.sort(() => Math.random() - 0.5);
         showQuestion();
       })
       .catch(err => {
@@ -143,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  window.startLesson1 = startQuiz;
+  window.startLesson1 = showModeOptions;
 
   lesson1BackBtn.addEventListener('click', () => {
     lesson1View.classList.add('fade-out');

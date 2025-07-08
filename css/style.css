@@ -256,3 +256,17 @@ body {
   padding: 1vh;
   border-radius: 6px;
 }
+
+/* Multiple choice option buttons */
+.quiz-option {
+  background: #1e1e1e;
+  margin-bottom: 1vh;
+}
+
+.quiz-option.correct {
+  background: #2e7d32;
+}
+
+.quiz-option.wrong {
+  background: #c62828;
+}
