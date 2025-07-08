@@ -7,11 +7,30 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('data/quotes.json')
     .then(res => res.json())
     .then(data => {
-      data.forEach(text => {
-        const div = document.createElement('div');
-        div.className = 'quote-block';
-        div.textContent = text;
-        quotesView.insertBefore(div, backBtn);
+      data.forEach((text, idx) => {
+        const card = document.createElement('div');
+        card.className = 'quote-card';
+
+        const inner = document.createElement('div');
+        inner.className = 'card-inner';
+
+        const front = document.createElement('div');
+        front.className = 'card-face card-front';
+        front.textContent = `Day ${idx + 1}`;
+
+        const back = document.createElement('div');
+        back.className = 'card-face card-back';
+        back.textContent = text;
+
+        inner.appendChild(front);
+        inner.appendChild(back);
+        card.appendChild(inner);
+
+        card.addEventListener('click', () => {
+          card.classList.toggle('flip');
+        });
+
+        quotesView.insertBefore(card, backBtn);
       });
     });
 
