@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let kanaData = { hiragana: [], katakana: [] };
   let kanjiData = [];
+  let activeSet = 'hiragana';
 
   fetch('data/quotes.json')
     .then(res => res.json())
@@ -44,7 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         quotesView.insertBefore(card, backBtn);
       });
-    });
+    })
+    .catch(err => console.error('Failed to load quotes:', err));
 
   fetch('data/lessons.json')
     .then(res => res.json())
@@ -63,19 +65,28 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         }
       });
-    });
+    })
+    .catch(err => console.error('Failed to load lessons:', err));
 
   fetch('data/kana.json')
     .then(res => res.json())
     .then(data => {
       kanaData = data;
-    });
+      if (alphabetView.style.display !== 'none' && alphabetGrid.textContent === 'Loading...') {
+        showSet(activeSet);
+      }
+    })
+    .catch(err => console.error('Failed to load kana:', err));
 
   fetch('data/kanji.json')
     .then(res => res.json())
     .then(data => {
       kanjiData = data.kanji;
-    });
+      if (alphabetView.style.display !== 'none' && alphabetGrid.textContent === 'Loading...') {
+        showSet(activeSet);
+      }
+    })
+    .catch(err => console.error('Failed to load kanji:', err));
 
   function hideAllViews() {
     wrapper.style.display = 'none';
@@ -97,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   backBtn.addEventListener('click', () => {
+    document.querySelectorAll('.quote-card.flip').forEach(c => c.classList.remove('flip'));
     hideAllViews();
     wrapper.style.display = 'flex';
   });
@@ -131,12 +143,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showSet(type) {
+    activeSet = type;
     clearActive();
     if (type === 'hiragana') hBtn.classList.add('active');
     if (type === 'katakana') kBtn.classList.add('active');
     if (type === 'kanji') kanjiBtn.classList.add('active');
 
     alphabetGrid.innerHTML = '';
+
+    if (type === 'kanji' && kanjiData.length === 0) {
+      alphabetGrid.textContent = 'Loading...';
+      return;
+    }
+    if ((type === 'hiragana' || type === 'katakana') && kanaData[type].length === 0) {
+      alphabetGrid.textContent = 'Loading...';
+      return;
+    }
     if (type === 'kanji') {
       const title = document.createElement('h3');
       title.className = 'kana-section-title';
