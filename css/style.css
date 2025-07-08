@@ -100,6 +100,59 @@ body {
 .back {
   background: linear-gradient(135deg, #ff1744, #d50000);
 }
+
+#alphabetView {
+  display: none;
+  flex-direction: column;
+  gap: 2vh;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.alphabet-nav {
+  position: sticky;
+  top: 0;
+  background: #121212;
+  display: flex;
+  gap: 1vw;
+  z-index: 5;
+}
+
+.toggle {
+  flex: 1;
+  padding: 2vh 0;
+  font-size: 1rem;
+  background: #1e1e1e;
+}
+
+.toggle.active {
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+  filter: brightness(1.2);
+}
+
+.alphabet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 1vh;
+}
+
+.char-card {
+  background: #1e1e1e;
+  border-radius: 8px;
+  padding: 1vh;
+  text-align: center;
+}
+.char-card .kana {
+  font-size: 1.5rem;
+}
+.char-card .romaji {
+  font-size: 0.9rem;
+  margin-top: 0.5vh;
+}
+.char-card .meaning {
+  font-size: 0.8rem;
+  margin-top: 0.5vh;
+}
 @media (min-width: 481px) {
   .btn {
     font-size: 1.1rem;
