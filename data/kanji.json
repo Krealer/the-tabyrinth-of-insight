@@ -1,16 +1,136 @@
 {
   "kanji": [
-    { "character": "日", "reading": "nichi / hi", "meaning": "sun, day" },
-    { "character": "月", "reading": "getsu / tsuki", "meaning": "moon, month" },
-    { "character": "山", "reading": "san / yama", "meaning": "mountain" },
-    { "character": "水", "reading": "sui / mizu", "meaning": "water" },
-    { "character": "火", "reading": "ka / hi", "meaning": "fire" },
-    { "character": "木", "reading": "moku / ki", "meaning": "tree" },
-    { "character": "金", "reading": "kin / kane", "meaning": "gold, money" },
-    { "character": "人", "reading": "jin / hito", "meaning": "person" },
-    { "character": "大", "reading": "dai / oo", "meaning": "big" },
-    { "character": "小", "reading": "shou / chii", "meaning": "small" },
-    { "character": "土", "reading": "do / tsuchi", "meaning": "earth" },
-    { "character": "川", "reading": "sen / kawa", "meaning": "river" }
+    {
+      "character": "日",
+      "readings": ["nichi", "hi"],
+      "meaning": "sun, day",
+      "grade": 1
+    },
+    {
+      "character": "月",
+      "readings": ["getsu", "tsuki"],
+      "meaning": "moon, month",
+      "grade": 1
+    },
+    {
+      "character": "山",
+      "readings": ["san", "yama"],
+      "meaning": "mountain",
+      "grade": 1
+    },
+    {
+      "character": "水",
+      "readings": ["mizu"],
+      "meaning": "water",
+      "grade": 1
+    },
+    {
+      "character": "火",
+      "readings": ["hi"],
+      "meaning": "fire",
+      "grade": 1
+    },
+    {
+      "character": "木",
+      "readings": ["ki"],
+      "meaning": "tree, wood",
+      "grade": 1
+    },
+    {
+      "character": "金",
+      "readings": ["kin", "kane"],
+      "meaning": "gold, money",
+      "grade": 1
+    },
+    {
+      "character": "人",
+      "readings": ["hito"],
+      "meaning": "person",
+      "grade": 1
+    },
+    {
+      "character": "大",
+      "readings": ["dai", "ookii"],
+      "meaning": "big",
+      "grade": 1
+    },
+    {
+      "character": "小",
+      "readings": ["shou", "chiisai"],
+      "meaning": "small",
+      "grade": 1
+    },
+    {
+      "character": "上",
+      "readings": ["ue"],
+      "meaning": "up",
+      "grade": 1
+    },
+    {
+      "character": "下",
+      "readings": ["shita"],
+      "meaning": "down",
+      "grade": 1
+    },
+    {
+      "character": "中",
+      "readings": ["naka"],
+      "meaning": "inside, middle",
+      "grade": 1
+    },
+    {
+      "character": "右",
+      "readings": ["migi"],
+      "meaning": "right",
+      "grade": 1
+    },
+    {
+      "character": "左",
+      "readings": ["hidari"],
+      "meaning": "left",
+      "grade": 1
+    },
+    {
+      "character": "生",
+      "readings": ["sei", "ikiru"],
+      "meaning": "life, to live",
+      "grade": 1
+    },
+    {
+      "character": "学",
+      "readings": ["gaku", "manabu"],
+      "meaning": "study, learning",
+      "grade": 1
+    },
+    {
+      "character": "校",
+      "readings": ["kou"],
+      "meaning": "school",
+      "grade": 1
+    },
+    {
+      "character": "先",
+      "readings": ["sen"],
+      "meaning": "ahead, previous",
+      "grade": 1
+    },
+    {
+      "character": "年",
+      "readings": ["nen", "toshi"],
+      "meaning": "year",
+      "grade": 1
+    },
+    {
+      "character": "土",
+      "readings": ["do", "tsuchi"],
+      "meaning": "earth",
+      "grade": 1
+    },
+    {
+      "character": "川",
+      "readings": ["kawa"],
+      "meaning": "river",
+      "grade": 1
+    }
   ]
 }
