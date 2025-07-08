@@ -4,62 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Language &amp; Inspiration</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: #121212;
-      color: #fff;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      width: 90vw;
-      max-width: 400px;
-      gap: 5vh;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 4vh 0;
-      font-size: 1.2rem;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      transition: filter 0.3s ease, transform 0.1s ease;
-    }
-    .btn:hover {
-      filter: brightness(1.1);
-    }
-    .btn:active {
-      transform: scale(0.98);
-    }
-    .learn {
-      background: linear-gradient(135deg, #00e676, #00c853);
-    }
-    .quote {
-      background: linear-gradient(135deg, #2979ff, #651fff);
-    }
-    @media (min-width: 481px) {
-      .btn {
-        font-size: 1.1rem;
-        padding: 1rem 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="wrapper">
     <a href="#" class="btn learn">Learn Japanese</a>
     <a href="#" class="btn quote">Daily Quote</a>
   </div>
+  <div id="quotesView" class="wrapper">
+    <button id="backBtn" class="btn back">Back</button>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 </html>
