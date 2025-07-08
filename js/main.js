@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lessonsView = document.getElementById('lessonsView');
   const backBtn = document.getElementById('backBtn');
   const lessonBackBtn = document.getElementById('lessonBackBtn');
+  const lesson1View = document.getElementById('lesson1View');
   const alphabetView = document.getElementById('alphabetView');
   const alphabetGrid = document.getElementById('alphabetGrid');
   const alphabetBackBtn = document.getElementById('alphabetBackBtn');
@@ -63,6 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
             alphabetView.style.display = 'flex';
             showSet('hiragana');
           });
+        } else if (lesson.title === 'Lesson 1') {
+          btn.addEventListener('click', () => {
+            hideAllViews();
+            lesson1View.style.display = 'flex';
+            if (typeof startLesson1 === 'function') startLesson1();
+          });
         }
       });
     })
@@ -92,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapper.style.display = 'none';
     quotesView.style.display = 'none';
     lessonsView.style.display = 'none';
+    lesson1View.style.display = 'none';
     alphabetView.style.display = 'none';
   }
 

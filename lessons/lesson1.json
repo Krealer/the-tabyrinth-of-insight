@@ -1,0 +1,12 @@
+[
+  {"type": "kana-to-romaji", "prompt": "あ", "answer": "a"},
+  {"type": "kana-to-romaji", "prompt": "く", "answer": "ku"},
+  {"type": "kana-to-romaji", "prompt": "て", "answer": "te"},
+  {"type": "kana-to-romaji", "prompt": "ね", "answer": "ne"},
+  {"type": "kana-to-romaji", "prompt": "も", "answer": "mo"},
+  {"type": "romaji-to-kana", "prompt": "ka", "answer": "か"},
+  {"type": "romaji-to-kana", "prompt": "su", "answer": "す"},
+  {"type": "romaji-to-kana", "prompt": "ri", "answer": "り"},
+  {"type": "romaji-to-kana", "prompt": "se", "answer": "せ"},
+  {"type": "romaji-to-kana", "prompt": "nu", "answer": "ぬ"}
+]

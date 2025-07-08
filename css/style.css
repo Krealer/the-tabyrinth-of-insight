@@ -215,3 +215,36 @@ body {
 @keyframes fadeOut {
   to { opacity: 0; }
 }
+
+/* Lesson quiz styles */
+.quiz-prompt {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.quiz-input {
+  width: 100%;
+  padding: 1vh;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  background: #1e1e1e;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  margin-bottom: 1vh;
+}
+
+.quiz-feedback {
+  text-align: center;
+  margin: 1vh 0;
+  font-weight: bold;
+}
+
+.quiz-feedback.correct {
+  color: #00e676;
+}
+
+.quiz-feedback.wrong {
+  color: #ff5252;
+}
