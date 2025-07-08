@@ -233,6 +233,7 @@ body {
   border-radius: 6px;
   color: #fff;
   margin-bottom: 1vh;
+  text-align: center;
 }
 
 .quiz-feedback {
@@ -247,4 +248,11 @@ body {
 
 .quiz-feedback.wrong {
   color: #ff5252;
+}
+
+/* Highlight style for retry questions */
+.retry .quiz-prompt {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1vh;
+  border-radius: 6px;
 }
