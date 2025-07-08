@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const backBtn = document.getElementById('backBtn');
   const lessonBackBtn = document.getElementById('lessonBackBtn');
   const lesson1View = document.getElementById('lesson1View');
+  const lesson2View = document.getElementById('lesson2View');
   const alphabetView = document.getElementById('alphabetView');
   const alphabetGrid = document.getElementById('alphabetGrid');
   const alphabetBackBtn = document.getElementById('alphabetBackBtn');
@@ -70,6 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
             lesson1View.style.display = 'flex';
             if (typeof startLesson1 === 'function') startLesson1();
           });
+        } else if (lesson.title === 'Lesson 2') {
+          btn.addEventListener('click', () => {
+            hideAllViews();
+            lesson2View.style.display = 'flex';
+            if (typeof startLesson2 === 'function') startLesson2();
+          });
         }
       });
     })
@@ -100,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     quotesView.style.display = 'none';
     lessonsView.style.display = 'none';
     lesson1View.style.display = 'none';
+    lesson2View.style.display = 'none';
     alphabetView.style.display = 'none';
   }
 
