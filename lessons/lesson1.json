@@ -1,12 +1,17 @@
 [
-  {"type": "kana-to-romaji", "prompt": "あ", "answer": "a"},
-  {"type": "kana-to-romaji", "prompt": "く", "answer": "ku"},
-  {"type": "kana-to-romaji", "prompt": "て", "answer": "te"},
-  {"type": "kana-to-romaji", "prompt": "ね", "answer": "ne"},
-  {"type": "kana-to-romaji", "prompt": "も", "answer": "mo"},
-  {"type": "romaji-to-kana", "prompt": "ka", "answer": "か"},
-  {"type": "romaji-to-kana", "prompt": "su", "answer": "す"},
-  {"type": "romaji-to-kana", "prompt": "ri", "answer": "り"},
-  {"type": "romaji-to-kana", "prompt": "se", "answer": "せ"},
-  {"type": "romaji-to-kana", "prompt": "nu", "answer": "ぬ"}
+  {"type": "input", "direction": "kana-to-romaji", "prompt": "あ", "answer": "a"},
+  {"type": "input", "direction": "kana-to-romaji", "prompt": "く", "answer": "ku"},
+  {"type": "input", "direction": "kana-to-romaji", "prompt": "て", "answer": "te"},
+  {"type": "input", "direction": "kana-to-romaji", "prompt": "ね", "answer": "ne"},
+  {"type": "input", "direction": "kana-to-romaji", "prompt": "も", "answer": "mo"},
+  {"type": "input", "direction": "romaji-to-kana", "prompt": "ka", "answer": "か"},
+  {"type": "input", "direction": "romaji-to-kana", "prompt": "su", "answer": "す"},
+  {"type": "input", "direction": "romaji-to-kana", "prompt": "ri", "answer": "り"},
+  {"type": "input", "direction": "romaji-to-kana", "prompt": "se", "answer": "せ"},
+  {"type": "input", "direction": "romaji-to-kana", "prompt": "nu", "answer": "ぬ"},
+  {"type": "multiple-choice", "direction": "kana-to-romaji", "prompt": "く", "answer": "ku", "choices": ["ki", "ku", "ko", "ka"]},
+  {"type": "multiple-choice", "direction": "kana-to-romaji", "prompt": "あ", "answer": "a", "choices": ["e", "o", "a", "i"]},
+  {"type": "multiple-choice", "direction": "kana-to-romaji", "prompt": "も", "answer": "mo", "choices": ["mu", "ma", "mi", "mo"]},
+  {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "so", "answer": "そ", "choices": ["さ", "そ", "す", "せ"]},
+  {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "ri", "answer": "り", "choices": ["れ", "ら", "り", "る"]}
 ]
