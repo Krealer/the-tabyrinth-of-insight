@@ -3,50 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Labyrinth Landing</title>
+  <title>Language &amp; Inspiration</title>
   <style>
     html, body {
-      height: 100%;
       margin: 0;
       padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f0f0f0;
-      font-family: Arial, Helvetica, sans-serif;
+      height: 100%;
+      background: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
     }
-    .container {
-      text-align: center;
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 90vw;
+      max-width: 400px;
+      gap: 5vh;
     }
     .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      margin: 0.5rem;
+      display: block;
+      width: 100%;
+      padding: 4vh 0;
       font-size: 1.2rem;
       color: #fff;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      border: none;
-      border-radius: 8px;
       text-decoration: none;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      transition: filter 0.3s ease, transform 0.1s ease;
     }
     .btn:hover {
-      background: linear-gradient(135deg, #5a67d8, #6b46c1);
-      transform: translateY(-2px);
+      filter: brightness(1.1);
     }
-    @media (max-width: 600px) {
+    .btn:active {
+      transform: scale(0.98);
+    }
+    .learn {
+      background: linear-gradient(135deg, #00e676, #00c853);
+    }
+    .quote {
+      background: linear-gradient(135deg, #2979ff, #651fff);
+    }
+    @media (min-width: 481px) {
       .btn {
-        width: 80%;
-        font-size: 1rem;
+        font-size: 1.1rem;
+        padding: 1rem 0;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <a href="#" class="btn">Learn Japanese</a>
-    <a href="#" class="btn">Daily Quote</a>
+  <div class="wrapper">
+    <a href="#" class="btn learn">Learn Japanese</a>
+    <a href="#" class="btn quote">Daily Quote</a>
   </div>
 </body>
 </html>
