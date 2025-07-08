@@ -162,3 +162,15 @@ body {
     font-size: 1.1rem;
   }
 }
+
+.hidden {
+  display: none !important;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; }
+}

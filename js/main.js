@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
         lessonsView.insertBefore(btn, lessonBackBtn);
         if (lesson.title === 'Alphabet') {
           btn.addEventListener('click', () => {
-            lessonsView.style.display = 'none';
+            hideAllViews();
+            resetAlphabet();
             alphabetView.style.display = 'flex';
             showSet('hiragana');
           });
@@ -76,31 +77,49 @@ document.addEventListener('DOMContentLoaded', () => {
       kanjiData = data.kanji;
     });
 
+  function hideAllViews() {
+    wrapper.style.display = 'none';
+    quotesView.style.display = 'none';
+    lessonsView.style.display = 'none';
+    alphabetView.style.display = 'none';
+  }
+
+  function resetAlphabet() {
+    alphabetGrid.innerHTML = '';
+    clearActive();
+    alphabetView.scrollTop = 0;
+  }
+
   quoteBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    wrapper.style.display = 'none';
+    hideAllViews();
     quotesView.style.display = 'flex';
   });
 
   backBtn.addEventListener('click', () => {
-    quotesView.style.display = 'none';
+    hideAllViews();
     wrapper.style.display = 'flex';
   });
 
   learnBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    wrapper.style.display = 'none';
+    hideAllViews();
     lessonsView.style.display = 'flex';
   });
 
   lessonBackBtn.addEventListener('click', () => {
-    lessonsView.style.display = 'none';
+    hideAllViews();
     wrapper.style.display = 'flex';
   });
 
   alphabetBackBtn.addEventListener('click', () => {
-    alphabetView.style.display = 'none';
-    lessonsView.style.display = 'flex';
+    alphabetView.classList.add('fade-out');
+    setTimeout(() => {
+      resetAlphabet();
+      hideAllViews();
+      lessonsView.style.display = 'flex';
+      alphabetView.classList.remove('fade-out');
+    }, 300);
   });
 
   hBtn.addEventListener('click', () => showSet('hiragana'));
