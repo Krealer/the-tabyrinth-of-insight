@@ -3,9 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>labyrinth</title>
+  <title>Labyrinth Landing</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0f0f0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .container {
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      margin: 0.5rem;
+      font-size: 1.2rem;
+      color: #fff;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      background: linear-gradient(135deg, #5a67d8, #6b46c1);
+      transform: translateY(-2px);
+    }
+    @media (max-width: 600px) {
+      .btn {
+        width: 80%;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  
+  <div class="container">
+    <a href="#" class="btn">Learn Japanese</a>
+    <a href="#" class="btn">Daily Quote</a>
+  </div>
 </body>
 </html>
