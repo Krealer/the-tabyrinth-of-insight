@@ -2,13 +2,15 @@
   "kanji": [
     { "character": "日", "reading": "nichi / hi", "meaning": "sun, day" },
     { "character": "月", "reading": "getsu / tsuki", "meaning": "moon, month" },
-    { "character": "火", "reading": "ka / hi", "meaning": "fire" },
+    { "character": "山", "reading": "san / yama", "meaning": "mountain" },
     { "character": "水", "reading": "sui / mizu", "meaning": "water" },
+    { "character": "火", "reading": "ka / hi", "meaning": "fire" },
     { "character": "木", "reading": "moku / ki", "meaning": "tree" },
     { "character": "金", "reading": "kin / kane", "meaning": "gold, money" },
+    { "character": "人", "reading": "jin / hito", "meaning": "person" },
+    { "character": "大", "reading": "dai / oo", "meaning": "big" },
+    { "character": "小", "reading": "shou / chii", "meaning": "small" },
     { "character": "土", "reading": "do / tsuchi", "meaning": "earth" },
-    { "character": "山", "reading": "san / yama", "meaning": "mountain" },
-    { "character": "川", "reading": "sen / kawa", "meaning": "river" },
-    { "character": "人", "reading": "jin / hito", "meaning": "person" }
+    { "character": "川", "reading": "sen / kawa", "meaning": "river" }
   ]
 }
