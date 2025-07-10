@@ -250,6 +250,9 @@
 
   window.loadLesson = function(lessonData, opts = {}) {
     cleanup();
+    if (Array.isArray(lessonData)) {
+      lessonData = { questions: lessonData };
+    }
     state.lessonData = lessonData;
     state.viewEl = opts.viewEl || document.getElementById('lessonView');
     state.contentEl = opts.contentEl || document.getElementById('lessonContent');

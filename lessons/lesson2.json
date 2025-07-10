@@ -1,12 +1,15 @@
-[
-  {"type": "input", "direction": "kana-to-romaji", "prompt": "カ", "answer": "ka"},
-  {"type": "input", "direction": "kana-to-romaji", "prompt": "ツ", "answer": "tsu"},
-  {"type": "input", "direction": "kana-to-romaji", "prompt": "ノ", "answer": "no"},
-  {"type": "input", "direction": "romaji-to-kana", "prompt": "me", "answer": "メ"},
-  {"type": "input", "direction": "romaji-to-kana", "prompt": "ro", "answer": "ロ"},
-  {"type": "multiple-choice", "direction": "kana-to-romaji", "prompt": "セ", "answer": "se", "choices": ["se", "so", "sa", "ne"]},
-  {"type": "multiple-choice", "direction": "kana-to-romaji", "prompt": "ヨ", "answer": "yo", "choices": ["ya", "yu", "yo", "wa"]},
-  {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "ta", "answer": "タ", "choices": ["チ", "タ", "テ", "ナ"]},
-  {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "fu", "answer": "フ", "choices": ["フ", "ウ", "ワ", "ケ"]},
-  {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "ne", "answer": "ネ", "choices": ["ネ", "レ", "メ", "テ"]}
-]
+{
+  "title": "Lesson 2: Katakana",
+  "questions": [
+    {"type": "input", "direction": "kana-to-romaji", "prompt": "カ", "answer": "ka"},
+    {"type": "input", "direction": "kana-to-romaji", "prompt": "ツ", "answer": "tsu"},
+    {"type": "input", "direction": "kana-to-romaji", "prompt": "ノ", "answer": "no"},
+    {"type": "input", "direction": "romaji-to-kana", "prompt": "me", "answer": "メ"},
+    {"type": "input", "direction": "romaji-to-kana", "prompt": "ro", "answer": "ロ"},
+    {"type": "multiple-choice", "direction": "kana-to-romaji", "prompt": "セ", "answer": "se", "choices": ["se", "so", "sa", "ne"]},
+    {"type": "multiple-choice", "direction": "kana-to-romaji", "prompt": "ヨ", "answer": "yo", "choices": ["ya", "yu", "yo", "wa"]},
+    {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "ta", "answer": "タ", "choices": ["チ", "タ", "テ", "ナ"]},
+    {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "fu", "answer": "フ", "choices": ["フ", "ウ", "ワ", "ケ"]},
+    {"type": "multiple-choice", "direction": "romaji-to-kana", "prompt": "ne", "answer": "ネ", "choices": ["ネ", "レ", "メ", "テ"]}
+  ]
+}

@@ -4,6 +4,15 @@
   const lessonContent = document.getElementById('lessonContent');
   const quizBackBtn = document.getElementById('quizBackBtn');
   const lessonsView = document.getElementById('lessonsView');
+  const lesson2Btn = document.getElementById('lesson2Btn');
+
+  if (lesson2Btn) {
+    lesson2Btn.addEventListener('click', () => {
+      fetch('lessons/lesson2.json')
+        .then(res => res.json())
+        .then(data => loadLesson(data));
+    });
+  }
 
   window.startLesson = function(path) {
     fetch(path)
