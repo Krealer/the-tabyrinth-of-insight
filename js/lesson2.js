@@ -9,12 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
   let current = 0;
   let retryIndex = 0;
   let inRetry = false;
+  let quizMode = 'mix';
 
   let correctFirst = 0;
   let correctSecond = 0;
 
   function loadQuestions() {
     return fetch('lessons/lesson2.json').then(res => res.json());
+  }
+
+  // PATCH: normalize user input and answers
+  function normalizeInput(str) {
+    return str.trim().toLowerCase();
   }
 
   function showScore() {
@@ -30,16 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const retry = document.createElement('button');
     retry.className = 'btn retry-btn';
     retry.textContent = 'Retry';
-    retry.addEventListener('click', startQuiz);
+    retry.addEventListener('click', showModeOptions);
     lesson2Content.appendChild(retry);
   }
 
   function handleSubmit(input, q, submitBtn, isRetry) {
     if (input.disabled) return;
-    const user = input.value.trim();
+    const user = normalizeInput(input.value);
     if (!user) return;
 
-    const correct = user.toLowerCase() === q.answer.toLowerCase();
+    const correct = user === normalizeInput(q.answer);
     input.disabled = true;
     submitBtn.disabled = true;
 
@@ -97,11 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
     lesson2Content.appendChild(next);
   }
 
+  // PATCH: handle multiple choice interactions
   function handleChoice(btn, buttons, q, isRetry) {
     if (btn.disabled) return;
-    buttons.forEach(b => b.disabled = true);
-    const user = btn.textContent.trim();
-    const correct = user.toLowerCase() === q.answer.toLowerCase();
+    buttons.forEach(b => (b.disabled = true));
+    const user = normalizeInput(btn.textContent);
+    const correct = user === normalizeInput(q.answer);
 
     if (correct) {
       btn.classList.add('correct');
@@ -112,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isRetry) correctSecond++; else correctFirst++;
     } else {
       btn.classList.add('wrong');
-      const right = buttons.find(b => b.textContent.trim() === q.answer);
+      const right = buttons.find(b => normalizeInput(b.textContent) === normalizeInput(q.answer));
       if (right) right.classList.add('correct');
       const wrong = document.createElement('div');
       wrong.className = 'quiz-feedback wrong';
@@ -161,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lesson2Content.appendChild(next);
   }
 
+
   function showQuestion() {
     lesson2Content.innerHTML = '';
     const q = inRetry ? retryQueue[retryIndex] : firstPass[current];
@@ -189,7 +197,15 @@ document.addEventListener('DOMContentLoaded', () => {
       lesson2Content.appendChild(submitBtn);
     } else if (q.type === 'multiple-choice') {
       const buttons = [];
-      q.choices.forEach(choice => {
+      const choices = Array.isArray(q.choices) ? [...new Set(q.choices)] : [];
+      // BUG FIX: guard against empty or invalid choice arrays
+      if (choices.length === 0) {
+        const err = document.createElement('div');
+        err.textContent = 'Question has no choices';
+        lesson2Content.appendChild(err);
+        return;
+      }
+      choices.forEach(choice => {
         const b = document.createElement('button');
         b.className = 'btn quiz-option';
         b.textContent = choice;
@@ -197,10 +213,16 @@ document.addEventListener('DOMContentLoaded', () => {
         buttons.push(b);
         lesson2Content.appendChild(b);
       });
+    } else {
+      // BUG FIX: handle unsupported question types
+      const err = document.createElement('div');
+      err.textContent = 'Unsupported question type.';
+      lesson2Content.appendChild(err);
     }
   }
 
-  function startQuiz() {
+  function startQuiz(mode = 'mix') {
+    quizMode = mode; // PATCH: allow question style selection
     current = 0;
     retryIndex = 0;
     inRetry = false;
@@ -210,7 +232,10 @@ document.addEventListener('DOMContentLoaded', () => {
     lesson2Content.classList.remove('retry');
     loadQuestions()
       .then(qs => {
-        firstPass = qs.sort(() => Math.random() - 0.5);
+        let filtered = qs;
+        if (quizMode === 'input') filtered = qs.filter(q => q.type === 'input');
+        if (quizMode === 'mcq') filtered = qs.filter(q => q.type === 'multiple-choice');
+        firstPass = filtered.sort(() => Math.random() - 0.5);
         showQuestion();
       })
       .catch(err => {
@@ -219,7 +244,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  window.startLesson2 = startQuiz;
+  // PATCH: choose between input, mcq or mix modes
+  function showModeOptions() {
+    lesson2Content.innerHTML = '';
+    const title = document.createElement('h3');
+    title.className = 'quiz-prompt';
+    title.textContent = 'Choose question style';
+    lesson2Content.appendChild(title);
+
+    const modes = [
+      { key: 'mix', label: 'Mix' },
+      { key: 'input', label: 'Typing Only' },
+      { key: 'mcq', label: 'Multiple Choice Only' }
+    ];
+    modes.forEach(m => {
+      const btn = document.createElement('button');
+      btn.className = 'btn mode-btn';
+      btn.textContent = m.label;
+      btn.addEventListener('click', () => startQuiz(m.key));
+      lesson2Content.appendChild(btn);
+    });
+  }
+
+  window.startLesson2 = showModeOptions;
 
   lesson2BackBtn.addEventListener('click', () => {
     lesson2View.classList.add('fade-out');
