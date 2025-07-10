@@ -1,7 +1,8 @@
 [
-  "A name they forget, a presence they ignore, until it’s far too late.",
-  "When your name means nothing, you’re free to become anything.",
-  "The weaker they think I am, the more dangerous I become.",
-  "Mediocrity is my masterpiece; no one suspects the invisible king.",
-  "A nobody, they said. Yet none remember how they lost."
+  {"day": 1, "quote": "A name they forget, a presence they ignore, until it’s far too late."},
+  {"day": 2, "quote": "When your name means nothing, you’re free to become anything."},
+  {"day": 3, "quote": "The weaker they think I am, the more dangerous I become."},
+  {"day": 4, "quote": "Mediocrity is my masterpiece; no one suspects the invisible king."},
+  {"day": 5, "quote": "A nobody, they said. Yet none remember how they lost."},
+  {"day": 6, "quote": "No past. No future. Just the mission and the mask."}
 ]
