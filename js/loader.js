@@ -5,12 +5,57 @@
   const quizBackBtn = document.getElementById('quizBackBtn');
   const lessonsView = document.getElementById('lessonsView');
   const lesson2Btn = document.getElementById('lesson2Btn');
+  const modeSelect = document.getElementById('modeSelect');
+  const modeForm = document.getElementById('modeForm');
+  const modeStartBtn = document.getElementById('modeStartBtn');
+  const modeBackBtn = document.getElementById('modeBackBtn');
+
+  function getSelectedMode() {
+    const checked = modeForm.querySelector('input[name="mode"]:checked');
+    return checked ? checked.value : 'mixed';
+  }
+
+  function showModeSelector() {
+    lessonsView.style.display = 'none';
+    modeSelect.style.display = 'flex';
+  }
+
+  function hideModeSelector() {
+    modeSelect.style.display = 'none';
+    lessonsView.style.display = 'flex';
+  }
 
   if (lesson2Btn) {
-    lesson2Btn.addEventListener('click', () => {
+    lesson2Btn.addEventListener('click', showModeSelector);
+  }
+
+  if (modeBackBtn) modeBackBtn.addEventListener('click', hideModeSelector);
+
+  if (modeStartBtn) {
+    modeStartBtn.addEventListener('click', () => {
       fetch('lessons/lesson2.json')
         .then(res => res.json())
-        .then(data => loadLesson(data));
+        .then(lesson => {
+          const selected = getSelectedMode();
+          const filtered = lesson.questions.filter(q =>
+            selected === 'mixed' ? true : q.type === selected
+          );
+          hideModeSelector();
+          loadLesson({ title: lesson.title, questions: filtered }, {
+            viewEl: lessonView,
+            contentEl: lessonContent,
+            backBtn: quizBackBtn,
+            onExit: () => {
+              lessonsView.style.display = 'flex';
+            },
+            selectedMode: selected === 'mixed' ? 'mix' : selected === 'multiple-choice' ? 'mcq' : 'input'
+          });
+        })
+        .catch(err => {
+          console.error('Failed to load lesson:', err);
+          lessonContent.textContent = 'Failed to load lesson.';
+          lessonView.style.display = 'flex';
+        });
     });
   }
 

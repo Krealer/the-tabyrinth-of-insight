@@ -22,6 +22,16 @@
     <div id="lessonContent"></div>
     <button id="quizBackBtn" class="btn back">Back</button>
   </div>
+  <div id="modeSelect" class="wrapper" style="display:none;">
+    <h3 class="quiz-prompt">Choose your answer mode</h3>
+    <form id="modeForm">
+      <label><input type="radio" name="mode" value="mixed" checked /> Mixed</label>
+      <label><input type="radio" name="mode" value="input" /> Typing Only</label>
+      <label><input type="radio" name="mode" value="multiple-choice" /> Multiple Choice Only</label>
+    </form>
+    <button id="modeStartBtn" class="btn">Start</button>
+    <button id="modeBackBtn" class="btn back">Back</button>
+  </div>
   <div id="alphabetView" class="wrapper">
     <div class="alphabet-nav">
       <button id="hiraganaBtn" class="btn toggle active">Hiragana</button>

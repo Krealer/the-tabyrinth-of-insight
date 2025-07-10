@@ -211,6 +211,8 @@
   }
 
   function startQuiz(mode = 'mix') {
+    if (mode === 'mixed') mode = 'mix';
+    if (mode === 'multiple-choice') mode = 'mcq';
     state.quizMode = mode;
     state.current = 0;
     state.retryIndex = 0;
@@ -272,6 +274,10 @@
     }
 
     if (state.viewEl) state.viewEl.style.display = 'flex';
-    showModeOptions();
+    if (opts.selectedMode) {
+      startQuiz(opts.selectedMode);
+    } else {
+      showModeOptions();
+    }
   };
 })();
