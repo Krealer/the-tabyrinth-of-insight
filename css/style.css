@@ -270,3 +270,12 @@ body {
 .quiz-option.wrong {
   background: #c62828;
 }
+
+/* Mode selection view */
+#modeSelect label {
+  display: block;
+  margin: 1vh 0;
+}
+#modeSelect form {
+  margin-bottom: 2vh;
+}
