@@ -22,7 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('data/quotes.json')
     .then(res => res.json())
     .then(data => {
-      data.forEach((text, idx) => {
+      data.forEach((entry, idx) => {
+        const day = entry.day || idx + 1;
+        const text = entry.quote || entry;
+
         const card = document.createElement('div');
         card.className = 'quote-card';
 
@@ -31,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const front = document.createElement('div');
         front.className = 'card-face card-front';
-        front.textContent = `Day ${idx + 1}`;
+        front.textContent = `Day ${day}`;
 
         const back = document.createElement('div');
         back.className = 'card-face card-back';
