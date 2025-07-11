@@ -250,6 +250,13 @@ body {
   color: #ff5252;
 }
 
+.quiz-meaning {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 0.5vh;
+}
+
 /* Highlight style for retry questions */
 .retry .quiz-prompt {
   background: rgba(255, 255, 255, 0.1);

@@ -107,6 +107,13 @@
       }
     }
 
+    if (q.meaning) {
+      const meaning = document.createElement('div');
+      meaning.className = 'quiz-meaning';
+      meaning.textContent = `Meaning: ${q.meaning}`;
+      state.contentEl.appendChild(meaning);
+    }
+
     const next = document.createElement('button');
     next.className = 'btn next-btn';
     const lastFirst = !state.inRetry && state.current === state.firstPass.length - 1;
@@ -151,6 +158,13 @@
       }
     }
 
+    if (q.meaning) {
+      const meaning = document.createElement('div');
+      meaning.className = 'quiz-meaning';
+      meaning.textContent = `Meaning: ${q.meaning}`;
+      state.contentEl.appendChild(meaning);
+    }
+
     const next = document.createElement('button');
     next.className = 'btn next-btn';
     const lastFirst = !state.inRetry && state.current === state.firstPass.length - 1;
@@ -167,7 +181,7 @@
 
     const promptEl = document.createElement('div');
     promptEl.className = 'quiz-prompt';
-    promptEl.textContent = `What is ${q.prompt}?`;
+    promptEl.textContent = q.prompt;
     state.contentEl.appendChild(promptEl);
 
     if (q.type === 'input') {
