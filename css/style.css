@@ -286,3 +286,14 @@ body {
 #modeSelect form {
   margin-bottom: 2vh;
 }
+
+/* Debug info panel */
+.debug-info {
+  font-size: 0.8rem;
+  color: #ccc;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1vh;
+  border-radius: 6px;
+  margin-top: 1vh;
+  white-space: pre-line;
+}

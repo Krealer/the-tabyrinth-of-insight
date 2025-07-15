@@ -9,6 +9,7 @@
   const modeForm = document.getElementById('modeForm');
   const modeStartBtn = document.getElementById('modeStartBtn');
   const modeBackBtn = document.getElementById('modeBackBtn');
+  const debugMode = new URLSearchParams(location.search).has('debug');
 
   function getSelectedMode() {
     const checked = modeForm.querySelector('input[name="mode"]:checked');
@@ -48,7 +49,9 @@
             onExit: () => {
               lessonsView.style.display = 'flex';
             },
-            selectedMode: selected === 'mixed' ? 'mix' : selected === 'multiple-choice' ? 'mcq' : 'input'
+            selectedMode: selected === 'mixed' ? 'mix' : selected === 'multiple-choice' ? 'mcq' : 'input',
+            debug: debugMode,
+            debugEl: document.getElementById('debugInfo')
           });
         })
         .catch(err => {
@@ -69,7 +72,9 @@
           backBtn: quizBackBtn,
           onExit: () => {
             lessonsView.style.display = 'flex';
-          }
+          },
+          debug: debugMode,
+          debugEl: document.getElementById('debugInfo')
         });
         lessonsView.style.display = 'none';
       })

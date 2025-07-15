@@ -16,7 +16,9 @@
     viewEl: null,
     contentEl: null,
     backBtn: null,
-    onExit: null
+    onExit: null,
+    debug: false,
+    debugEl: null
   };
 
   function normalizeInput(str) {
@@ -34,6 +36,7 @@
     state.quizMode = 'mix';
     state.lessonData = null;
     if (state.contentEl) state.contentEl.innerHTML = '';
+    if (state.debugEl) state.debugEl.style.display = 'none';
   }
 
   function showScore() {
@@ -50,6 +53,22 @@
     retry.textContent = 'Retry';
     retry.addEventListener('click', showModeOptions);
     state.contentEl.appendChild(retry);
+    updateDebugInfo();
+  }
+
+  function updateDebugInfo() {
+    if (!state.debug || !state.debugEl) return;
+    const info = [
+      `Mode: ${state.quizMode}`,
+      `Current index: ${state.current}`,
+      `Retry index: ${state.retryIndex}`,
+      `In retry: ${state.inRetry}`,
+      `First pass length: ${state.firstPass.length}`,
+      `Retry queue: ${state.retryQueue.length}`,
+      `Score: ${state.correctFirst + state.correctSecond}`
+    ].join('\n');
+    state.debugEl.textContent = info;
+    state.debugEl.style.display = 'block';
   }
 
   function nextQuestion() {
@@ -121,6 +140,7 @@
     next.textContent = (lastFirst && state.retryQueue.length === 0) || lastRetry ? 'Finish' : 'Next';
     next.addEventListener('click', nextQuestion);
     state.contentEl.appendChild(next);
+    updateDebugInfo();
   }
 
   function handleChoice(btn, buttons, q, isRetry) {
@@ -172,6 +192,7 @@
     next.textContent = (lastFirst && state.retryQueue.length === 0) || lastRetry ? 'Finish' : 'Next';
     next.addEventListener('click', nextQuestion);
     state.contentEl.appendChild(next);
+    updateDebugInfo();
   }
 
   function showQuestion() {
@@ -206,22 +227,23 @@
       if (choices.length === 0) {
         const err = document.createElement('div');
         err.textContent = 'Question has no choices';
-        state.contentEl.appendChild(err);
-        return;
-      }
-      choices.forEach(choice => {
+      state.contentEl.appendChild(err);
+      return;
+    }
+    choices.forEach(choice => {
         const b = document.createElement('button');
         b.className = 'btn quiz-option';
         b.textContent = choice;
         b.addEventListener('click', () => handleChoice(b, buttons, q, state.inRetry));
         buttons.push(b);
-        state.contentEl.appendChild(b);
-      });
-    } else {
-      const err = document.createElement('div');
-      err.textContent = 'Unsupported question type.';
-      state.contentEl.appendChild(err);
-    }
+      state.contentEl.appendChild(b);
+    });
+  } else {
+    const err = document.createElement('div');
+    err.textContent = 'Unsupported question type.';
+    state.contentEl.appendChild(err);
+  }
+    updateDebugInfo();
   }
 
   function startQuiz(mode = 'mix') {
@@ -241,6 +263,7 @@
     if (state.quizMode === 'mcq') filtered = qs.filter(q => q.type === 'multiple-choice');
     state.firstPass = filtered.sort(() => Math.random() - 0.5);
     showQuestion();
+    updateDebugInfo();
   }
 
   function showModeOptions() {
@@ -274,6 +297,8 @@
     state.contentEl = opts.contentEl || document.getElementById('lessonContent');
     state.backBtn = opts.backBtn || document.getElementById('quizBackBtn');
     state.onExit = typeof opts.onExit === 'function' ? opts.onExit : null;
+    state.debug = !!opts.debug;
+    state.debugEl = opts.debugEl || document.getElementById('debugInfo');
 
     if (state.backBtn) {
       state.backBtn.onclick = () => {
