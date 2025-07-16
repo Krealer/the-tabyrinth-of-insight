@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const learnBtn = document.querySelector('.learn');
   const wrapper = document.querySelector('.wrapper');
   const quotesView = document.getElementById('quotesView');
+  const quoteGrid = document.querySelector('#quotesView .quote-grid');
   const lessonsView = document.getElementById('lessonsView');
   const backBtn = document.getElementById('backBtn');
   const lessonBackBtn = document.getElementById('lessonBackBtn');
@@ -49,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
           card.classList.toggle('flip');
         });
 
-        quotesView.insertBefore(card, backBtn);
+        quoteGrid.appendChild(card);
       });
     })
     .catch(err => console.error('Failed to load quotes:', err));
