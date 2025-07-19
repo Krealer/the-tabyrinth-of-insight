@@ -6,15 +6,26 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  background: #0e0e0e;
-  color: #f0f0f0;
+:root {
+  --content-width: 100vw;
+  --content-height: 100vh;
+  --aspect-ratio: 9 / 16;
+  --max-width: 430px;
+}
+
+html,
+body {
+  width: var(--content-width);
+  height: var(--content-height);
+  background-color: #0d0d0d;
+  color: #ffffff;
   font-family: system-ui, sans-serif;
-  font-size: 16px;
+  font-size: clamp(14px, 2.5vw, 18px);
   line-height: 1.6;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ========== Container ========== */
@@ -27,6 +38,17 @@ html, body {
   flex-direction: column;
   gap: 1.75rem;
   justify-content: flex-start;
+}
+
+.viewport-container {
+  width: 100%;
+  max-width: 430px;
+  aspect-ratio: 9 / 16;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  overflow-y: auto;
 }
 
 /* ========== Headings ========== */
@@ -119,7 +141,7 @@ input[type="text"]:focus {
   position: relative;
   width: 90%;
   max-width: 320px;
-  min-height: 180px;
+  min-height: 100px;
   perspective: 1000px;
   margin: 0 auto;
   cursor: pointer;
@@ -185,6 +207,7 @@ input[type="text"]:focus {
   padding: 1rem;
   background: #1a1a1a;
   border-radius: 0.75rem;
+  min-height: 100px;
   width: 90%;
   max-width: 320px;
   font-size: 0.95rem;
@@ -214,7 +237,7 @@ input[type="text"]:focus {
 
 @media (max-width: 430px) {
   .quote-card {
-    min-height: 200px;
+    min-height: 100px;
   }
 
   .quote-card-back {
