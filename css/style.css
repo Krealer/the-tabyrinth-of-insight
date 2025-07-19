@@ -133,17 +133,11 @@ body {
 }
 
 .quote-card {
+  perspective: 1000px;
   width: 100%;
   max-width: 320px;
-  padding: 1.25rem 0;
-  text-align: center;
-  font-size: 1.1rem;
-  color: #fff;
-  background: #181818;
-  border-radius: 1.5rem;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.07);
-  transition: transform 0.3s ease;
-  perspective: 1000px;
+  min-height: 160px;
+  position: relative;
   cursor: pointer;
 }
 
@@ -152,44 +146,44 @@ body {
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.12);
 }
 
-.card-inner {
+.quote-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
-  transition: transform 0.3s ease;
 }
 
-.quote-card.flip .card-inner {
+.quote-card.flipped .quote-card-inner {
   transform: rotateY(180deg);
 }
 
-.card-face {
+.quote-card-front,
+.quote-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 1.25rem;
   padding: 1rem;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(255,255,255,0.08);
+  background: #181818;
+  color: #f4f4f4;
 }
 
-.card-front {
-  font-weight: bold;
-}
-
-.card-back {
+.quote-card-back {
   transform: rotateY(180deg);
-  font-style: italic;
-  font-family: serif;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 .alphabet-nav {
