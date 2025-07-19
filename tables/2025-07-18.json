@@ -3,5 +3,19 @@
   { "category": "Must Do", "task": "Languages", "status": "❌" },
   { "category": "Must Do", "task": "Education", "status": "❌" },
   { "category": "Must Do", "task": "About Me", "status": "✅" },
-  { "category": "Must Do", "task": "Psychology", "status": "❌" }
+  { "category": "Must Do", "task": "Psychology", "status": "❌" },
+  { "category": "Must Do", "task": "Edit", "status": "✅" },
+  { "category": "Must Do", "task": "Psychology Edit", "status": "✅" },
+  { "category": "Must Do", "task": "Train", "status": "❌" },
+  { "category": "Must Do", "task": "Go Outside", "status": "✅" },
+  { "category": "Must Do", "task": "Watch Anime", "status": "❌" },
+  { "category": "Must Do", "task": "Chess", "status": "✅" },
+  { "category": "Can Do", "task": "Epic Seven", "status": "✅" },
+  { "category": "Can Do", "task": "Honkai Star Rail", "status": "✅" },
+  { "category": "Can Do", "task": "Grand Summoners", "status": "✅" },
+  { "category": "Can Do", "task": "Coding", "status": "❌" },
+  { "category": "Can Do", "task": "Veymor", "status": "❌" },
+  { "category": "Can Do", "task": "Chess Video", "status": "❌" },
+  { "category": "Can Do", "task": "Education on Anything", "status": "❌" },
+  { "category": "Other", "task": "RTA Video", "status": "❌" }
 ]
