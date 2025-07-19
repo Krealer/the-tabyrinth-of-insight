@@ -32,14 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
         card.className = 'quote-card';
 
         const inner = document.createElement('div');
-        inner.className = 'card-inner';
+        inner.className = 'quote-card-inner';
 
         const front = document.createElement('div');
-        front.className = 'card-face card-front';
+        front.className = 'quote-card-front';
         front.textContent = `Day ${day}`;
 
         const back = document.createElement('div');
-        back.className = 'card-face card-back';
+        back.className = 'quote-card-back';
         back.textContent = text;
 
         inner.appendChild(front);
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.appendChild(inner);
 
         card.addEventListener('click', () => {
-          card.classList.toggle('flip');
+          card.classList.toggle('flipped');
         });
 
         quoteGrid.appendChild(card);
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   backBtn.addEventListener('click', () => {
-    document.querySelectorAll('.quote-card.flip').forEach(c => c.classList.remove('flip'));
+    document.querySelectorAll('.quote-card.flipped').forEach(c => c.classList.remove('flipped'));
     hideAllViews();
     mainMenu.style.display = 'flex';
   });
