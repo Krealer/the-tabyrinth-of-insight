@@ -193,29 +193,23 @@ input[type="text"]:focus {
 
 /* ===== Daily Table Styling ===== */
 .daily-table {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
   width: 100%;
+  max-width: 400px;
+  margin-top: 1rem;
 }
 
 .daily-row {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem;
-  background: #1a1a1a;
-  border-radius: 0.75rem;
-  min-height: 100px;
-  width: 90%;
-  max-width: 320px;
-  font-size: 0.95rem;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #444;
+  font-size: 1rem;
 }
 
 .cell {
   flex: 1;
   text-align: center;
+  color: white;
 }
 
 .cell.status {
