@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const quoteBtn = document.querySelector('.quote');
   const learnBtn = document.querySelector('.learn');
-  const wrapper = document.querySelector('.wrapper');
+  const mainMenu = document.getElementById('mainMenu');
   const quotesView = document.getElementById('quotesView');
   const quoteGrid = document.querySelector('#quotesView .quote-grid');
   const lessonsView = document.getElementById('lessonsView');
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => {
       data.forEach(lesson => {
         const btn = document.createElement('button');
-        btn.className = 'btn lesson';
+        btn.className = 'menu-button lesson';
         btn.textContent = lesson.title;
         lessonsView.insertBefore(btn, lessonBackBtn);
         if (lesson.title === 'Alphabet') {
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(err => console.error('Failed to load kanji:', err));
 
   function hideAllViews() {
-    wrapper.style.display = 'none';
+    mainMenu.style.display = 'none';
     quotesView.style.display = 'none';
     lessonsView.style.display = 'none';
     lessonView.style.display = 'none';
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
   backBtn.addEventListener('click', () => {
     document.querySelectorAll('.quote-card.flip').forEach(c => c.classList.remove('flip'));
     hideAllViews();
-    wrapper.style.display = 'flex';
+    mainMenu.style.display = 'flex';
   });
 
   learnBtn.addEventListener('click', (e) => {
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   lessonBackBtn.addEventListener('click', () => {
     hideAllViews();
-    wrapper.style.display = 'flex';
+    mainMenu.style.display = 'flex';
   });
 
   alphabetBackBtn.addEventListener('click', () => {

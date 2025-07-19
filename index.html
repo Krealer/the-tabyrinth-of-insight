@@ -8,34 +8,34 @@
   <link rel="stylesheet" href="css/portrait.css">
 </head>
 <body>
-  <div class="main-menu">
+  <div class="main-menu" id="mainMenu">
     <div class="header-title">Language &amp; Inspiration</div>
     <button class="menu-button learn">Learn Japanese</button>
     <button class="menu-button quote">Daily Quote</button>
   </div>
-  <div id="quotesView" class="wrapper">
-    <div class="header">Daily Quote</div>
+  <div id="quotesView" class="main-menu">
+    <div class="header-title">Daily Quote</div>
     <div class="quote-grid"></div>
-    <button id="backBtn" class="btn back">Back</button>
+    <button id="backBtn" class="menu-button back">Back</button>
   </div>
-  <div id="lessonsView" class="wrapper lesson-container">
-    <button id="lesson2Btn" class="btn lesson">Lesson 2: Katakana</button>
-    <button id="lessonBackBtn" class="btn back">Back</button>
+  <div id="lessonsView" class="main-menu lesson-container">
+    <button id="lesson2Btn" class="menu-button lesson">Lesson 2: Katakana</button>
+    <button id="lessonBackBtn" class="menu-button back">Back</button>
   </div>
-  <div id="lessonView" class="wrapper lesson-container" style="display:none;">
+  <div id="lessonView" class="main-menu lesson-container" style="display:none;">
     <div id="lessonContent"></div>
     <div id="debugInfo" class="debug-info" style="display:none;"></div>
-    <button id="quizBackBtn" class="btn back">Back</button>
+    <button id="quizBackBtn" class="menu-button back">Back</button>
   </div>
-  <div id="modeSelect" class="wrapper lesson-container" style="display:none;">
+  <div id="modeSelect" class="main-menu lesson-container" style="display:none;">
     <h3 class="quiz-prompt">Choose your answer mode</h3>
     <form id="modeForm">
       <label><input type="radio" name="mode" value="mixed" checked /> Mixed</label>
       <label><input type="radio" name="mode" value="input" /> Typing Only</label>
       <label><input type="radio" name="mode" value="multiple-choice" /> Multiple Choice Only</label>
     </form>
-    <button id="modeStartBtn" class="btn">Start</button>
-    <button id="modeBackBtn" class="btn back">Back</button>
+    <button id="modeStartBtn" class="menu-button">Start</button>
+    <button id="modeBackBtn" class="menu-button back">Back</button>
   </div>
   <div id="alphabetView" class="wrapper">
     <div class="alphabet-nav">
