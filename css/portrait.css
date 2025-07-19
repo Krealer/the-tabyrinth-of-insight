@@ -116,11 +116,12 @@ input[type="text"]:focus {
 }
 
 .quote-card {
-  perspective: 1000px;
-  width: 100%;
-  max-width: 320px;
-  min-height: 160px;
   position: relative;
+  width: 90%;
+  max-width: 320px;
+  min-height: 180px;
+  perspective: 1000px;
+  margin: 0 auto;
   cursor: pointer;
 }
 
@@ -134,8 +135,7 @@ input[type="text"]:focus {
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
+  transition: transform 0.8s ease;
   transform-style: preserve-3d;
 }
 
@@ -147,27 +147,26 @@ input[type="text"]:focus {
 .quote-card-back {
   position: absolute;
   width: 100%;
-  backface-visibility: hidden;
   height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  background-color: #181818;
+  color: #f5f5f5;
   display: flex;
-  align-items: center;
   justify-content: center;
-  border-radius: 1.25rem;
+  align-items: center;
   padding: 1rem;
-  box-shadow: 0 0 10px rgba(255,255,255,0.08);
-  background: #181818;
-  color: #f4f4f4;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  font-size: 1.05rem;
+  text-align: center;
+  overflow-wrap: break-word;
 }
 
 .quote-card-back {
   transform: rotateY(180deg);
-  font-family: 'Inter', sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.6;
   white-space: pre-wrap;
-  word-break: break-word;
-  overflow-y: auto;
-  max-height: 100%;
+  overflow: hidden;
+  line-height: 1.6;
 }
 
 /* ===== Daily Table Styling ===== */
@@ -210,6 +209,17 @@ input[type="text"]:focus {
 
   button {
     padding: 0.85rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .quote-card {
+    min-height: 200px;
+  }
+
+  .quote-card-back {
+    font-size: 1rem;
+    padding: 1.25rem;
   }
 }
 
