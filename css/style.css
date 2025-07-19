@@ -22,6 +22,41 @@ body {
   overflow-x: hidden;
 }
 
+.main-menu {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.header-title {
+  font-size: 1.4rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #ffffffcc;
+  text-transform: uppercase;
+}
+
+.menu-button {
+  width: 100%;
+  max-width: 280px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  backdrop-filter: blur(6px);
+  color: #f2f2f2;
+  transition: background 0.3s ease;
+}
+
+.menu-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
 .wrapper {
   width: 100%;
   max-width: 430px;
@@ -52,19 +87,6 @@ body {
   }
 }
 
-.header-bar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.04);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
 
 .header {
   text-align: center;
