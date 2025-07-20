@@ -48,13 +48,16 @@ body {
 }
 
 .viewport-container {
-  width: 100%;
-  max-width: 430px;
+  width: 100vw;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
   aspect-ratio: 9 / 16;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
   overflow-y: auto;
   min-height: 100vh;
   height: 100dvh;
@@ -165,8 +168,15 @@ input[type="text"]:focus {
   gap: 1.5rem;
   padding: 2rem 1rem;
   width: 100%;
-  max-width: 430px;
+  max-width: none;
   margin: 0 auto;
+}
+
+.daily-quote-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .quote-card {
@@ -282,11 +292,11 @@ input[type="text"]:focus {
 }
 
 .daily-quote-button {
-  width: 90%;
+  width: 90vw;
   max-width: 500px;
-  margin: 12px auto;
+  margin: 12px 0;
   padding: 16px 0;
-  font-size: 18px;
+  font-size: 1.1rem;
   text-align: center;
   border-radius: 30px;
   background-color: #1a1a1a;
