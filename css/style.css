@@ -5,6 +5,12 @@ html, body {
   background: #0e0e0e;
   color: #eee;
   font-family: Arial, sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,6 +36,19 @@ body {
   align-items: center;
   padding: 2rem 1rem;
   gap: 2rem;
+}
+
+#content {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  max-height: 100vh;
+}
+
+.scroll-section {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: 70vh;
 }
 
 
