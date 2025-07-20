@@ -169,6 +169,15 @@ input[type="text"]:focus {
   perspective: 1000px;
   margin: 0 auto;
   cursor: pointer;
+  padding: 1rem;
+  font-size: clamp(1rem, 4vw, 1.25rem);
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .quote-card:hover {

@@ -1,10 +1,11 @@
 html, body {
   margin: 0;
   padding: 0;
-  min-height: 100%;
+  height: 100%;
   background: #0e0e0e;
   color: #eee;
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -153,7 +154,8 @@ body {
   flex-direction: column;
   gap: 1.5rem;
   overflow-y: auto;
-  max-height: 80vh;
+  height: 100vh;
+  min-height: 100dvh;
 }
 
 .quote-card {
@@ -164,6 +166,15 @@ body {
   perspective: 1000px;
   margin: 0 auto;
   cursor: pointer;
+  padding: 1rem;
+  font-size: clamp(1rem, 4vw, 1.25rem);
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .quote-card:hover {
