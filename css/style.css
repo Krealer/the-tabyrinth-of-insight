@@ -9,6 +9,18 @@ html, body {
   -webkit-overflow-scrolling: touch;
 }
 
+.viewport-container,
+#daily-quote-container,
+main,
+.container {
+  width: 100vw;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -110,8 +122,15 @@ body {
   gap: 1.5rem;
   padding: 2rem 1rem;
   width: 100%;
-  max-width: 430px;
+  max-width: none;
   margin: 0 auto;
+}
+
+.daily-quote-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 @media (min-width: 800px) {
@@ -346,11 +365,11 @@ body {
 }
 
 .daily-quote-button {
-  width: 90%;
+  width: 90vw;
   max-width: 500px;
-  margin: 12px auto;
+  margin: 12px 0;
   padding: 16px 0;
-  font-size: 18px;
+  font-size: 1.1rem;
   text-align: center;
   border-radius: 30px;
   background-color: #1a1a1a;
