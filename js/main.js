@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const text = entry.quote || entry;
 
         const card = document.createElement('div');
-        card.className = 'quote-card daily-quote-button';
+        card.className = 'quote-card daily-quote-button wide-button';
 
         const inner = document.createElement('div');
         inner.className = 'quote-card-inner';

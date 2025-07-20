@@ -474,3 +474,23 @@ body {
   gap: 1rem;
   justify-content: center;
 }
+
+.wide-button {
+  display: block;
+  width: 90%;
+  margin: 20px auto;
+  padding: 16px 24px;
+  font-size: 18px;
+  color: white;
+  background-color: #1c1c1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.wide-button:hover {
+  background-color: #2c2c2e;
+  transform: scale(1.02);
+}
