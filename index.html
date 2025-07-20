@@ -13,7 +13,7 @@
     <div class="header-title">Labyrinth of Insight</div>
     <button class="menu-button learn">Learn Japanese</button>
     <button class="menu-button quote">Daily Quote</button>
-    <button class="menu-button" onclick="showTableMenu()">Daily Table</button>
+    <button class="menu-button" onclick="requestDailyTablePassword()">Daily Table</button>
     <button class="menu-button wip-button" disabled>Games (Coming Soon)</button>
     <button class="menu-button wip-button" disabled>Coding (Coming Soon)</button>
   </div>
@@ -53,6 +53,20 @@
     <button id="alphabetBackBtn" class="btn back">Back</button>
   </div>
   <div id="content" class="main-menu" style="display:none;"></div>
+  <div id="passwordModal" class="password-modal" style="display:none;">
+    <div class="password-box">
+      <p class="password-prompt">Enter password to access Daily Table</p>
+      <div class="password-input-wrapper">
+        <input type="password" id="dailyPassword" class="password-input" />
+        <button id="togglePassword" class="toggle-password" onclick="toggleDailyPassword()">Show</button>
+      </div>
+      <p id="errorMsg" class="password-error" style="display:none;">Incorrect password.</p>
+      <div class="password-actions">
+        <button class="menu-button" onclick="verifyDailyTablePassword()">Submit</button>
+        <button class="menu-button" onclick="closePasswordModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
 </div>
   <script src="js/main.js"></script>
   <script src="js/quiz.js"></script>

@@ -1,3 +1,40 @@
+function requestDailyTablePassword() {
+  const modal = document.getElementById('passwordModal');
+  const error = document.getElementById('errorMsg');
+  const input = document.getElementById('dailyPassword');
+  if (error) error.style.display = 'none';
+  if (input) {
+    input.value = '';
+    input.type = 'password';
+  }
+  modal.style.display = 'flex';
+}
+
+function closePasswordModal() {
+  document.getElementById('passwordModal').style.display = 'none';
+}
+
+function toggleDailyPassword() {
+  const input = document.getElementById('dailyPassword');
+  if (input.type === 'password') {
+    input.type = 'text';
+    document.getElementById('togglePassword').textContent = 'Hide';
+  } else {
+    input.type = 'password';
+    document.getElementById('togglePassword').textContent = 'Show';
+  }
+}
+
+function verifyDailyTablePassword() {
+  const input = document.getElementById('dailyPassword').value;
+  if (input === 'Sh4dow') {
+    closePasswordModal();
+    showTableMenu();
+  } else {
+    document.getElementById('errorMsg').style.display = 'block';
+  }
+}
+
 function showTableMenu() {
   const container = document.getElementById('content');
   const mainMenu = document.getElementById('mainMenu');
