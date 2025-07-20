@@ -78,6 +78,7 @@ body {
   transition: background 0.3s ease;
 }
 
+
 .menu-button:hover {
   background: rgba(255, 255, 255, 0.08);
 }
@@ -342,6 +343,25 @@ body {
     font-size: 1rem;
     padding: 1.25rem;
   }
+}
+
+.daily-quote-button {
+  width: 90%;
+  max-width: 500px;
+  margin: 12px auto;
+  padding: 16px 0;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #444;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.daily-quote-button:hover {
+  background-color: #2a2a2a;
 }
 
 .hidden { display: none !important; }
