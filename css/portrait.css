@@ -114,6 +114,13 @@ button:active {
   background: rgba(255, 255, 255, 0.12);
 }
 
+.wip-button {
+  opacity: 0.4;
+  pointer-events: none;
+  font-style: italic;
+  font-weight: 300;
+}
+
 /* ========== Input Fields ========== */
 input[type="text"] {
   width: 100%;
