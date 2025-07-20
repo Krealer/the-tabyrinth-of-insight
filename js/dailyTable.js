@@ -6,6 +6,7 @@ function showTableMenu() {
   container.innerHTML = `
     <div class="header-title">Daily Table</div>
     <button class="menu-button" onclick="loadTable('2025-07-18')">18/7/2025</button>
+    <button class="menu-button" onclick="loadTable('2025-07-19')">19/7/2025</button>
     <button class="menu-button" onclick="goBack()">Back</button>
   `;
 }
