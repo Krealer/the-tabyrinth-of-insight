@@ -82,6 +82,13 @@ body {
   background: rgba(255, 255, 255, 0.08);
 }
 
+.wip-button {
+  opacity: 0.4;
+  pointer-events: none;
+  font-style: italic;
+  font-weight: 300;
+}
+
 .wrapper {
   width: 100%;
   max-width: 430px;
