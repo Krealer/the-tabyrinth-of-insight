@@ -45,6 +45,7 @@ function showTableMenu() {
     <button class="wide-button" onclick="loadTable('18/7/2025')">18/7/2025</button>
     <button class="wide-button" onclick="loadTable('19/7/2025')">19/7/2025</button>
     <button class="wide-button" onclick="loadTable('20/7/2025')">20/7/2025</button>
+    <button class="wide-button" onclick="loadDailyTable('20-7-2025')">20/7/2025</button>
     <button class="menu-button" onclick="goBack()">Back</button>
   `;
 }
@@ -87,6 +88,27 @@ function loadTable(date) {
       });
 
       tableContainer.appendChild(table);
+    });
+}
+
+function loadDailyTable(date) {
+  fetch(`tables/${date}.json`)
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('content');
+      container.innerHTML = `
+        <div class="header-title">Table — ${date.replace(/-/g, '/')}</div>
+        <div class="daily-table">
+          ${data.map(item => `
+            <div class="daily-row">
+              <div class="cell category">${item.category}</div>
+              <div class="cell task">${item.task}</div>
+              <div class="cell status">${item.status}</div>
+            </div>
+          `).join('')}
+        </div>
+        <button class="menu-button" onclick="showTableMenu()">Back</button>
+      `;
     });
 }
 
