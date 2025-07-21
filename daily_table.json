@@ -1,0 +1,53 @@
+{
+  "tables": [
+    {
+      "date": "18/7/2025",
+      "file": "Checklist_Summary___18_July_2025.csv"
+    },
+    {
+      "date": "19/7/2025",
+      "file": "Checklist_Summary___19_July_2025.csv"
+    },
+    {
+      "date": "20/7/2025",
+      "file": "Checklist_Summary___20_July_2025.csv",
+      "data": [
+        {
+          "Task ID": "T001",
+          "Description": "Check security system",
+          "Status": "Completed",
+          "Priority": "High",
+          "Assigned To": "Akira"
+        },
+        {
+          "Task ID": "T002",
+          "Description": "Refill medical supplies",
+          "Status": "Pending",
+          "Priority": "Medium",
+          "Assigned To": "Sora"
+        },
+        {
+          "Task ID": "T003",
+          "Description": "Inspect perimeter defenses",
+          "Status": "Completed",
+          "Priority": "High",
+          "Assigned To": "Kai"
+        },
+        {
+          "Task ID": "T004",
+          "Description": "Clean central control room",
+          "Status": "Pending",
+          "Priority": "Low",
+          "Assigned To": "Mio"
+        },
+        {
+          "Task ID": "T005",
+          "Description": "Review surveillance footage",
+          "Status": "In Progress",
+          "Priority": "High",
+          "Assigned To": "Yuna"
+        }
+      ]
+    }
+  ]
+}
