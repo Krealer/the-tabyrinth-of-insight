@@ -42,30 +42,51 @@ function showTableMenu() {
   container.style.display = 'flex';
   container.innerHTML = `
     <div class="header-title">Daily Table</div>
-    <button class="wide-button" onclick="loadTable('2025-07-18')">18/7/2025</button>
-    <button class="wide-button" onclick="loadTable('2025-07-19')">19/7/2025</button>
+    <button class="wide-button" onclick="loadTable('18/7/2025')">18/7/2025</button>
+    <button class="wide-button" onclick="loadTable('19/7/2025')">19/7/2025</button>
+    <button class="wide-button" onclick="loadTable('20/7/2025')">20/7/2025</button>
     <button class="menu-button" onclick="goBack()">Back</button>
   `;
 }
 
-function loadTable(dateKey) {
-  fetch(`tables/${dateKey}.json`)
-    .then(res => res.json())
+function loadTable(date) {
+  fetch('daily_table.json')
+    .then(response => response.json())
     .then(data => {
+      const tableData = data.tables.find(t => t.date === date);
+      if (!tableData || !tableData.data) return;
+
       const container = document.getElementById('content');
       container.innerHTML = `
-        <div class="header-title">Table — ${dateKey.replace(/-/g, '/')}</div>
-        <div class="daily-table">
-          ${data.map(item => `
-            <div class="daily-row">
-              <div class="cell category">${item.category}</div>
-              <div class="cell task">${item.task}</div>
-              <div class="cell status">${item.status}</div>
-            </div>
-          `).join('')}
-        </div>
+        <div class="header-title">Table — ${date}</div>
+        <div id="table-display"></div>
         <button class="menu-button" onclick="showTableMenu()">Back</button>
       `;
+
+      const tableContainer = document.getElementById('table-display');
+      tableContainer.innerHTML = '';
+      const table = document.createElement('table');
+
+      const headers = Object.keys(tableData.data[0]);
+      const headerRow = document.createElement('tr');
+      headers.forEach(header => {
+        const th = document.createElement('th');
+        th.textContent = header;
+        headerRow.appendChild(th);
+      });
+      table.appendChild(headerRow);
+
+      tableData.data.forEach(row => {
+        const tr = document.createElement('tr');
+        headers.forEach(key => {
+          const td = document.createElement('td');
+          td.textContent = row[key];
+          tr.appendChild(td);
+        });
+        table.appendChild(tr);
+      });
+
+      tableContainer.appendChild(table);
     });
 }
 
