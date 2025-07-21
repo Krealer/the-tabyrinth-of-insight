@@ -286,21 +286,21 @@ input[type="text"]:focus {
 
 .daily-quote-button {
   width: 90vw;
-  max-width: 500px;
-  margin: 12px 0;
-  padding: 16px 0;
-  font-size: 1.1rem;
+  max-width: 95%;
+  margin: 20px auto;
+  padding: 20px;
   text-align: center;
-  border-radius: 30px;
-  background-color: #1a1a1a;
+  border-radius: 24px;
+  background-color: #1b1b1b;
   color: white;
-  border: 1px solid #444;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
-  transition: background-color 0.3s ease;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .daily-quote-button:hover {
-  background-color: #2a2a2a;
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
 }
 
 .learn-japanese-container {
