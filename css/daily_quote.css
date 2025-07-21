@@ -1,0 +1,21 @@
+.daily-quote-button {
+  width: 90vw;
+  max-width: 95%;
+  margin: 20px auto;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 24px;
+  background-color: #1b1b1b;
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 80px; /* Ensures visual balance */
+}
+
+.daily-quote-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
