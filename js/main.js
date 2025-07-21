@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => {
       data.forEach(lesson => {
         const btn = document.createElement('button');
-        btn.className = 'menu-button lesson learn-japanese-button';
+        btn.className = 'menu-button lesson learn-japanese-button wide-button';
         btn.textContent = lesson.title;
         lessonsView.insertBefore(btn, lessonBackBtn);
         if (lesson.title === 'Alphabet') {
