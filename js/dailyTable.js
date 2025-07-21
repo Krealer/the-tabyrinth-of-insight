@@ -44,7 +44,6 @@ function showTableMenu() {
     <div class="header-title">Daily Table</div>
     <button class="wide-button" onclick="loadTable('18/7/2025')">18/7/2025</button>
     <button class="wide-button" onclick="loadTable('19/7/2025')">19/7/2025</button>
-    <button class="wide-button" onclick="loadTable('20/7/2025')">20/7/2025</button>
     <button class="wide-button" onclick="loadDailyTable('20-7-2025')">20/7/2025</button>
     <button class="menu-button" onclick="goBack()">Back</button>
   `;
