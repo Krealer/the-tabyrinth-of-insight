@@ -42,9 +42,9 @@ function showTableMenu() {
   container.style.display = 'flex';
   container.innerHTML = `
     <div class="header-title">Daily Table</div>
-    <button class="wide-button" onclick="loadTable('18/7/2025')">18/7/2025</button>
-    <button class="wide-button" onclick="loadTable('19/7/2025')">19/7/2025</button>
-    <button class="wide-button" onclick="loadDailyTable('20-7-2025')">20/7/2025</button>
+    <button class="wide-button" onclick="loadDailyTable('18/7/2025')">18/7/2025</button>
+    <button class="wide-button" onclick="loadDailyTable('19/7/2025')">19/7/2025</button>
+    <button class="wide-button" onclick="loadDailyTable('20/7/2025')">20/7/2025</button>
     <button class="menu-button" onclick="goBack()">Back</button>
   `;
 }
@@ -91,20 +91,25 @@ function loadTable(date) {
 }
 
 function loadDailyTable(date) {
-  fetch(`tables/${date}.json`)
+  fetch('data/daily_tables.json')
     .then(res => res.json())
-    .then(data => {
+    .then(allTables => {
+      const table = allTables.find(t => t.date === date);
+      if (!table) return;
+
       const container = document.getElementById('content');
       container.innerHTML = `
-        <div class="header-title">Table — ${date.replace(/-/g, '/')}</div>
+        <div class="header-title">Table — ${date}</div>
         <div class="daily-table">
-          ${data.map(item => `
-            <div class="daily-row">
-              <div class="cell category">${item.category}</div>
-              <div class="cell task">${item.task}</div>
-              <div class="cell status">${item.status}</div>
-            </div>
-          `).join('')}
+          ${table.entries
+            .map(item => `
+              <div class="daily-row">
+                <div class="cell category">${item.category}</div>
+                <div class="cell task">${item.task}</div>
+                <div class="cell status">${item.status}</div>
+              </div>
+            `)
+            .join('')}
         </div>
         <button class="menu-button" onclick="showTableMenu()">Back</button>
       `;
