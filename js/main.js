@@ -25,30 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(data => {
       data.forEach((entry, idx) => {
-        const day = entry.day || idx + 1;
         const text = entry.quote || entry;
 
         const card = document.createElement('div');
-        card.className = 'quote-card daily-quote-button';
-
-        const inner = document.createElement('div');
-        inner.className = 'quote-card-inner';
-
-        const front = document.createElement('div');
-        front.className = 'quote-card-front';
-        front.textContent = `Day ${day}`;
-
-        const back = document.createElement('div');
-        back.className = 'quote-card-back';
-        back.textContent = text;
-
-        inner.appendChild(front);
-        inner.appendChild(back);
-        card.appendChild(inner);
-
-        card.addEventListener('click', () => {
-          card.classList.toggle('flipped');
-        });
+        card.className = 'quote-button';
+        card.textContent = text;
 
         quoteGrid.appendChild(card);
       });
@@ -121,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   backBtn.addEventListener('click', () => {
-    document.querySelectorAll('.quote-card.flipped').forEach(c => c.classList.remove('flipped'));
     hideAllViews();
     mainMenu.style.display = 'flex';
   });
