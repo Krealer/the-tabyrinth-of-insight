@@ -137,21 +137,6 @@ input[type="text"]:focus {
   margin: 0 auto;
 }
 
-.daily-quote-wrapper {
-  width: 100%;
-  padding: 20px 0;
-}
-
-.quote-card {
-  position: relative;
-  width: 90%;
-  max-width: 320px;
-  min-height: 100px;
-  perspective: 1000px;
-  margin: 0 auto;
-  text-align: center;
-  color: white;
-}
 
 .cell.status {
   font-weight: bold;
@@ -170,16 +155,6 @@ input[type="text"]:focus {
   }
 }
 
-@media (max-width: 430px) {
-  .quote-card {
-    min-height: 100px;
-  }
-
-  .quote-card-back {
-    font-size: 1rem;
-    padding: 1.25rem;
-  }
-}
 
 
 

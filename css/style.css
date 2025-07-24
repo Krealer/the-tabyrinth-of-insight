@@ -121,10 +121,6 @@ body {
   margin: 0 auto;
 }
 
-.daily-quote-wrapper {
-  width: 100%;
-  padding: 20px 0;
-}
 
 @media (min-width: 800px) {
   .wrapper {
@@ -178,67 +174,6 @@ body {
   min-height: 100dvh;
 }
 
-.quote-card {
-  position: relative;
-  width: 90%;
-  max-width: 320px;
-  min-height: 100px;
-  perspective: 1000px;
-  margin: 0 auto;
-  cursor: pointer;
-  padding: 1rem;
-  font-size: clamp(1rem, 4vw, 1.25rem);
-  white-space: normal;
-  word-wrap: break-word;
-  line-height: 1.4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.quote-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.12);
-}
-
-.quote-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s ease;
-  transform-style: preserve-3d;
-}
-
-.quote-card.flipped .quote-card-inner {
-  transform: rotateY(180deg);
-}
-
-.quote-card-front,
-.quote-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 1rem;
-  background-color: #181818;
-  color: #f5f5f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
-  font-size: 1.05rem;
-  text-align: center;
-  overflow-wrap: break-word;
-}
-
-.quote-card-back {
-  transform: rotateY(180deg);
-  white-space: pre-wrap;
-  overflow: hidden;
-  line-height: 1.6;
-}
 
 .alphabet-nav {
   display: flex;
@@ -346,16 +281,6 @@ body {
   }
 }
 
-@media (max-width: 430px) {
-  .quote-card {
-    min-height: 100px;
-  }
-
-  .quote-card-back {
-    font-size: 1rem;
-    padding: 1.25rem;
-  }
-}
 
 
 .learn-japanese-container {
