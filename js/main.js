@@ -24,14 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('data/quotes.json')
     .then(res => res.json())
     .then(data => {
-      data.forEach((entry, idx) => {
+      data.forEach((entry) => {
         const text = entry.quote || entry;
 
-        const card = document.createElement('div');
-        card.className = 'quote-button';
-        card.textContent = text;
+        const div = document.createElement('div');
+        div.className = 'quote-entry';
+        div.textContent = text;
 
-        quoteGrid.appendChild(card);
+        quoteGrid.appendChild(div);
       });
     })
     .catch(err => console.error('Failed to load quotes:', err));
