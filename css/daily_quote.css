@@ -2,12 +2,11 @@
 
 .daily-quote-wrapper {
   width: 100%;
-  max-width: 430px;
   margin: 0 auto;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: clamp(0.5rem, 2vw, 1.25rem);
   align-items: center;
 }
 
