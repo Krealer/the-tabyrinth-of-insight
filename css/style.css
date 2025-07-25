@@ -1,13 +1,7 @@
-:root {
-  --content-width: 100vw;
-  --content-height: 100vh;
-  --aspect-ratio: 9 / 16;
-  --max-width: 430px;
-}
 
 html, body {
-  width: var(--content-width);
-  height: var(--content-height);
+  width: 100%;
+  min-height: 100dvh;
   margin: 0;
   padding: 0;
   background-color: #0d0d0d;
@@ -24,7 +18,6 @@ html, body {
 
 main {
   width: 100vw;
-  max-width: 100vw;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -33,12 +26,10 @@ main {
 
 .viewport-container {
   width: 100vw;
-  max-width: 100vw;
-  aspect-ratio: 9 / 16;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   height: 100dvh;
   overflow-y: auto;
   scroll-behavior: smooth;
@@ -60,13 +51,13 @@ body {
 
 
 .main-menu {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem 1rem;
-  gap: 2rem;
+  gap: clamp(0.5rem, 2vw, 1.25rem);
 }
 
 
@@ -85,7 +76,7 @@ body {
 .menu-button {
   width: 80%;
   max-width: 320px;
-  padding: 1rem;
+  padding: clamp(0.75rem, 3vw, 1.25rem);
   font-size: 1.1rem;
   background: #1a1a1a;
   border: 1px solid #444;
@@ -110,31 +101,11 @@ body {
 }
 
 
-.wrapper {
-  width: 100%;
-  max-width: 430px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 2rem 1.25rem;
-  box-sizing: border-box;
-  min-height: 100vh;
-}
 
 .quote-grid {
   width: 100%;
   padding: 2rem 1rem;
   margin: 0 auto;
-}
-
-
-@media (min-width: 800px) {
-  .wrapper {
-    max-width: 800px;
-  }
-}
 
 
 .header {
@@ -149,7 +120,7 @@ body {
 .btn {
   display: block;
   width: 100%;
-  padding: 1rem;
+  padding: clamp(0.75rem, 3vw, 1.25rem);
   min-height: 48px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -161,6 +132,7 @@ body {
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
+
 
 .btn:hover {
   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
@@ -176,7 +148,7 @@ body {
 #alphabetView {
   display: none;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: clamp(0.5rem, 2vw, 1.25rem);
   overflow-y: auto;
   height: 100vh;
   min-height: 100dvh;
@@ -185,7 +157,7 @@ body {
 
 .alphabet-nav {
   display: flex;
-  gap: 0.5rem;
+  gap: clamp(0.5rem, 2vw, 1.25rem);
   position: sticky;
   top: 0;
   padding: 0.5rem 0;
@@ -208,7 +180,7 @@ body {
 .kanji-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-  gap: 0.5rem;
+  gap: clamp(0.5rem, 2vw, 1.25rem);
 }
 
 .kana-section-title {
@@ -297,7 +269,7 @@ body {
   width: 90%;
   max-width: 500px;
   margin: 12px auto;
-  padding: 16px;
+  padding: clamp(0.75rem, 3vw, 1.25rem);
   text-align: center;
   background-color: #111;
   color: white;
