@@ -10,9 +10,7 @@ html, body {
 }
 
 .viewport-container,
-#daily-quote-container,
-main,
-.container {
+main {
   width: 100vw;
   max-width: 100vw;
   padding: 0;
