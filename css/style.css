@@ -315,65 +315,6 @@ body {
   to { opacity: 0; }
 }
 
-/* Password Modal */
-.password-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(4px);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.password-box {
-  background: #1a1a1a;
-  padding: 2rem 1.5rem;
-  border-radius: 1rem;
-  text-align: center;
-  width: 80%;
-  max-width: 320px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-.password-input-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 1rem 0;
-}
-
-.password-input {
-  flex: 1;
-  padding: 0.5rem;
-  background: transparent;
-  border: 1px solid #444;
-  color: #eee;
-  border-radius: 0.5rem;
-}
-
-.toggle-password {
-  background: none;
-  border: none;
-  color: #eee;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-.password-error {
-  color: #ff5252;
-  margin-bottom: 0.5rem;
-}
-
-.password-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
 
 .wide-button {
   width: 90%;
@@ -394,19 +335,3 @@ body {
   transform: scale(1.01);
 }
 
-#table-display table {
-  width: 90%;
-  margin: 12px auto;
-  border-collapse: collapse;
-  color: #fff;
-}
-
-#table-display th,
-#table-display td {
-  border: 1px solid rgba(255,255,255,0.2);
-  padding: 8px;
-}
-
-#table-display th {
-  background-color: #121212;
-}
