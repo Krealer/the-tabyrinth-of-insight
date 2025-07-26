@@ -1,6 +1,6 @@
 
 html, body {
-  width: 100%;
+  width: 100vw;
   min-height: 100dvh;
   margin: 0;
   padding: 0;
@@ -10,6 +10,7 @@ html, body {
   font-size: clamp(14px, 2.5vw, 18px);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,12 +27,14 @@ main {
 
 .viewport-container {
   width: 100vw;
+  max-width: 100vw;
+  aspect-ratio: 9 / 16;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100dvh;
-  height: 100dvh;
-  overflow-y: auto;
+  justify-content: flex-start;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
@@ -50,13 +53,21 @@ body {
 }
 
 
+.main-menu,
+.wrapper {
+  width: 100%;
+  max-width: 430px;
+  overflow-x: hidden;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
 .main-menu {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
   gap: clamp(0.5rem, 2vw, 1.25rem);
 }
 
@@ -75,9 +86,11 @@ body {
 
 
 .menu-button {
-  width: 80%;
-  max-width: 320px;
+  width: 100%;
+  max-width: 430px;
   padding: clamp(0.75rem, 3vw, 1.25rem);
+  box-sizing: border-box;
+  overflow-x: hidden;
   font-size: 1.1rem;
   background: #1a1a1a;
   border: 1px solid #444;
@@ -105,7 +118,10 @@ body {
 
 .quote-grid {
   width: 100%;
-  padding: 2rem 1rem;
+  max-width: 430px;
+  overflow-x: hidden;
+  padding: 0 1rem;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 
@@ -174,6 +190,16 @@ body {
 
 #mainMenu { z-index: 1; }
 #quotesView { z-index: 2; }
+
+img,
+svg,
+canvas,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 
 
