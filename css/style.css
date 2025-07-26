@@ -190,6 +190,19 @@ body {
 #mainMenu { z-index: 1; }
 #quotesView { z-index: 2; }
 
+.hidden {
+  display: none !important;
+}
+
+#alphabetView {
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  min-height: 100dvh;
+  overflow-y: auto;
+}
+
 img,
 svg,
 canvas,
