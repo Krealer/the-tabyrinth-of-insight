@@ -1,0 +1,32 @@
+[
+  {
+    "type": "hiragana-to-romaji",
+    "prompt": "た",
+    "options": ["Ha", "Mo", "Ta", "Ku"],
+    "answer": "Ta"
+  },
+  {
+    "type": "romaji-to-hiragana",
+    "prompt": "mo",
+    "options": ["さ", "も", "ひ", "ら"],
+    "answer": "も"
+  },
+  {
+    "type": "hiragana-to-romaji",
+    "prompt": "き",
+    "options": ["Ki", "Shi", "Sa", "Ko"],
+    "answer": "Ki"
+  },
+  {
+    "type": "romaji-to-hiragana",
+    "prompt": "su",
+    "options": ["す", "し", "さ", "そ"],
+    "answer": "す"
+  },
+  {
+    "type": "hiragana-to-romaji",
+    "prompt": "ね",
+    "options": ["Ne", "Nu", "No", "Ni"],
+    "answer": "Ne"
+  }
+]

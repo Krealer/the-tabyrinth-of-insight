@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const quoteBtn = document.querySelector('.quote');
-  const learnJapaneseBtn = document.querySelector('.learn');
+  const learnJapaneseButton = document.getElementById('learnJapaneseButton');
   const mainMenu = document.getElementById('mainMenu');
   const quotesView = document.getElementById('quotesView');
   const quoteGrid = document.querySelector('#quotesView .quote-grid');
@@ -47,10 +47,28 @@ document.addEventListener('DOMContentLoaded', () => {
     quotesView.scrollTop = 0;
   });
 
-  learnJapaneseBtn.addEventListener('click', () => {
+  learnJapaneseButton.addEventListener('click', () => {
     mainMenu.style.display = 'none';
     lessonsView.style.display = 'flex';
   });
+
+  // Initialize lesson buttons
+  document.getElementById("learnJapaneseButton").onclick = () => {
+    document.getElementById("lessonsView").style.display = "flex";
+  };
+
+  fetch("data/lessons.json")
+    .then(res => res.json())
+    .then(lessons => {
+      const container = document.getElementById("lessonsView");
+      lessons.forEach(lesson => {
+        const btn = document.createElement("button");
+        btn.className = "learn-japanese-button";
+        btn.textContent = lesson.title;
+        btn.onclick = () => startLesson(lesson.id);
+        container.appendChild(btn);
+      });
+    });
 
   lessonBackBtn.addEventListener('click', () => {
     lessonsView.style.display = 'none';
