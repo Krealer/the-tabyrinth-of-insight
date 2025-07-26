@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const alphabetBtn = document.querySelector(".alphabet");
+  const alphabetBtn = document.getElementById("alphabetBtn");
   const alphabetView = document.getElementById("alphabetView");
-  const mainMenu = document.getElementById("mainMenu");
+  const lessonsView = document.getElementById("lessonsView");
   const alphabetGrid = document.getElementById("alphabetGrid");
   const alphabetBackBtn = document.getElementById("alphabetBackBtn");
 
   alphabetBtn.addEventListener("click", () => {
-    mainMenu.style.display = "none";
+    lessonsView.style.display = "none";
     alphabetView.style.display = "flex";
 
     fetch("data/kana.json")
@@ -24,6 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   alphabetBackBtn.addEventListener("click", () => {
     alphabetView.style.display = "none";
-    mainMenu.style.display = "flex";
+    lessonsView.style.display = "flex";
   });
 });
