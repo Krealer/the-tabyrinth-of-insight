@@ -21,8 +21,8 @@
   <div id="lessonsView" class="main-menu learn-japanese-container" style="display: none;">
     <div class="header-title">Learn Japanese</div>
 
-    <button class="menu-button wide-button" id="hiraganaBtn">Hiragana</button>
-    <button class="menu-button wide-button wip-button" disabled>Katakana (Coming Soon)</button>
+  <button class="menu-button wide-button" id="hiraganaBtn">Hiragana</button>
+  <button class="menu-button wide-button" onclick="showKatakana()">Katakana</button>
     <button class="menu-button wide-button wip-button" disabled>Kanji (Coming Soon)</button>
     <!-- Future lessons go below -->
     <!-- <button class="menu-button wide-button" id="lesson1Btn">Lesson 1</button> -->
@@ -41,9 +41,15 @@
     <div id="hiraganaGrid" class="alphabet-grid"></div>
     <button id="hiraganaBackBtn" class="back-button">Back</button>
   </div>
+  <div id="katakanaView" class="hidden wrapper">
+    <div class="header-title">Katakana</div>
+    <div id="katakanaGrid" class="alphabet-grid"></div>
+    <button class="menu-button back" onclick="returnToLearnJapanese()">Back</button>
+  </div>
   <div id="content" class="main-menu" style="display:none;"></div>
 </div>
   <script src="js/main.js"></script>
   <script src="js/alphabet.js"></script>
+  <script src="js/kana_katakana.js"></script>
 </body>
 </html>
