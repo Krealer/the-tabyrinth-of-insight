@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/daily_quote.css">
   <link rel="stylesheet" href="css/alphabet.css">
   <link rel="stylesheet" href="css/learn_japanese.css">
+  <link rel="stylesheet" href="css/kanji.css">
 </head>
 <body>
   <div class="viewport-container">
@@ -23,7 +24,7 @@
 
   <button class="menu-button wide-button" id="hiraganaBtn">Hiragana</button>
   <button class="menu-button wide-button" id="katakanaBtn">Katakana</button>
-    <button class="menu-button wide-button wip-button" id="kanjiBtn">Kanji (Coming Soon)</button>
+  <button class="menu-button wide-button" id="kanjiBtn">Kanji</button>
     <!-- Future lessons go below -->
     <!-- <button class="menu-button wide-button" id="lesson1Btn">Lesson 1</button> -->
 
@@ -46,9 +47,15 @@
     <div id="katakanaGrid" class="alphabet-grid"></div>
     <button class="menu-button back" onclick="returnToLearnJapanese()">Back</button>
   </div>
+  <div id="kanjiView" class="main-menu" style="display:none;">
+    <div class="header-title">Kanji</div>
+    <div id="kanjiGrid" class="kanji-grid"></div>
+    <button id="kanjiBackBtn" class="btn back">Back</button>
+  </div>
   <div id="content" class="main-menu" style="display:none;"></div>
 </div>
   <script src="js/main.js"></script>
   <script src="js/alphabet.js"></script>
+  <script src="js/kanji.js"></script>
 </body>
 </html>

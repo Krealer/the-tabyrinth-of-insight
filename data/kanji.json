@@ -1,0 +1,62 @@
+[
+  {
+    "kanji": "日",
+    "meanings": ["day", "sun"],
+    "onyomi": ["ニチ", "ジツ"],
+    "kunyomi": ["ひ", "び", "か"]
+  },
+  {
+    "kanji": "月",
+    "meanings": ["month", "moon"],
+    "onyomi": ["ゲツ", "ガツ"],
+    "kunyomi": ["つき"]
+  },
+  {
+    "kanji": "火",
+    "meanings": ["fire"],
+    "onyomi": ["カ"],
+    "kunyomi": ["ひ"]
+  },
+  {
+    "kanji": "水",
+    "meanings": ["water"],
+    "onyomi": ["スイ"],
+    "kunyomi": ["みず"]
+  },
+  {
+    "kanji": "木",
+    "meanings": ["tree", "wood"],
+    "onyomi": ["モク", "ボク"],
+    "kunyomi": ["き"]
+  },
+  {
+    "kanji": "金",
+    "meanings": ["gold", "money"],
+    "onyomi": ["キン", "コン"],
+    "kunyomi": ["かね"]
+  },
+  {
+    "kanji": "土",
+    "meanings": ["earth", "soil"],
+    "onyomi": ["ド", "ト"],
+    "kunyomi": ["つち"]
+  },
+  {
+    "kanji": "山",
+    "meanings": ["mountain"],
+    "onyomi": ["サン"],
+    "kunyomi": ["やま"]
+  },
+  {
+    "kanji": "川",
+    "meanings": ["river"],
+    "onyomi": ["セン"],
+    "kunyomi": ["かわ"]
+  },
+  {
+    "kanji": "田",
+    "meanings": ["rice field"],
+    "onyomi": ["デン"],
+    "kunyomi": ["た"]
+  }
+]
