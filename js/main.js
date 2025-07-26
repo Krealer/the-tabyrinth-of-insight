@@ -61,12 +61,18 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(lessons => {
       const container = document.getElementById("lessonsView");
+
+      // Insert lesson buttons *after* the alphabet buttons but *before* the Back button
+      const alphabetButtons = container.querySelectorAll(".learn-japanese-button");
+      const backButton = container.querySelector("button.back-button");
+
       lessons.forEach(lesson => {
         const btn = document.createElement("button");
         btn.className = "learn-japanese-button";
         btn.textContent = lesson.title;
         btn.onclick = () => startLesson(lesson.id);
-        container.appendChild(btn);
+
+        container.insertBefore(btn, backButton);
       });
     });
 
