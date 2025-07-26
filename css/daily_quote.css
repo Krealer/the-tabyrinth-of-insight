@@ -2,18 +2,22 @@
 
 .daily-quote-wrapper {
   width: 100%;
+  max-width: 430px;
   margin: 0 auto;
-  margin-top: 2rem;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   gap: clamp(0.5rem, 2vw, 1.25rem);
   align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .quote-entry {
   width: 100%;
+  max-width: 360px;
   padding: 1.25rem 1rem;
+  margin: 0 auto;
   border-radius: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   color: #ffffff;
@@ -26,6 +30,7 @@
   transition: background 0.3s ease, transform 0.2s ease;
   word-wrap: break-word;
   white-space: pre-wrap;
+  box-sizing: border-box;
 }
 
 .quote-entry:hover {
