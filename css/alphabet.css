@@ -1,6 +1,6 @@
 /* ========== ALPHABET VIEW ========== */
 
-#alphabetView {
+#hiraganaView {
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem 1rem;
