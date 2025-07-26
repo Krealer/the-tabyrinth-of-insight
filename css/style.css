@@ -162,10 +162,7 @@ body {
   transform: scale(0.98);
 }
 
-#quotesView,
-#lessonsView,
-#lessonView,
-#alphabetView {
+#quotesView {
   display: none;
   flex-direction: column;
   gap: clamp(0.5rem, 2vw, 1.25rem);

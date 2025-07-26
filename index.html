@@ -6,7 +6,6 @@
   <title>Labyrinth of Insight</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/daily_quote.css">
-  <link rel="stylesheet" href="css/learn_japanese.css">
 </head>
 <body>
   <div class="viewport-container">
@@ -24,38 +23,8 @@
     </div>
     <button id="backBtn" class="menu-button back">Back</button>
   </div>
-  <div id="lessonsView" class="main-menu lesson-container learn-japanese-container">
-    <button id="lesson2Btn" class="menu-button lesson learn-japanese-button">Lesson 2: Katakana</button>
-    <button id="lessonBackBtn" class="menu-button back learn-japanese-button">Back</button>
-  </div>
-  <div id="lessonView" class="main-menu lesson-container" style="display:none;">
-    <div id="lessonContent"></div>
-    <div id="debugInfo" class="debug-info" style="display:none;"></div>
-    <button id="quizBackBtn" class="menu-button back">Back</button>
-  </div>
-  <div id="modeSelect" class="main-menu lesson-container" style="display:none;">
-    <h3 class="quiz-prompt">Choose your answer mode</h3>
-    <form id="modeForm">
-      <label><input type="radio" name="mode" value="mixed" checked /> Mixed</label>
-      <label><input type="radio" name="mode" value="input" /> Typing Only</label>
-      <label><input type="radio" name="mode" value="multiple-choice" /> Multiple Choice Only</label>
-    </form>
-    <button id="modeStartBtn" class="menu-button">Start</button>
-    <button id="modeBackBtn" class="menu-button back">Back</button>
-  </div>
-  <div id="alphabetView" class="main-menu">
-    <div class="alphabet-nav">
-      <button id="hiraganaBtn" class="btn toggle active">Hiragana</button>
-      <button id="katakanaBtn" class="btn toggle">Katakana</button>
-      <button id="kanjiBtn" class="btn toggle">Kanji</button>
-    </div>
-    <div id="alphabetGrid" class="alphabet-grid"></div>
-    <button id="alphabetBackBtn" class="btn back">Back</button>
-  </div>
   <div id="content" class="main-menu" style="display:none;"></div>
 </div>
   <script src="js/main.js"></script>
-  <script src="js/quiz.js"></script>
-  <script src="js/loader.js"></script>
 </body>
 </html>
