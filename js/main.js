@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const quotesView = document.getElementById('quotesView');
   const quoteGrid = document.querySelector('#quotesView .quote-grid');
   const backBtn = document.getElementById('backBtn');
-  const alphabetBtn = document.querySelector('.menu-button.alphabet');
-  const alphabetView = document.getElementById('alphabetView');
-  const alphabetBackBtn = document.getElementById('alphabetBackBtn');
 
   // Load and render daily quotes
   fetch('data/quotes.json')
@@ -32,9 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function hideAllViews() {
     mainMenu.style.display = 'none';
     quotesView.style.display = 'none';
-    if (alphabetView) {
-      alphabetView.classList.add('hidden');
-    }
   }
 
   quoteBtn.addEventListener('click', e => {
@@ -49,15 +43,4 @@ document.addEventListener('DOMContentLoaded', () => {
     mainMenu.style.display = 'flex';
   });
 
-  if (alphabetBtn && alphabetView && alphabetBackBtn) {
-    alphabetBtn.addEventListener('click', () => {
-      document.getElementById('mainMenu').classList.add('hidden');
-      alphabetView.classList.remove('hidden');
-    });
-
-    alphabetBackBtn.addEventListener('click', () => {
-      alphabetView.classList.add('hidden');
-      document.getElementById('mainMenu').classList.remove('hidden');
-    });
-  }
 });
