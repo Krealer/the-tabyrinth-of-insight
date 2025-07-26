@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const backBtn = document.getElementById('backBtn');
   const lessonsView = document.getElementById('lessonsView');
   const lessonBackBtn = document.getElementById('lessonBackBtn');
-  const hiraganaGrid = document.querySelector('.alphabet-grid');
+  const hiraganaGrid = document.getElementById('hiraganaGrid');
+  const katakanaBtn = document.getElementById('katakanaBtn');
+  const katakanaGrid = document.getElementById('katakanaGrid');
+  const kanjiBtn = document.getElementById('kanjiBtn');
 
   // Load and render daily quotes
   fetch('data/quotes.json')
@@ -56,6 +59,34 @@ document.addEventListener('DOMContentLoaded', () => {
     hideAllViews();
     mainMenu.style.display = 'flex';
   });
+
+  // Load and render Katakana alphabet on demand
+  if (katakanaBtn) {
+    katakanaBtn.addEventListener('click', async () => {
+      lessonsView.classList.add('hidden');
+      document.getElementById('katakanaView').classList.remove('hidden');
+      katakanaGrid.innerHTML = '';
+      const response = await fetch('data/katakana.json');
+      const katakana = await response.json();
+      katakana.forEach(char => {
+        const div = document.createElement('div');
+        div.className = 'char-card';
+        div.innerHTML = `<div>${char.kana}</div><small>${char.romaji}</small>`;
+        katakanaGrid.appendChild(div);
+      });
+    });
+  }
+
+  // Show placeholder message for Kanji
+  if (kanjiBtn) {
+    kanjiBtn.addEventListener('click', () => {
+      lessonsView.classList.add('hidden');
+      const grid = document.getElementById('katakanaView');
+      grid.classList.remove('hidden');
+      const inner = document.getElementById('katakanaGrid');
+      inner.innerHTML = '<div class="header">Kanji support coming soon...</div>';
+    });
+  }
 
   // Load and render full Hiragana alphabet
   if (hiraganaGrid) {
