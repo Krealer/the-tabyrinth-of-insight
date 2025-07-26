@@ -72,3 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+function returnToLearnJapanese() {
+  document.getElementById('hiraganaView')?.classList.add('hidden');
+  document.getElementById('katakanaView')?.classList.add('hidden');
+  document.getElementById('lessonsView').classList.remove('hidden');
+}
+
+function showKatakana() {
+  document.getElementById('lessonsView').classList.add('hidden');
+  document.getElementById('katakanaView').classList.remove('hidden');
+}
