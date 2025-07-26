@@ -1,29 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const alphabetBtn = document.getElementById("alphabetBtn");
-  const alphabetView = document.getElementById("alphabetView");
+  const hiraganaBtn = document.getElementById("hiraganaBtn");
+  const hiraganaView = document.getElementById("hiraganaView");
   const lessonsView = document.getElementById("lessonsView");
-  const alphabetGrid = document.getElementById("alphabetGrid");
-  const alphabetBackBtn = document.getElementById("alphabetBackBtn");
+  const hiraganaGrid = document.getElementById("hiraganaGrid");
+  const hiraganaBackBtn = document.getElementById("hiraganaBackBtn");
 
-  alphabetBtn.addEventListener("click", () => {
+  hiraganaBtn.addEventListener("click", () => {
     lessonsView.style.display = "none";
-    alphabetView.style.display = "flex";
+    hiraganaView.style.display = "flex";
 
     fetch("data/kana.json")
       .then(res => res.json())
       .then(data => {
-        alphabetGrid.innerHTML = ""; // Clear existing content
+        hiraganaGrid.innerHTML = ""; // Clear existing content
         data.forEach(entry => {
           const card = document.createElement("div");
           card.className = "char-card";
           card.innerHTML = `<div>${entry.kana}</div><small>${entry.romaji}</small>`;
-          alphabetGrid.appendChild(card);
+          hiraganaGrid.appendChild(card);
         });
       });
   });
 
-  alphabetBackBtn.addEventListener("click", () => {
-    alphabetView.style.display = "none";
+  hiraganaBackBtn.addEventListener("click", () => {
+    hiraganaView.style.display = "none";
     lessonsView.style.display = "flex";
   });
 });

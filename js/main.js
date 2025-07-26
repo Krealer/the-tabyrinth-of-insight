@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const backBtn = document.getElementById('backBtn');
   const lessonsView = document.getElementById('lessonsView');
   const lessonBackBtn = document.getElementById('lessonBackBtn');
-  const alphabetGrid = document.querySelector('.alphabet-grid');
+  const hiraganaGrid = document.querySelector('.alphabet-grid');
 
   // Load and render daily quotes
   fetch('data/quotes.json')
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Load and render full Hiragana alphabet
-  if (alphabetGrid) {
+  if (hiraganaGrid) {
     fetch('data/hiragana_full.json')
       .then(res => res.json())
       .then(data => {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const card = document.createElement('div');
           card.className = 'char-card';
           card.innerHTML = `\n        <div class="kana">${entry.kana}</div>\n        <div class="romaji">${entry.romaji}</div>\n      `;
-          alphabetGrid.appendChild(card);
+          hiraganaGrid.appendChild(card);
         });
       });
   }
