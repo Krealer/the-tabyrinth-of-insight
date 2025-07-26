@@ -37,11 +37,49 @@
 .quote-entry:hover {
   background: rgba(255, 255, 255, 0.08);
   transform: scale(1.015);
+  }
+
+  @media (max-width: 430px) {
+    .quote-entry {
+      font-size: 1.05rem;
+      padding: 1rem;
+    }
+  }
+
+.quote-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 1.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.05);
+  transition: transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
 }
 
-@media (max-width: 430px) {
-  .quote-entry {
-    font-size: 1.05rem;
-    padding: 1rem;
-  }
+.quote-card:hover {
+  transform: scale(1.02);
+}
+
+.quote-day {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #aaa;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.quote-entry {
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #fff;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }

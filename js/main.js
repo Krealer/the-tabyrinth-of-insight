@@ -21,20 +21,30 @@ document.addEventListener('DOMContentLoaded', () => {
   let kanjiData = [];
   let activeSet = 'hiragana';
 
+  // Load and render quotes with labeled cards
   fetch('data/quotes.json')
     .then(res => res.json())
     .then(data => {
-      data.forEach((entry) => {
-        const text = entry.quote || entry;
+      const quoteGrid = document.querySelector('.quote-grid');
+      quoteGrid.innerHTML = '';
 
-        const div = document.createElement('div');
-        div.className = 'quote-entry';
-        div.textContent = text;
+      data.forEach(entry => {
+        const card = document.createElement('div');
+        card.className = 'quote-card';
 
-        quoteGrid.appendChild(div);
+        const dayLabel = document.createElement('div');
+        dayLabel.className = 'quote-day';
+        dayLabel.textContent = `Day ${entry.day}`;
+
+        const quoteText = document.createElement('div');
+        quoteText.className = 'quote-entry';
+        quoteText.textContent = entry.quote;
+
+        card.appendChild(dayLabel);
+        card.appendChild(quoteText);
+        quoteGrid.appendChild(card);
       });
-    })
-    .catch(err => console.error('Failed to load quotes:', err));
+    });
 
   fetch('data/lessons.json')
     .then(res => res.json())
