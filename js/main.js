@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const katakanaBtn = document.getElementById('katakanaBtn');
   const katakanaGrid = document.getElementById('katakanaGrid');
   const kanjiBtn = document.getElementById('kanjiBtn');
+  const kanjiView = document.getElementById('kanjiView');
+  const kanjiBackBtn = document.getElementById('kanjiBackBtn');
 
   // Load and render daily quotes
   fetch('data/quotes.json')
@@ -77,14 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Show placeholder message for Kanji
-  if (kanjiBtn) {
+  if (kanjiBtn && kanjiView && kanjiBackBtn) {
     kanjiBtn.addEventListener('click', () => {
-      lessonsView.classList.add('hidden');
-      const grid = document.getElementById('katakanaView');
-      grid.classList.remove('hidden');
-      const inner = document.getElementById('katakanaGrid');
-      inner.innerHTML = '<div class="header">Kanji support coming soon...</div>';
+      hideAllViews();
+      kanjiView.style.display = 'flex';
+    });
+
+    kanjiBackBtn.addEventListener('click', () => {
+      kanjiView.style.display = 'none';
+      document.getElementById('lessonsView').style.display = 'flex';
     });
   }
 
