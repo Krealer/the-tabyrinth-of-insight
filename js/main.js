@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     hideAllViews();
     quotesView.style.display = 'flex';
+    quotesView.scrollTop = 0;
   });
 
   backBtn.addEventListener('click', () => {
