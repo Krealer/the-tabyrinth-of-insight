@@ -3,60 +3,80 @@
     "kanji": "日",
     "meanings": ["day", "sun"],
     "onyomi": ["ニチ", "ジツ"],
-    "kunyomi": ["ひ", "び", "か"]
+    "kunyomi": ["ひ", "び", "か"],
+    "onyomi_romaji": ["nichi", "jitsu"],
+    "kunyomi_romaji": ["hi", "bi", "ka"]
   },
   {
     "kanji": "月",
     "meanings": ["month", "moon"],
     "onyomi": ["ゲツ", "ガツ"],
-    "kunyomi": ["つき"]
+    "kunyomi": ["つき"],
+    "onyomi_romaji": ["getsu", "gatsu"],
+    "kunyomi_romaji": ["tsuki"]
   },
   {
     "kanji": "火",
     "meanings": ["fire"],
     "onyomi": ["カ"],
-    "kunyomi": ["ひ"]
+    "kunyomi": ["ひ", "ほ"],
+    "onyomi_romaji": ["ka"],
+    "kunyomi_romaji": ["hi", "ho"]
   },
   {
     "kanji": "水",
     "meanings": ["water"],
     "onyomi": ["スイ"],
-    "kunyomi": ["みず"]
+    "kunyomi": ["みず"],
+    "onyomi_romaji": ["sui"],
+    "kunyomi_romaji": ["mizu"]
   },
   {
     "kanji": "木",
     "meanings": ["tree", "wood"],
     "onyomi": ["モク", "ボク"],
-    "kunyomi": ["き"]
+    "kunyomi": ["き", "こ"],
+    "onyomi_romaji": ["moku", "boku"],
+    "kunyomi_romaji": ["ki", "ko"]
   },
   {
     "kanji": "金",
     "meanings": ["gold", "money"],
     "onyomi": ["キン", "コン"],
-    "kunyomi": ["かね"]
+    "kunyomi": ["かね", "かな"],
+    "onyomi_romaji": ["kin", "kon"],
+    "kunyomi_romaji": ["kane", "kana"]
   },
   {
     "kanji": "土",
     "meanings": ["earth", "soil"],
     "onyomi": ["ド", "ト"],
-    "kunyomi": ["つち"]
+    "kunyomi": ["つち"],
+    "onyomi_romaji": ["do", "to"],
+    "kunyomi_romaji": ["tsuchi"]
   },
   {
     "kanji": "山",
     "meanings": ["mountain"],
-    "onyomi": ["サン"],
-    "kunyomi": ["やま"]
+    "onyomi": ["サン", "ザン"],
+    "kunyomi": ["やま"],
+    "onyomi_romaji": ["san", "zan"],
+    "kunyomi_romaji": ["yama"]
   },
   {
     "kanji": "川",
     "meanings": ["river"],
     "onyomi": ["セン"],
-    "kunyomi": ["かわ"]
+    "kunyomi": ["かわ"],
+    "onyomi_romaji": ["sen"],
+    "kunyomi_romaji": ["kawa"]
   },
   {
     "kanji": "田",
     "meanings": ["rice field"],
     "onyomi": ["デン"],
-    "kunyomi": ["た"]
+    "kunyomi": ["た"],
+    "onyomi_romaji": ["den"],
+    "kunyomi_romaji": ["ta"]
   }
 ]
