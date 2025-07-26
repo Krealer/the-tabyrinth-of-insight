@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const quoteBtn = document.querySelector('.quote');
-  const learnBtn = document.querySelector('.learn');
+  const learnJapaneseBtn = document.querySelector('.learn');
   const mainMenu = document.getElementById('mainMenu');
   const quotesView = document.getElementById('quotesView');
   const quoteGrid = document.querySelector('#quotesView .quote-grid');
   const backBtn = document.getElementById('backBtn');
+  const lessonsView = document.getElementById('lessonsView');
+  const lessonBackBtn = document.getElementById('lessonBackBtn');
 
   // Load and render daily quotes
   fetch('data/quotes.json')
@@ -29,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function hideAllViews() {
     mainMenu.style.display = 'none';
     quotesView.style.display = 'none';
+    lessonsView.style.display = 'none';
   }
 
   quoteBtn.addEventListener('click', e => {
@@ -36,6 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
     hideAllViews();
     quotesView.style.display = 'flex';
     quotesView.scrollTop = 0;
+  });
+
+  learnJapaneseBtn.addEventListener('click', () => {
+    mainMenu.style.display = 'none';
+    lessonsView.style.display = 'flex';
+  });
+
+  lessonBackBtn.addEventListener('click', () => {
+    lessonsView.style.display = 'none';
+    mainMenu.style.display = 'flex';
   });
 
   backBtn.addEventListener('click', () => {
