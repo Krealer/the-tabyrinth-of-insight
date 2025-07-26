@@ -10,6 +10,7 @@ let currentLessonData = null;
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let quizCallback = null;
+let currentQuestion = null;
 
 function startLesson(id) {
   fetch(`data/lessons/${id}.json`)
@@ -24,6 +25,7 @@ function startLesson(id) {
 
 function showModeSelection(lessonData) {
   currentLessonData = lessonData;
+  document.getElementById('quizView').style.display = 'none';
   const view = document.getElementById('lessonView');
   view.innerHTML = `
     <h2>Select Quiz Mode</h2>
@@ -58,6 +60,7 @@ function runQuiz(questions, onComplete) {
   currentQuestions = questions;
   currentQuestionIndex = 0;
   quizCallback = onComplete || null;
+  document.getElementById('lessonView').style.display = 'none';
   renderQuestion(currentQuestions[currentQuestionIndex]);
 }
 
@@ -70,35 +73,21 @@ function runEndlessQuiz(questions) {
 }
 
 function renderQuestion(q) {
-  const container = document.getElementById('lessonView');
-  container.innerHTML = '';
-
-  const promptEl = document.createElement('div');
-  promptEl.className = 'quiz-prompt';
-  promptEl.textContent = q.prompt;
-  container.appendChild(promptEl);
-
-  const optionsContainer = document.createElement('div');
-  optionsContainer.className = 'alphabet-grid';
-  q.options.forEach(option => {
-    const btn = document.createElement('button');
-    btn.className = 'btn';
-    btn.textContent = option;
-    btn.onclick = () => handleAnswer(option, q.answer);
-    optionsContainer.appendChild(btn);
-  });
-
-  container.appendChild(optionsContainer);
-
-  const backBtn = document.createElement('button');
-  backBtn.className = 'back-button';
-  backBtn.textContent = 'Back to Mode Selection';
-  backBtn.onclick = () => showModeSelection(currentLessonData);
-  container.appendChild(backBtn);
+  currentQuestion = q;
+  const view = document.getElementById('quizView');
+  view.style.display = 'flex';
+  const shuffledAnswers = shuffle([...q.options]);
+  view.innerHTML = `
+    <div class="question-text">${q.prompt}</div>
+    <div class="answer-buttons">
+      ${shuffledAnswers.map(ans => `<button onclick="checkAnswer('${ans}')">${ans}</button>`).join('')}
+    </div>
+    <button class="back-button" onclick="showModeSelection(currentLessonData)">Back to Mode Selection</button>
+  `;
 }
 
-function handleAnswer(option, answer) {
-  if (option === answer) {
+function checkAnswer(option) {
+  if (option === currentQuestion.answer) {
     currentQuestionIndex++;
     if (currentQuestionIndex < currentQuestions.length) {
       renderQuestion(currentQuestions[currentQuestionIndex]);
@@ -108,13 +97,9 @@ function handleAnswer(option, answer) {
       if (cb) {
         cb();
       } else {
-        const container = document.getElementById('lessonView');
-        container.innerHTML = "<div class='quiz-complete'>Lesson Complete!</div>";
-        const backButton = document.createElement('button');
-        backButton.className = 'back-button';
-        backButton.textContent = 'Back to Mode Selection';
-        backButton.onclick = () => showModeSelection(currentLessonData);
-        container.appendChild(backButton);
+        const view = document.getElementById('quizView');
+        view.innerHTML = "<div class='quiz-complete'>Lesson Complete!</div>" +
+          "<button class='back-button' onclick='showModeSelection(currentLessonData)'>Back to Mode Selection</button>";
       }
     }
   } else {
