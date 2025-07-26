@@ -1,0 +1,29 @@
+.alphabet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
+.char-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  padding: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.char-card:hover {
+  transform: scale(1.05);
+}
+
+.char-card small {
+  display: block;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.25rem;
+}
