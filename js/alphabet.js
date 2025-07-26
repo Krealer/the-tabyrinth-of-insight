@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lessonsView.style.display = "none";
     hiraganaView.style.display = "flex";
 
-    fetch("data/kana.json")
+    fetch("data/hiragana.json")
       .then(res => res.json())
       .then(data => {
         hiraganaGrid.innerHTML = ""; // Clear existing content
