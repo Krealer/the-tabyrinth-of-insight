@@ -15,8 +15,17 @@ document.addEventListener("DOMContentLoaded", () => {
         hiraganaGrid.innerHTML = ""; // Clear existing content
         data.forEach(entry => {
           const card = document.createElement("div");
-          card.className = "char-card";
-          card.innerHTML = `<div>${entry.kana}</div><small>${entry.romaji}</small>`;
+          card.className = "hiragana-card";
+
+          const kana = document.createElement("div");
+          kana.textContent = entry.kana;
+
+          const romaji = document.createElement("div");
+          romaji.textContent = entry.romaji;
+          romaji.style.fontSize = "14px";
+
+          card.appendChild(kana);
+          card.appendChild(romaji);
           hiraganaGrid.appendChild(card);
         });
       });
