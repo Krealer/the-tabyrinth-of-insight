@@ -142,10 +142,33 @@ function showKanjiView() {
         const card = document.createElement('div');
         card.className = 'kanji-card';
         card.innerHTML = `<div class="kanji-char">${entry.kanji}</div><div class="kanji-meaning">${entry.meaning}</div>`;
+        card.dataset.kanji = entry.kanji;
+        card.dataset.meanings = entry.meaning;
+        card.dataset.readings = [...(entry.on || []), ...(entry.kun || [])].join(' ');
+        card.dataset.vocab = (entry.vocabulary || []).map(v => v.word + ' ' + v.kana + ' ' + v.meaning).join(' ');
         card.addEventListener('click', () => {
           createKanjiModal(entry);
         });
         grid.appendChild(card);
+      });
+
+      document.getElementById("kanjiSearchInput").addEventListener("input", function (e) {
+        const query = e.target.value.toLowerCase();
+
+        document.querySelectorAll(".kanji-card").forEach(card => {
+          const kanji = card.dataset.kanji || "";
+          const meanings = (card.dataset.meanings || "").toLowerCase();
+          const readings = (card.dataset.readings || "").toLowerCase();
+          const vocab = (card.dataset.vocab || "").toLowerCase();
+
+          const match =
+            kanji.includes(query) ||
+            meanings.includes(query) ||
+            readings.includes(query) ||
+            vocab.includes(query);
+
+          card.style.display = match ? "block" : "none";
+        });
       });
     });
 }
