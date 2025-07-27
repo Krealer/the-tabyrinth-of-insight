@@ -1,40 +1,38 @@
 .kanji-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: clamp(1rem, 2vw, 1.5rem);
-  padding: 2rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+  padding: 20px;
+  justify-content: center;
 }
 
 .kanji-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 1.25rem;
-  padding: 1rem 1.25rem;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-family: system-ui, sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-.kanji-character {
+.kanji-char {
   font-size: 2.5rem;
-  text-align: center;
+  margin-bottom: 5px;
 }
 
 .kanji-meaning {
-  font-size: 1rem;
-  text-align: center;
-  opacity: 0.85;
-}
-
-.kanji-readings {
   font-size: 0.9rem;
-  line-height: 1.4;
+  color: #ccc;
 }
 
-.kanji-readings strong {
-  display: inline-block;
-  min-width: 3rem;
+.back-button {
+  margin: 20px auto;
+  display: block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #111;
+  color: white;
+  font-size: 1rem;
 }

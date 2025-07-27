@@ -10,9 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const hiraganaGrid = document.getElementById('hiraganaGrid');
   const katakanaBtn = document.getElementById('katakanaBtn');
   const katakanaGrid = document.getElementById('katakanaGrid');
-  const kanjiBtn = document.getElementById('kanjiBtn');
-  const kanjiView = document.getElementById('kanjiView');
-  const kanjiBackBtn = document.getElementById('kanjiBackBtn');
 
   // Load and render daily quotes
   fetch('data/quotes.json')
@@ -103,17 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (kanjiBtn && kanjiView && kanjiBackBtn) {
-    kanjiBtn.addEventListener('click', () => {
-      hideAllViews();
-      kanjiView.style.display = 'flex';
-    });
-
-    kanjiBackBtn.addEventListener('click', () => {
-      kanjiView.style.display = 'none';
-      document.getElementById('lessonsView').style.display = 'flex';
-    });
-  }
 
   // Load and render full Hiragana alphabet
   if (hiraganaGrid) {
@@ -140,4 +126,28 @@ function returnToLearnJapanese() {
 function showKatakana() {
   document.getElementById('lessonsView').classList.add('hidden');
   document.getElementById('katakanaView').classList.remove('hidden');
+}
+
+function showKanjiView() {
+  document.getElementById('mainMenu').classList.add('hidden');
+  document.getElementById('kanjiView').classList.remove('hidden');
+
+  const grid = document.getElementById('kanjiGrid');
+  grid.innerHTML = '';
+
+  fetch('data/kanji.json')
+    .then(res => res.json())
+    .then(kanjiList => {
+      kanjiList.forEach(entry => {
+        const card = document.createElement('div');
+        card.className = 'kanji-card';
+        card.innerHTML = `<div class="kanji-char">${entry.kanji}</div><div class="kanji-meaning">${entry.meaning}</div>`;
+        grid.appendChild(card);
+      });
+    });
+}
+
+function hideKanjiView() {
+  document.getElementById('kanjiView').classList.add('hidden');
+  document.getElementById('mainMenu').classList.remove('hidden');
 }
