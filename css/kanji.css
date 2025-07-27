@@ -105,3 +105,24 @@
   color: #eee;
   font-family: system-ui, sans-serif;
 }
+
+.kanji-vocab-entry {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.kanji-vocab-word {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-right: 6px;
+}
+
+.kanji-vocab-kana {
+  color: #bbb;
+  margin-right: 8px;
+  font-style: italic;
+}
+
+.kanji-vocab-meaning {
+  color: #ddd;
+}
