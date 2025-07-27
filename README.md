@@ -4,8 +4,14 @@ A simple static website for exploring various learning resources and games. The 
 
 ## Structure
 - **index.html** – landing page with navigation buttons
-- **/css** – styles
-- **/js** – optional scripts
-- **/pages** – placeholder content pages
+- **/index/** – styles and scripts for the home page
+- **/pages/** – each section with its own assets
+
+Example for the Japanese section:
+
+- `/pages/japanese.html`
+- `/pages/japanese/css/style.css`
+- `/pages/japanese/js/script.js`
+- `/pages/japanese/data/placeholder.json`
 
 All links use relative paths for easy deployment, and no external assets are required.
