@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Labyrinth of Insight</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/daily_quote.css">
@@ -12,58 +12,7 @@
   <link rel="stylesheet" href="css/quiz.css">
 </head>
 <body>
-  <div class="viewport-container">
-  <div class="main-menu" id="mainMenu">
-    <div class="header-title">Labyrinth of Insight</div>
-      <button id="learnJapaneseButton" class="menu-button learn">Learn Japanese</button>
-    <button class="menu-button quote">Daily Quote</button>
-    <button class="menu-button wip-button" disabled>Games (Coming Soon)</button>
-    <button class="menu-button wip-button" disabled>Coding (Coming Soon)</button>
-  </div>
-  <div id="lessonsView" class="main-menu learn-japanese-container" style="display: none;">
-    <div class="header-title">Learn Japanese</div>
-
-  <button class="learn-japanese-button" id="hiraganaBtn">Hiragana</button>
-  <button class="learn-japanese-button" id="katakanaBtn">Katakana</button>
-  <button class="learn-japanese-button" id="kanjiBtn">Kanji</button>
-    <!-- Future lessons go below -->
-    <!-- <button class="menu-button wide-button" id="lesson1Btn">Lesson 1</button> -->
-
-    <button id="lessonBackBtn" class="learn-japanese-button back-button">Back</button>
-  </div>
-  <div id="quotesView" class="main-menu">
-    <div class="header-title">Daily Quote</div>
-    <div class="daily-quote-wrapper">
-      <div class="quote-grid"></div>
-    </div>
-    <button id="backBtn" class="back-button">Back</button>
-  </div>
-  <div id="hiraganaView" class="alphabet-view hidden">
-    <div class="header-title">Hiragana</div>
-    <div id="hiraganaGrid" class="hiragana-grid"></div>
-    <button id="hiraganaBackBtn" class="back-button">Back</button>
-  </div>
-  <div id="katakanaView" class="alphabet-view hidden">
-    <div class="header-title">Katakana</div>
-    <div id="katakanaGrid" class="katakana-grid"></div>
-    <button class="menu-button back" onclick="returnToLearnJapanese()">Back</button>
-  </div>
-  <div id="kanjiView" class="alphabet-view hidden">
-    <h2>KANJI</h2>
-    <input 
-      type="text" 
-      id="kanjiSearchInput" 
-      placeholder="Search Kanji, reading, or meaning..."
-      class="kanji-search-input"
-    />
-    <div id="kanjiGrid" class="kanji-grid"></div>
-    <button class="back-button" onclick="hideKanjiView()">Back</button>
-  </div>
-  <div id="lessonView" class="main-menu" style="display:none;"></div>
-  <div id="quizView" class="main-menu" style="display:none;"></div>
-</div>
-  <script src="js/main.js"></script>
-  <script src="js/alphabet.js"></script>
-  <script src="js/quiz.js"></script>
+  <div id="main-content"></div>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
