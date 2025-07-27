@@ -7,6 +7,5 @@ A simple static website for exploring various learning resources and games. The 
 - **/css** – styles
 - **/js** – optional scripts
 - **/pages** – placeholder content pages
-- **/assets** – images and fonts
 
-All links and assets use relative paths for easy deployment.
+All links use relative paths for easy deployment, and no external assets are required.
