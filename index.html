@@ -4,15 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Labyrinth of Insight</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/daily_quote.css">
-  <link rel="stylesheet" href="css/alphabet.css">
-  <link rel="stylesheet" href="css/learn_japanese.css">
-  <link rel="stylesheet" href="css/kanji.css">
-  <link rel="stylesheet" href="css/quiz.css">
 </head>
 <body>
   <div id="main-content"></div>
-  <script type="module" src="js/main.js"></script>
+
+  <script type="module">
+    import { loadLearnJapaneseMenu } from './js/main.js';
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const content = document.getElementById('main-content');
+      if (content) {
+        loadLearnJapaneseMenu();
+      } else {
+        console.error('#main-content not found.');
+      }
+    });
+  </script>
 </body>
 </html>
