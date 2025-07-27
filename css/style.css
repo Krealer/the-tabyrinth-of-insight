@@ -44,6 +44,22 @@ header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+.back-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    background-color: #222;
+    border: 1px solid #555;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
 @media (min-width: 600px) {
     .center {
         flex-direction: row;
