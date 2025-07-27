@@ -168,19 +168,30 @@ function showKanjiView() {
 
   fetch('data/kanji.json')
     .then(res => res.json())
-    .then(kanjiList => {
-      kanjiList.forEach(entry => {
+    .then(kanjiData => {
+      kanjiData.forEach(entry => {
         const card = document.createElement('div');
         card.className = 'kanji-card';
-        card.innerHTML = `<div class="kanji-char">${entry.kanji}</div><div class="kanji-meaning">${entry.meaning}</div>`;
+
+        const char = document.createElement('div');
+        char.className = 'kanji-character';
+        char.textContent = entry.kanji;
+
+        const meaning = document.createElement('div');
+        meaning.className = 'kanji-meaning';
+        meaning.textContent = entry.meaning;
+
+        card.appendChild(char);
+        card.appendChild(meaning);
+        grid.appendChild(card);
+
+        // Preserve search data for future functionality
         card.dataset.kanji = entry.kanji;
         card.dataset.meanings = entry.meaning;
         card.dataset.readings = [...(entry.on || []), ...(entry.kun || [])].join(' ');
-        card.dataset.vocab = (entry.vocabulary || []).map(v => v.word + ' ' + v.kana + ' ' + v.meaning).join(' ');
-        card.addEventListener('click', () => {
-          createKanjiModal(entry);
-        });
-        grid.appendChild(card);
+        card.dataset.vocab = (entry.vocabulary || []).map(v => `${v.word} ${v.kana} ${v.meaning}`).join(' ');
+
+        // Future step: add onclick logic here
       });
 
       document.getElementById("kanjiSearchInput").addEventListener("input", function (e) {
