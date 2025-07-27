@@ -1,0 +1,232 @@
+[
+  {
+    "character": "あ",
+    "options": ["a", "i", "u", "e"],
+    "answer": "a"
+  },
+  {
+    "character": "い",
+    "options": ["e", "i", "o", "a"],
+    "answer": "i"
+  },
+  {
+    "character": "う",
+    "options": ["u", "a", "o", "i"],
+    "answer": "u"
+  },
+  {
+    "character": "え",
+    "options": ["i", "e", "u", "o"],
+    "answer": "e"
+  },
+  {
+    "character": "お",
+    "options": ["o", "a", "u", "e"],
+    "answer": "o"
+  },
+  {
+    "character": "か",
+    "options": ["ka", "ko", "ki", "ku"],
+    "answer": "ka"
+  },
+  {
+    "character": "き",
+    "options": ["ke", "ka", "ki", "ku"],
+    "answer": "ki"
+  },
+  {
+    "character": "く",
+    "options": ["ko", "ku", "ka", "ki"],
+    "answer": "ku"
+  },
+  {
+    "character": "け",
+    "options": ["ke", "ko", "ki", "ka"],
+    "answer": "ke"
+  },
+  {
+    "character": "こ",
+    "options": ["ku", "ka", "ko", "ke"],
+    "answer": "ko"
+  },
+  {
+    "character": "さ",
+    "options": ["sa", "shi", "so", "se"],
+    "answer": "sa"
+  },
+  {
+    "character": "し",
+    "options": ["shi", "sa", "su", "ki"],
+    "answer": "shi"
+  },
+  {
+    "character": "す",
+    "options": ["su", "so", "tsu", "se"],
+    "answer": "su"
+  },
+  {
+    "character": "せ",
+    "options": ["se", "shi", "so", "sa"],
+    "answer": "se"
+  },
+  {
+    "character": "そ",
+    "options": ["so", "su", "se", "sa"],
+    "answer": "so"
+  },
+  {
+    "character": "た",
+    "options": ["ta", "te", "to", "da"],
+    "answer": "ta"
+  },
+  {
+    "character": "ち",
+    "options": ["chi", "shi", "cha", "tsu"],
+    "answer": "chi"
+  },
+  {
+    "character": "つ",
+    "options": ["tsu", "zu", "su", "chi"],
+    "answer": "tsu"
+  },
+  {
+    "character": "て",
+    "options": ["te", "ta", "ne", "to"],
+    "answer": "te"
+  },
+  {
+    "character": "と",
+    "options": ["to", "ta", "do", "te"],
+    "answer": "to"
+  },
+  {
+    "character": "な",
+    "options": ["na", "ni", "ne", "nu"],
+    "answer": "na"
+  },
+  {
+    "character": "に",
+    "options": ["ni", "na", "nu", "ne"],
+    "answer": "ni"
+  },
+  {
+    "character": "ぬ",
+    "options": ["nu", "no", "mu", "ni"],
+    "answer": "nu"
+  },
+  {
+    "character": "ね",
+    "options": ["ne", "nu", "re", "na"],
+    "answer": "ne"
+  },
+  {
+    "character": "の",
+    "options": ["no", "na", "nu", "to"],
+    "answer": "no"
+  },
+  {
+    "character": "は",
+    "options": ["ha", "ba", "wa", "ho"],
+    "answer": "ha"
+  },
+  {
+    "character": "ひ",
+    "options": ["hi", "bi", "fu", "ki"],
+    "answer": "hi"
+  },
+  {
+    "character": "ふ",
+    "options": ["fu", "hu", "bu", "pu"],
+    "answer": "fu"
+  },
+  {
+    "character": "へ",
+    "options": ["he", "e", "ha", "ne"],
+    "answer": "he"
+  },
+  {
+    "character": "ほ",
+    "options": ["ho", "he", "ha", "wo"],
+    "answer": "ho"
+  },
+  {
+    "character": "ま",
+    "options": ["ma", "na", "mu", "mo"],
+    "answer": "ma"
+  },
+  {
+    "character": "み",
+    "options": ["mi", "ma", "mu", "ni"],
+    "answer": "mi"
+  },
+  {
+    "character": "む",
+    "options": ["mu", "ma", "me", "nu"],
+    "answer": "mu"
+  },
+  {
+    "character": "め",
+    "options": ["me", "ne", "mu", "ma"],
+    "answer": "me"
+  },
+  {
+    "character": "も",
+    "options": ["mo", "ma", "no", "mu"],
+    "answer": "mo"
+  },
+  {
+    "character": "や",
+    "options": ["ya", "yo", "yu", "wa"],
+    "answer": "ya"
+  },
+  {
+    "character": "ゆ",
+    "options": ["yu", "yo", "ya", "ru"],
+    "answer": "yu"
+  },
+  {
+    "character": "よ",
+    "options": ["yo", "yu", "ya", "ro"],
+    "answer": "yo"
+  },
+  {
+    "character": "ら",
+    "options": ["ra", "la", "na", "ri"],
+    "answer": "ra"
+  },
+  {
+    "character": "り",
+    "options": ["ri", "ra", "ru", "re"],
+    "answer": "ri"
+  },
+  {
+    "character": "る",
+    "options": ["ru", "ra", "ro", "ri"],
+    "answer": "ru"
+  },
+  {
+    "character": "れ",
+    "options": ["re", "ri", "ra", "ru"],
+    "answer": "re"
+  },
+  {
+    "character": "ろ",
+    "options": ["ro", "ru", "re", "ra"],
+    "answer": "ro"
+  },
+  {
+    "character": "わ",
+    "options": ["wa", "wo", "ra", "ga"],
+    "answer": "wa"
+  },
+  {
+    "character": "を",
+    "options": ["wo", "o", "wa", "mo"],
+    "answer": "wo"
+  },
+  {
+    "character": "ん",
+    "options": ["n", "nn", "mu", "nu"],
+    "answer": "n"
+  }
+]
