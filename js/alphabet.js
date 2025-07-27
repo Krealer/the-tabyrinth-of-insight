@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const hiraganaBackBtn = document.getElementById("hiraganaBackBtn");
 
   hiraganaBtn.addEventListener("click", () => {
-    lessonsView.style.display = "none";
-    hiraganaView.style.display = "flex";
+    lessonsView.classList.add("hidden");
+    hiraganaView.classList.remove("hidden");
 
     fetch("data/hiragana.json")
       .then(res => res.json())
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   hiraganaBackBtn.addEventListener("click", () => {
-    hiraganaView.style.display = "none";
-    lessonsView.style.display = "flex";
+    hiraganaView.classList.add("hidden");
+    lessonsView.classList.remove("hidden");
   });
 });

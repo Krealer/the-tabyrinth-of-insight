@@ -23,9 +23,9 @@
   <div id="lessonsView" class="main-menu learn-japanese-container" style="display: none;">
     <div class="header-title">Learn Japanese</div>
 
-  <button class="menu-button wide-button" id="hiraganaBtn">Hiragana</button>
-  <button class="menu-button wide-button" id="katakanaBtn">Katakana</button>
-  <button class="menu-button wide-button" id="kanjiBtn" onclick="showKanjiView()">Kanji</button>
+  <button class="learn-japanese-button" id="hiraganaBtn">Hiragana</button>
+  <button class="learn-japanese-button" id="katakanaBtn">Katakana</button>
+  <button class="learn-japanese-button" id="kanjiBtn">Kanji</button>
     <!-- Future lessons go below -->
     <!-- <button class="menu-button wide-button" id="lesson1Btn">Lesson 1</button> -->
 
@@ -38,17 +38,17 @@
     </div>
     <button id="backBtn" class="back-button">Back</button>
   </div>
-  <div id="hiraganaView" class="main-menu" style="display: none;">
+  <div id="hiraganaView" class="alphabet-view hidden">
     <div class="header-title">Hiragana</div>
     <div id="hiraganaGrid" class="alphabet-grid"></div>
     <button id="hiraganaBackBtn" class="back-button">Back</button>
   </div>
-  <div id="katakanaView" class="hidden wrapper">
+  <div id="katakanaView" class="alphabet-view hidden">
     <div class="header-title">Katakana</div>
     <div id="katakanaGrid" class="alphabet-grid"></div>
     <button class="menu-button back" onclick="returnToLearnJapanese()">Back</button>
   </div>
-  <div id="kanjiView" class="page hidden">
+  <div id="kanjiView" class="alphabet-view hidden">
     <h2>KANJI</h2>
     <input 
       type="text" 

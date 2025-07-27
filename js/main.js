@@ -8,8 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const lessonsView = document.getElementById('lessonsView');
   const lessonBackBtn = document.getElementById('lessonBackBtn');
   const hiraganaGrid = document.getElementById('hiraganaGrid');
+  const hiraganaBtn = document.getElementById('hiraganaBtn');
   const katakanaBtn = document.getElementById('katakanaBtn');
+  const kanjiBtn = document.getElementById('kanjiBtn');
   const katakanaGrid = document.getElementById('katakanaGrid');
+  const hiraganaView = document.getElementById('hiraganaView');
+  const katakanaView = document.getElementById('katakanaView');
+  const kanjiView = document.getElementById('kanjiView');
 
   // Load and render daily quotes
   fetch('data/quotes.json')
@@ -36,6 +41,31 @@ document.addEventListener('DOMContentLoaded', () => {
     quotesView.style.display = 'none';
     lessonsView.style.display = 'none';
   }
+
+  function hideAllAlphabetViews() {
+    hiraganaView.classList.add('hidden');
+    katakanaView.classList.add('hidden');
+    kanjiView.classList.add('hidden');
+  }
+
+  hiraganaBtn.addEventListener('click', () => {
+    hideAllAlphabetViews();
+    lessonsView.classList.add('hidden');
+    hiraganaView.classList.remove('hidden');
+  });
+
+  katakanaBtn.addEventListener('click', () => {
+    hideAllAlphabetViews();
+    lessonsView.classList.add('hidden');
+    katakanaView.classList.remove('hidden');
+  });
+
+  kanjiBtn.addEventListener('click', () => {
+    hideAllAlphabetViews();
+    lessonsView.classList.add('hidden');
+    kanjiView.classList.remove('hidden');
+    showKanjiView();
+  });
 
   quoteBtn.addEventListener('click', e => {
     e.preventDefault();
@@ -129,6 +159,7 @@ function showKatakana() {
 }
 
 function showKanjiView() {
+  document.getElementById('lessonsView')?.classList.add('hidden');
   document.getElementById('mainMenu').classList.add('hidden');
   document.getElementById('kanjiView').classList.remove('hidden');
 
@@ -175,7 +206,7 @@ function showKanjiView() {
 
 function hideKanjiView() {
   document.getElementById('kanjiView').classList.add('hidden');
-  document.getElementById('mainMenu').classList.remove('hidden');
+  document.getElementById('lessonsView')?.classList.remove('hidden');
 }
 
 function createKanjiModal(entry) {
