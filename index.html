@@ -15,17 +15,5 @@
 <body>
   <div id="main-content"></div>
 
-  <script type="module">
-    import { loadLearnJapaneseMenu } from './js/main.js';
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const content = document.getElementById('main-content');
-      if (content) {
-        loadLearnJapaneseMenu();
-      } else {
-        console.error('#main-content not found.');
-      }
-    });
-  </script>
 </body>
 </html>
