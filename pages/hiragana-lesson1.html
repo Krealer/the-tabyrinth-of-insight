@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiragana: Lesson 1</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <style>
+    .quiz-char {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .quiz-option.correct {
+      background: #33691e;
+      border-color: #558b2f;
+    }
+    .quiz-option.wrong {
+      background: #b71c1c;
+      border-color: #e53935;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hiragana: Lesson 1</h1>
+    <div id="prompt" class="quiz-char">か</div>
+    <div class="options">
+      <button class="button quiz-option">Jo</button>
+      <button class="button quiz-option">Ku</button>
+      <button class="button quiz-option">Ka</button>
+      <button class="button quiz-option">Wa</button>
+    </div>
+    <a href="learn-japanese.html" class="button" style="margin-top:2rem;">Back</a>
+  </div>
+  <script>
+    const correctAnswer = 'Ka';
+    document.querySelectorAll('.quiz-option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const chosen = btn.textContent.trim();
+        const isCorrect = chosen === correctAnswer;
+        btn.classList.add(isCorrect ? 'correct' : 'wrong');
+        document.querySelectorAll('.quiz-option').forEach(b => b.disabled = true);
+      });
+    });
+  </script>
+</body>
+</html>
