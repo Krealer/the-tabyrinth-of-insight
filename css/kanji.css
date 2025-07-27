@@ -37,6 +37,20 @@
   font-size: 1rem;
 }
 
+.kanji-search-input {
+  width: 90%;
+  max-width: 500px;
+  margin: 1rem auto;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #555;
+  background: rgba(255, 255, 255, 0.04);
+  color: white;
+  display: block;
+  backdrop-filter: blur(6px);
+}
+
 .kanji-modal-overlay {
   position: fixed;
   top: 0;
