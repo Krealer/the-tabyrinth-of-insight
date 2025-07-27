@@ -1,9 +1,52 @@
+
 .alphabet-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
   gap: clamp(0.5rem, 2vw, 1.25rem);
   padding: 1rem;
   width: 100%;
+}
+
+.hiragana-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.hiragana-card {
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 10px;
+  width: 60px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.katakana-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.katakana-card {
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 10px;
+  width: 60px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
 }
 
 .char-card {

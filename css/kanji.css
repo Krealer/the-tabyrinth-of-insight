@@ -1,9 +1,10 @@
 .kanji-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 12px;
   padding: 20px;
-  justify-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .kanji-card {

@@ -123,8 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const katakana = await response.json();
       katakana.forEach(char => {
         const div = document.createElement('div');
-        div.className = 'char-card';
-        div.innerHTML = `<div>${char.kana}</div><small>${char.romaji}</small>`;
+        div.className = 'katakana-card';
+
+        const kana = document.createElement('div');
+        kana.textContent = char.kana;
+
+        const romaji = document.createElement('div');
+        romaji.textContent = char.romaji;
+        romaji.style.fontSize = '14px';
+
+        div.appendChild(kana);
+        div.appendChild(romaji);
         katakanaGrid.appendChild(div);
       });
     });
@@ -138,8 +147,17 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         data.forEach(entry => {
           const card = document.createElement('div');
-          card.className = 'char-card';
-          card.innerHTML = `\n        <div class="kana">${entry.kana}</div>\n        <div class="romaji">${entry.romaji}</div>\n      `;
+          card.className = 'hiragana-card';
+
+          const kana = document.createElement('div');
+          kana.textContent = entry.kana;
+
+          const romaji = document.createElement('div');
+          romaji.textContent = entry.romaji;
+          romaji.style.fontSize = '14px';
+
+          card.appendChild(kana);
+          card.appendChild(romaji);
           hiraganaGrid.appendChild(card);
         });
       });
