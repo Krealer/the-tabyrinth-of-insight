@@ -142,6 +142,9 @@ function showKanjiView() {
         const card = document.createElement('div');
         card.className = 'kanji-card';
         card.innerHTML = `<div class="kanji-char">${entry.kanji}</div><div class="kanji-meaning">${entry.meaning}</div>`;
+        card.addEventListener('click', () => {
+          createKanjiModal(entry);
+        });
         grid.appendChild(card);
       });
     });
@@ -150,4 +153,23 @@ function showKanjiView() {
 function hideKanjiView() {
   document.getElementById('kanjiView').classList.add('hidden');
   document.getElementById('mainMenu').classList.remove('hidden');
+}
+
+function createKanjiModal(entry) {
+  const modal = document.createElement('div');
+  modal.className = 'kanji-modal-overlay';
+
+  modal.innerHTML = `
+    <div class="kanji-modal">
+      <span class="kanji-modal-close" onclick="this.parentElement.parentElement.remove()">×</span>
+      <div class="kanji-modal-content">
+        <div class="kanji-modal-char">${entry.kanji}</div>
+        <div class="kanji-modal-meaning">${entry.meaning}</div>
+        <div class="kanji-modal-section"><strong>On'yomi:</strong> ${entry.on.join(', ')}</div>
+        <div class="kanji-modal-section"><strong>Kun'yomi:</strong> ${entry.kun.join(', ')}</div>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
 }

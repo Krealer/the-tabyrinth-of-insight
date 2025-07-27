@@ -36,3 +36,61 @@
   color: white;
   font-size: 1rem;
 }
+
+.kanji-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.kanji-modal {
+  background-color: #1b1b1b;
+  border-radius: 12px;
+  padding: 24px;
+  color: #fff;
+  max-width: 320px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.kanji-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.kanji-modal-content {
+  text-align: center;
+}
+
+.kanji-modal-char {
+  font-size: 4rem;
+  margin-bottom: 12px;
+}
+
+.kanji-modal-meaning {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.kanji-modal-section {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
