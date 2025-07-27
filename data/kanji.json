@@ -1,83 +1,1290 @@
 [
-  { "kanji": "一", "meaning": "one", "on": ["イチ", "イツ"], "kun": ["ひと"] },
-  { "kanji": "二", "meaning": "two", "on": ["ニ"], "kun": ["ふた"] },
-  { "kanji": "三", "meaning": "three", "on": ["サン"], "kun": ["みっ"] },
-  { "kanji": "四", "meaning": "four", "on": ["シ"], "kun": ["よん", "よ"] },
-  { "kanji": "五", "meaning": "five", "on": ["ゴ"], "kun": ["いつ"] },
-  { "kanji": "六", "meaning": "six", "on": ["ロク"], "kun": ["むっ", "むい"] },
-  { "kanji": "七", "meaning": "seven", "on": ["シチ"], "kun": ["なな", "なの"] },
-  { "kanji": "八", "meaning": "eight", "on": ["ハチ"], "kun": ["やっ", "よう"] },
-  { "kanji": "九", "meaning": "nine", "on": ["キュウ", "ク"], "kun": ["ここの"] },
-  { "kanji": "十", "meaning": "ten", "on": ["ジュウ", "ジッ"], "kun": ["とお"] },
-  { "kanji": "百", "meaning": "hundred", "on": ["ヒャク"], "kun": [] },
-  { "kanji": "千", "meaning": "thousand", "on": ["セン"], "kun": ["ち"] },
-  { "kanji": "万", "meaning": "ten thousand", "on": ["マン"], "kun": [] },
-  { "kanji": "円", "meaning": "yen, circle", "on": ["エン"], "kun": ["まる"] },
-  { "kanji": "口", "meaning": "mouth", "on": ["コウ"], "kun": ["くち"] },
-  { "kanji": "目", "meaning": "eye", "on": ["モク"], "kun": ["め"] },
-  { "kanji": "耳", "meaning": "ear", "on": ["ジ"], "kun": ["みみ"] },
-  { "kanji": "手", "meaning": "hand", "on": ["シュ"], "kun": ["て"] },
-  { "kanji": "足", "meaning": "foot, leg", "on": ["ソク"], "kun": ["あし", "た"] },
-  { "kanji": "力", "meaning": "power", "on": ["リョク"], "kun": ["ちから"] },
-  { "kanji": "人", "meaning": "person", "on": ["ジン", "ニン"], "kun": ["ひと"] },
-  { "kanji": "男", "meaning": "man", "on": ["ダン"], "kun": ["おとこ"] },
-  { "kanji": "女", "meaning": "woman", "on": ["ジョ"], "kun": ["おんな"] },
-  { "kanji": "子", "meaning": "child", "on": ["シ"], "kun": ["こ"] },
-  { "kanji": "父", "meaning": "father", "on": ["フ"], "kun": ["ちち"] },
-  { "kanji": "母", "meaning": "mother", "on": ["ボ"], "kun": ["はは"] },
-  { "kanji": "友", "meaning": "friend", "on": ["ユウ"], "kun": ["とも"] },
-  { "kanji": "先", "meaning": "before, ahead", "on": ["セン"], "kun": ["さき"] },
-  { "kanji": "生", "meaning": "life, birth", "on": ["セイ", "ショウ"], "kun": ["い", "う"] },
-  { "kanji": "学", "meaning": "study", "on": ["ガク"], "kun": ["まな"] },
-  { "kanji": "校", "meaning": "school", "on": ["コウ"], "kun": [] },
-  { "kanji": "年", "meaning": "year", "on": ["ネン"], "kun": ["とし"] },
-  { "kanji": "時", "meaning": "time, hour", "on": ["ジ"], "kun": ["とき"] },
-  { "kanji": "日", "meaning": "day, sun", "on": ["ニチ", "ジツ"], "kun": ["ひ", "び", "か"] },
-  { "kanji": "月", "meaning": "month, moon", "on": ["ゲツ", "ガツ"], "kun": ["つき"] },
-  { "kanji": "火", "meaning": "fire", "on": ["カ"], "kun": ["ひ", "ほ"] },
-  { "kanji": "水", "meaning": "water", "on": ["スイ"], "kun": ["みず"] },
-  { "kanji": "木", "meaning": "tree", "on": ["モク"], "kun": ["き"] },
-  { "kanji": "金", "meaning": "gold, money", "on": ["キン"], "kun": ["かね"] },
-  { "kanji": "土", "meaning": "earth, soil", "on": ["ド"], "kun": ["つち"] },
-  { "kanji": "山", "meaning": "mountain", "on": ["サン"], "kun": ["やま"] },
-  { "kanji": "川", "meaning": "river", "on": ["セン"], "kun": ["かわ"] },
-  { "kanji": "天", "meaning": "heaven", "on": ["テン"], "kun": ["あま"] },
-  { "kanji": "空", "meaning": "sky, empty", "on": ["クウ"], "kun": ["そら", "あ"] },
-  { "kanji": "田", "meaning": "rice field", "on": ["デン"], "kun": ["た"] },
-  { "kanji": "気", "meaning": "spirit", "on": ["キ"], "kun": [] },
-  { "kanji": "雨", "meaning": "rain", "on": ["ウ"], "kun": ["あめ"] },
-  { "kanji": "車", "meaning": "car", "on": ["シャ"], "kun": ["くるま"] },
-  { "kanji": "門", "meaning": "gate", "on": ["モン"], "kun": [] },
-  { "kanji": "話", "meaning": "talk", "on": ["ワ"], "kun": ["はな"] },
-  { "kanji": "語", "meaning": "language, word", "on": ["ゴ"], "kun": ["かた"] },
-  { "kanji": "読", "meaning": "read", "on": ["ドク"], "kun": ["よ"] },
-  { "kanji": "書", "meaning": "write", "on": ["ショ"], "kun": ["か"] },
-  { "kanji": "聞", "meaning": "hear", "on": ["ブン"], "kun": ["き"] },
-  { "kanji": "見", "meaning": "see", "on": ["ケン"], "kun": ["み"] },
-  { "kanji": "行", "meaning": "go", "on": ["コウ"], "kun": ["い", "ゆ"] },
-  { "kanji": "来", "meaning": "come", "on": ["ライ"], "kun": ["く", "きた"] },
-  { "kanji": "帰", "meaning": "return", "on": ["キ"], "kun": ["かえ"] },
-  { "kanji": "食", "meaning": "eat", "on": ["ショク"], "kun": ["た"] },
-  { "kanji": "飲", "meaning": "drink", "on": ["イン"], "kun": ["の"] },
-  { "kanji": "買", "meaning": "buy", "on": ["バイ"], "kun": ["か"] },
-  { "kanji": "会", "meaning": "meet", "on": ["カイ"], "kun": ["あ"] },
-  { "kanji": "今", "meaning": "now", "on": ["コン"], "kun": ["いま"] },
-  { "kanji": "新", "meaning": "new", "on": ["シン"], "kun": ["あたら"] },
-  { "kanji": "古", "meaning": "old", "on": ["コ"], "kun": ["ふる"] },
-  { "kanji": "長", "meaning": "long, leader", "on": ["チョウ"], "kun": ["なが"] },
-  { "kanji": "高", "meaning": "high, expensive", "on": ["コウ"], "kun": ["たか"] },
-  { "kanji": "安", "meaning": "cheap, peace", "on": ["アン"], "kun": ["やす"] },
-  { "kanji": "多", "meaning": "many", "on": ["タ"], "kun": ["おお"] },
-  { "kanji": "少", "meaning": "few", "on": ["ショウ"], "kun": ["すく", "すこ"] },
-  { "kanji": "早", "meaning": "early", "on": ["ソウ"], "kun": ["はや"] },
-  { "kanji": "明", "meaning": "bright", "on": ["メイ"], "kun": ["あか"] },
-  { "kanji": "白", "meaning": "white", "on": ["ハク"], "kun": ["しろ"] },
-  { "kanji": "黒", "meaning": "black", "on": ["コク"], "kun": ["くろ"] },
-  { "kanji": "赤", "meaning": "red", "on": ["セキ"], "kun": ["あか"] },
-  { "kanji": "青", "meaning": "blue", "on": ["セイ"], "kun": ["あお"] },
-  { "kanji": "好き", "meaning": "like", "on": ["コウ"], "kun": ["す"] },
-  { "kanji": "大", "meaning": "big", "on": ["ダイ"], "kun": ["おお"] },
-  { "kanji": "中", "meaning": "middle", "on": ["チュウ"], "kun": ["なか"] },
-  { "kanji": "小", "meaning": "small", "on": ["ショウ"], "kun": ["ちい"] },
-  { "kanji": "山", "meaning": "mountain", "on": ["サン"], "kun": ["やま"] }
+  {
+    "kanji": "一",
+    "meaning": "one",
+    "on": [
+      "イチ",
+      "イツ"
+    ],
+    "kun": [
+      "ひと"
+    ],
+    "kana_components": [
+      "い",
+      "ち",
+      "つ",
+      "ひ",
+      "と"
+    ]
+  },
+  {
+    "kanji": "二",
+    "meaning": "two",
+    "on": [
+      "ニ"
+    ],
+    "kun": [
+      "ふた"
+    ],
+    "kana_components": [
+      "に",
+      "ふ",
+      "た"
+    ]
+  },
+  {
+    "kanji": "三",
+    "meaning": "three",
+    "on": [
+      "サン"
+    ],
+    "kun": [
+      "みっ"
+    ],
+    "kana_components": [
+      "さ",
+      "ん",
+      "み",
+      "っ"
+    ]
+  },
+  {
+    "kanji": "四",
+    "meaning": "four",
+    "on": [
+      "シ"
+    ],
+    "kun": [
+      "よん",
+      "よ"
+    ],
+    "kana_components": [
+      "し",
+      "よ",
+      "ん"
+    ]
+  },
+  {
+    "kanji": "五",
+    "meaning": "five",
+    "on": [
+      "ゴ"
+    ],
+    "kun": [
+      "いつ"
+    ],
+    "kana_components": [
+      "ご",
+      "い",
+      "つ"
+    ]
+  },
+  {
+    "kanji": "六",
+    "meaning": "six",
+    "on": [
+      "ロク"
+    ],
+    "kun": [
+      "むっ",
+      "むい"
+    ],
+    "kana_components": [
+      "ろ",
+      "く",
+      "む",
+      "っ",
+      "い"
+    ]
+  },
+  {
+    "kanji": "七",
+    "meaning": "seven",
+    "on": [
+      "シチ"
+    ],
+    "kun": [
+      "なな",
+      "なの"
+    ],
+    "kana_components": [
+      "し",
+      "ち",
+      "な",
+      "の"
+    ]
+  },
+  {
+    "kanji": "八",
+    "meaning": "eight",
+    "on": [
+      "ハチ"
+    ],
+    "kun": [
+      "やっ",
+      "よう"
+    ],
+    "kana_components": [
+      "は",
+      "ち",
+      "や",
+      "っ",
+      "よ",
+      "う"
+    ]
+  },
+  {
+    "kanji": "九",
+    "meaning": "nine",
+    "on": [
+      "キュウ",
+      "ク"
+    ],
+    "kun": [
+      "ここの"
+    ],
+    "kana_components": [
+      "き",
+      "ゅ",
+      "う",
+      "く",
+      "こ",
+      "の"
+    ]
+  },
+  {
+    "kanji": "十",
+    "meaning": "ten",
+    "on": [
+      "ジュウ",
+      "ジッ"
+    ],
+    "kun": [
+      "とお"
+    ],
+    "kana_components": [
+      "じ",
+      "ゅ",
+      "う",
+      "っ",
+      "と",
+      "お"
+    ]
+  },
+  {
+    "kanji": "百",
+    "meaning": "hundred",
+    "on": [
+      "ヒャク"
+    ],
+    "kun": [],
+    "kana_components": [
+      "ひ",
+      "ゃ",
+      "く"
+    ]
+  },
+  {
+    "kanji": "千",
+    "meaning": "thousand",
+    "on": [
+      "セン"
+    ],
+    "kun": [
+      "ち"
+    ],
+    "kana_components": [
+      "せ",
+      "ん",
+      "ち"
+    ]
+  },
+  {
+    "kanji": "万",
+    "meaning": "ten thousand",
+    "on": [
+      "マン"
+    ],
+    "kun": [],
+    "kana_components": [
+      "ま",
+      "ん"
+    ]
+  },
+  {
+    "kanji": "円",
+    "meaning": "yen, circle",
+    "on": [
+      "エン"
+    ],
+    "kun": [
+      "まる"
+    ],
+    "kana_components": [
+      "え",
+      "ん",
+      "ま",
+      "る"
+    ]
+  },
+  {
+    "kanji": "口",
+    "meaning": "mouth",
+    "on": [
+      "コウ"
+    ],
+    "kun": [
+      "くち"
+    ],
+    "kana_components": [
+      "こ",
+      "う",
+      "く",
+      "ち"
+    ]
+  },
+  {
+    "kanji": "目",
+    "meaning": "eye",
+    "on": [
+      "モク"
+    ],
+    "kun": [
+      "め"
+    ],
+    "kana_components": [
+      "も",
+      "く",
+      "め"
+    ]
+  },
+  {
+    "kanji": "耳",
+    "meaning": "ear",
+    "on": [
+      "ジ"
+    ],
+    "kun": [
+      "みみ"
+    ],
+    "kana_components": [
+      "じ",
+      "み"
+    ]
+  },
+  {
+    "kanji": "手",
+    "meaning": "hand",
+    "on": [
+      "シュ"
+    ],
+    "kun": [
+      "て"
+    ],
+    "kana_components": [
+      "し",
+      "ゅ",
+      "て"
+    ]
+  },
+  {
+    "kanji": "足",
+    "meaning": "foot, leg",
+    "on": [
+      "ソク"
+    ],
+    "kun": [
+      "あし",
+      "た"
+    ],
+    "kana_components": [
+      "そ",
+      "く",
+      "あ",
+      "し",
+      "た"
+    ]
+  },
+  {
+    "kanji": "力",
+    "meaning": "power",
+    "on": [
+      "リョク"
+    ],
+    "kun": [
+      "ちから"
+    ],
+    "kana_components": [
+      "り",
+      "ょ",
+      "く",
+      "ち",
+      "か",
+      "ら"
+    ]
+  },
+  {
+    "kanji": "人",
+    "meaning": "person",
+    "on": [
+      "ジン",
+      "ニン"
+    ],
+    "kun": [
+      "ひと"
+    ],
+    "kana_components": [
+      "じ",
+      "ん",
+      "に",
+      "ひ",
+      "と"
+    ]
+  },
+  {
+    "kanji": "男",
+    "meaning": "man",
+    "on": [
+      "ダン"
+    ],
+    "kun": [
+      "おとこ"
+    ],
+    "kana_components": [
+      "だ",
+      "ん",
+      "お",
+      "と",
+      "こ"
+    ]
+  },
+  {
+    "kanji": "女",
+    "meaning": "woman",
+    "on": [
+      "ジョ"
+    ],
+    "kun": [
+      "おんな"
+    ],
+    "kana_components": [
+      "じ",
+      "ょ",
+      "お",
+      "ん",
+      "な"
+    ]
+  },
+  {
+    "kanji": "子",
+    "meaning": "child",
+    "on": [
+      "シ"
+    ],
+    "kun": [
+      "こ"
+    ],
+    "kana_components": [
+      "し",
+      "こ"
+    ]
+  },
+  {
+    "kanji": "父",
+    "meaning": "father",
+    "on": [
+      "フ"
+    ],
+    "kun": [
+      "ちち"
+    ],
+    "kana_components": [
+      "ふ",
+      "ち"
+    ]
+  },
+  {
+    "kanji": "母",
+    "meaning": "mother",
+    "on": [
+      "ボ"
+    ],
+    "kun": [
+      "はは"
+    ],
+    "kana_components": [
+      "ぼ",
+      "は"
+    ]
+  },
+  {
+    "kanji": "友",
+    "meaning": "friend",
+    "on": [
+      "ユウ"
+    ],
+    "kun": [
+      "とも"
+    ],
+    "kana_components": [
+      "ゆ",
+      "う",
+      "と",
+      "も"
+    ]
+  },
+  {
+    "kanji": "先",
+    "meaning": "before, ahead",
+    "on": [
+      "セン"
+    ],
+    "kun": [
+      "さき"
+    ],
+    "kana_components": [
+      "せ",
+      "ん",
+      "さ",
+      "き"
+    ]
+  },
+  {
+    "kanji": "生",
+    "meaning": "life, birth",
+    "on": [
+      "セイ",
+      "ショウ"
+    ],
+    "kun": [
+      "い",
+      "う"
+    ],
+    "kana_components": [
+      "せ",
+      "い",
+      "し",
+      "ょ",
+      "う"
+    ]
+  },
+  {
+    "kanji": "学",
+    "meaning": "study",
+    "on": [
+      "ガク"
+    ],
+    "kun": [
+      "まな"
+    ],
+    "kana_components": [
+      "が",
+      "く",
+      "ま",
+      "な"
+    ]
+  },
+  {
+    "kanji": "校",
+    "meaning": "school",
+    "on": [
+      "コウ"
+    ],
+    "kun": [],
+    "kana_components": [
+      "こ",
+      "う"
+    ]
+  },
+  {
+    "kanji": "年",
+    "meaning": "year",
+    "on": [
+      "ネン"
+    ],
+    "kun": [
+      "とし"
+    ],
+    "kana_components": [
+      "ね",
+      "ん",
+      "と",
+      "し"
+    ]
+  },
+  {
+    "kanji": "時",
+    "meaning": "time, hour",
+    "on": [
+      "ジ"
+    ],
+    "kun": [
+      "とき"
+    ],
+    "kana_components": [
+      "じ",
+      "と",
+      "き"
+    ]
+  },
+  {
+    "kanji": "日",
+    "meaning": "day, sun",
+    "on": [
+      "ニチ",
+      "ジツ"
+    ],
+    "kun": [
+      "ひ",
+      "び",
+      "か"
+    ],
+    "kana_components": [
+      "に",
+      "ち",
+      "じ",
+      "つ",
+      "ひ",
+      "び",
+      "か"
+    ]
+  },
+  {
+    "kanji": "月",
+    "meaning": "month, moon",
+    "on": [
+      "ゲツ",
+      "ガツ"
+    ],
+    "kun": [
+      "つき"
+    ],
+    "kana_components": [
+      "げ",
+      "つ",
+      "が",
+      "き"
+    ]
+  },
+  {
+    "kanji": "火",
+    "meaning": "fire",
+    "on": [
+      "カ"
+    ],
+    "kun": [
+      "ひ",
+      "ほ"
+    ],
+    "kana_components": [
+      "か",
+      "ひ",
+      "ほ"
+    ]
+  },
+  {
+    "kanji": "水",
+    "meaning": "water",
+    "on": [
+      "スイ"
+    ],
+    "kun": [
+      "みず"
+    ],
+    "kana_components": [
+      "す",
+      "い",
+      "み",
+      "ず"
+    ]
+  },
+  {
+    "kanji": "木",
+    "meaning": "tree",
+    "on": [
+      "モク"
+    ],
+    "kun": [
+      "き"
+    ],
+    "kana_components": [
+      "も",
+      "く",
+      "き"
+    ]
+  },
+  {
+    "kanji": "金",
+    "meaning": "gold, money",
+    "on": [
+      "キン"
+    ],
+    "kun": [
+      "かね"
+    ],
+    "kana_components": [
+      "き",
+      "ん",
+      "か",
+      "ね"
+    ]
+  },
+  {
+    "kanji": "土",
+    "meaning": "earth, soil",
+    "on": [
+      "ド"
+    ],
+    "kun": [
+      "つち"
+    ],
+    "kana_components": [
+      "ど",
+      "つ",
+      "ち"
+    ]
+  },
+  {
+    "kanji": "山",
+    "meaning": "mountain",
+    "on": [
+      "サン"
+    ],
+    "kun": [
+      "やま"
+    ],
+    "kana_components": [
+      "さ",
+      "ん",
+      "や",
+      "ま"
+    ]
+  },
+  {
+    "kanji": "川",
+    "meaning": "river",
+    "on": [
+      "セン"
+    ],
+    "kun": [
+      "かわ"
+    ],
+    "kana_components": [
+      "せ",
+      "ん",
+      "か",
+      "わ"
+    ]
+  },
+  {
+    "kanji": "天",
+    "meaning": "heaven",
+    "on": [
+      "テン"
+    ],
+    "kun": [
+      "あま"
+    ],
+    "kana_components": [
+      "て",
+      "ん",
+      "あ",
+      "ま"
+    ]
+  },
+  {
+    "kanji": "空",
+    "meaning": "sky, empty",
+    "on": [
+      "クウ"
+    ],
+    "kun": [
+      "そら",
+      "あ"
+    ],
+    "kana_components": [
+      "く",
+      "う",
+      "そ",
+      "ら",
+      "あ"
+    ]
+  },
+  {
+    "kanji": "田",
+    "meaning": "rice field",
+    "on": [
+      "デン"
+    ],
+    "kun": [
+      "た"
+    ],
+    "kana_components": [
+      "で",
+      "ん",
+      "た"
+    ]
+  },
+  {
+    "kanji": "気",
+    "meaning": "spirit",
+    "on": [
+      "キ"
+    ],
+    "kun": [],
+    "kana_components": [
+      "き"
+    ]
+  },
+  {
+    "kanji": "雨",
+    "meaning": "rain",
+    "on": [
+      "ウ"
+    ],
+    "kun": [
+      "あめ"
+    ],
+    "kana_components": [
+      "う",
+      "あ",
+      "め"
+    ]
+  },
+  {
+    "kanji": "車",
+    "meaning": "car",
+    "on": [
+      "シャ"
+    ],
+    "kun": [
+      "くるま"
+    ],
+    "kana_components": [
+      "し",
+      "ゃ",
+      "く",
+      "る",
+      "ま"
+    ]
+  },
+  {
+    "kanji": "門",
+    "meaning": "gate",
+    "on": [
+      "モン"
+    ],
+    "kun": [],
+    "kana_components": [
+      "も",
+      "ん"
+    ]
+  },
+  {
+    "kanji": "話",
+    "meaning": "talk",
+    "on": [
+      "ワ"
+    ],
+    "kun": [
+      "はな"
+    ],
+    "kana_components": [
+      "わ",
+      "は",
+      "な"
+    ]
+  },
+  {
+    "kanji": "語",
+    "meaning": "language, word",
+    "on": [
+      "ゴ"
+    ],
+    "kun": [
+      "かた"
+    ],
+    "kana_components": [
+      "ご",
+      "か",
+      "た"
+    ]
+  },
+  {
+    "kanji": "読",
+    "meaning": "read",
+    "on": [
+      "ドク"
+    ],
+    "kun": [
+      "よ"
+    ],
+    "kana_components": [
+      "ど",
+      "く",
+      "よ"
+    ]
+  },
+  {
+    "kanji": "書",
+    "meaning": "write",
+    "on": [
+      "ショ"
+    ],
+    "kun": [
+      "か"
+    ],
+    "kana_components": [
+      "し",
+      "ょ",
+      "か"
+    ]
+  },
+  {
+    "kanji": "聞",
+    "meaning": "hear",
+    "on": [
+      "ブン"
+    ],
+    "kun": [
+      "き"
+    ],
+    "kana_components": [
+      "ぶ",
+      "ん",
+      "き"
+    ]
+  },
+  {
+    "kanji": "見",
+    "meaning": "see",
+    "on": [
+      "ケン"
+    ],
+    "kun": [
+      "み"
+    ],
+    "kana_components": [
+      "け",
+      "ん",
+      "み"
+    ]
+  },
+  {
+    "kanji": "行",
+    "meaning": "go",
+    "on": [
+      "コウ"
+    ],
+    "kun": [
+      "い",
+      "ゆ"
+    ],
+    "kana_components": [
+      "こ",
+      "う",
+      "い",
+      "ゆ"
+    ]
+  },
+  {
+    "kanji": "来",
+    "meaning": "come",
+    "on": [
+      "ライ"
+    ],
+    "kun": [
+      "く",
+      "きた"
+    ],
+    "kana_components": [
+      "ら",
+      "い",
+      "く",
+      "き",
+      "た"
+    ]
+  },
+  {
+    "kanji": "帰",
+    "meaning": "return",
+    "on": [
+      "キ"
+    ],
+    "kun": [
+      "かえ"
+    ],
+    "kana_components": [
+      "き",
+      "か",
+      "え"
+    ]
+  },
+  {
+    "kanji": "食",
+    "meaning": "eat",
+    "on": [
+      "ショク"
+    ],
+    "kun": [
+      "た"
+    ],
+    "kana_components": [
+      "し",
+      "ょ",
+      "く",
+      "た"
+    ]
+  },
+  {
+    "kanji": "飲",
+    "meaning": "drink",
+    "on": [
+      "イン"
+    ],
+    "kun": [
+      "の"
+    ],
+    "kana_components": [
+      "い",
+      "ん",
+      "の"
+    ]
+  },
+  {
+    "kanji": "買",
+    "meaning": "buy",
+    "on": [
+      "バイ"
+    ],
+    "kun": [
+      "か"
+    ],
+    "kana_components": [
+      "ば",
+      "い",
+      "か"
+    ]
+  },
+  {
+    "kanji": "会",
+    "meaning": "meet",
+    "on": [
+      "カイ"
+    ],
+    "kun": [
+      "あ"
+    ],
+    "kana_components": [
+      "か",
+      "い",
+      "あ"
+    ]
+  },
+  {
+    "kanji": "今",
+    "meaning": "now",
+    "on": [
+      "コン"
+    ],
+    "kun": [
+      "いま"
+    ],
+    "kana_components": [
+      "こ",
+      "ん",
+      "い",
+      "ま"
+    ]
+  },
+  {
+    "kanji": "新",
+    "meaning": "new",
+    "on": [
+      "シン"
+    ],
+    "kun": [
+      "あたら"
+    ],
+    "kana_components": [
+      "し",
+      "ん",
+      "あ",
+      "た",
+      "ら"
+    ]
+  },
+  {
+    "kanji": "古",
+    "meaning": "old",
+    "on": [
+      "コ"
+    ],
+    "kun": [
+      "ふる"
+    ],
+    "kana_components": [
+      "こ",
+      "ふ",
+      "る"
+    ]
+  },
+  {
+    "kanji": "長",
+    "meaning": "long, leader",
+    "on": [
+      "チョウ"
+    ],
+    "kun": [
+      "なが"
+    ],
+    "kana_components": [
+      "ち",
+      "ょ",
+      "う",
+      "な",
+      "が"
+    ]
+  },
+  {
+    "kanji": "高",
+    "meaning": "high, expensive",
+    "on": [
+      "コウ"
+    ],
+    "kun": [
+      "たか"
+    ],
+    "kana_components": [
+      "こ",
+      "う",
+      "た",
+      "か"
+    ]
+  },
+  {
+    "kanji": "安",
+    "meaning": "cheap, peace",
+    "on": [
+      "アン"
+    ],
+    "kun": [
+      "やす"
+    ],
+    "kana_components": [
+      "あ",
+      "ん",
+      "や",
+      "す"
+    ]
+  },
+  {
+    "kanji": "多",
+    "meaning": "many",
+    "on": [
+      "タ"
+    ],
+    "kun": [
+      "おお"
+    ],
+    "kana_components": [
+      "た",
+      "お"
+    ]
+  },
+  {
+    "kanji": "少",
+    "meaning": "few",
+    "on": [
+      "ショウ"
+    ],
+    "kun": [
+      "すく",
+      "すこ"
+    ],
+    "kana_components": [
+      "し",
+      "ょ",
+      "う",
+      "す",
+      "く",
+      "こ"
+    ]
+  },
+  {
+    "kanji": "早",
+    "meaning": "early",
+    "on": [
+      "ソウ"
+    ],
+    "kun": [
+      "はや"
+    ],
+    "kana_components": [
+      "そ",
+      "う",
+      "は",
+      "や"
+    ]
+  },
+  {
+    "kanji": "明",
+    "meaning": "bright",
+    "on": [
+      "メイ"
+    ],
+    "kun": [
+      "あか"
+    ],
+    "kana_components": [
+      "め",
+      "い",
+      "あ",
+      "か"
+    ]
+  },
+  {
+    "kanji": "白",
+    "meaning": "white",
+    "on": [
+      "ハク"
+    ],
+    "kun": [
+      "しろ"
+    ],
+    "kana_components": [
+      "は",
+      "く",
+      "し",
+      "ろ"
+    ]
+  },
+  {
+    "kanji": "黒",
+    "meaning": "black",
+    "on": [
+      "コク"
+    ],
+    "kun": [
+      "くろ"
+    ],
+    "kana_components": [
+      "こ",
+      "く",
+      "ろ"
+    ]
+  },
+  {
+    "kanji": "赤",
+    "meaning": "red",
+    "on": [
+      "セキ"
+    ],
+    "kun": [
+      "あか"
+    ],
+    "kana_components": [
+      "せ",
+      "き",
+      "あ",
+      "か"
+    ]
+  },
+  {
+    "kanji": "青",
+    "meaning": "blue",
+    "on": [
+      "セイ"
+    ],
+    "kun": [
+      "あお"
+    ],
+    "kana_components": [
+      "せ",
+      "い",
+      "あ",
+      "お"
+    ]
+  },
+  {
+    "kanji": "好き",
+    "meaning": "like",
+    "on": [
+      "コウ"
+    ],
+    "kun": [
+      "す"
+    ],
+    "kana_components": [
+      "こ",
+      "う",
+      "す"
+    ]
+  },
+  {
+    "kanji": "大",
+    "meaning": "big",
+    "on": [
+      "ダイ"
+    ],
+    "kun": [
+      "おお"
+    ],
+    "kana_components": [
+      "だ",
+      "い",
+      "お"
+    ]
+  },
+  {
+    "kanji": "中",
+    "meaning": "middle",
+    "on": [
+      "チュウ"
+    ],
+    "kun": [
+      "なか"
+    ],
+    "kana_components": [
+      "ち",
+      "ゅ",
+      "う",
+      "な",
+      "か"
+    ]
+  },
+  {
+    "kanji": "小",
+    "meaning": "small",
+    "on": [
+      "ショウ"
+    ],
+    "kun": [
+      "ちい"
+    ],
+    "kana_components": [
+      "し",
+      "ょ",
+      "う",
+      "ち",
+      "い"
+    ]
+  },
+  {
+    "kanji": "山",
+    "meaning": "mountain",
+    "on": [
+      "サン"
+    ],
+    "kun": [
+      "やま"
+    ],
+    "kana_components": [
+      "さ",
+      "ん",
+      "や",
+      "ま"
+    ]
+  }
 ]
+
