@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson Mode</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/learn_japanese.css">
+  <link rel="stylesheet" href="../css/quiz.css">
+</head>
+<body>
+  <div class="main-menu" id="lessonContainer">
+    <h2 id="lesson-title"></h2>
+    <div id="lessonView"></div>
+    <div id="quizView"></div>
+  </div>
+
+  <script src="../js/quiz.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    const data = JSON.parse(sessionStorage.getItem("navigationData"));
+    const response = await fetch(data.lessonFile);
+    const questions = await response.json();
+    document.querySelector("#lesson-title").textContent = data.lessonName;
+    showModeSelection({ questions });
+  });
+  </script>
+</body>
+</html>

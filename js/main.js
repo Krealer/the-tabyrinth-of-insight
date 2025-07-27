@@ -238,6 +238,11 @@ function hideKanjiView() {
   document.getElementById('lessonsView')?.classList.remove('hidden');
 }
 
+function navigateTo(page, data = {}) {
+  sessionStorage.setItem('navigationData', JSON.stringify(data));
+  window.location.href = page;
+}
+
 function createKanjiModal(entry) {
   const modal = document.createElement('div');
   modal.className = 'kanji-modal-overlay';
