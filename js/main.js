@@ -167,6 +167,9 @@ function createKanjiModal(entry) {
         <div class="kanji-modal-meaning">${entry.meaning}</div>
         <div class="kanji-modal-section"><strong>On'yomi:</strong> ${entry.on.join(', ')}</div>
         <div class="kanji-modal-section"><strong>Kun'yomi:</strong> ${entry.kun.join(', ')}</div>
+        <div class="kanji-modal-section"><strong>Kana Components:</strong> 
+          <span class="kana-tag">${entry.kana_components.join("</span> <span class='kana-tag'>")}</span>
+        </div>
       </div>
     </div>
   `;
