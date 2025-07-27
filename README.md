@@ -1,7 +1,8 @@
 # The Labyrinth of Insight
 
 A simple static website for exploring various learning resources and games. The
-site is designed for GitHub Pages and follows a mobile‑first approach.
+site is designed for GitHub Pages, follows a mobile‑first approach and now
+features a dark theme with polished gradient buttons.
 
 ## Structure
 - `index.html` – landing page with navigation buttons
