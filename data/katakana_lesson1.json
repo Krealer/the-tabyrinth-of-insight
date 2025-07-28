@@ -1,0 +1,508 @@
+[
+  {
+    "question": "ア",
+    "type": "kana-to-romaji",
+    "options": [
+      "e",
+      "a",
+      "u",
+      "i"
+    ],
+    "answer": "a"
+  },
+  {
+    "question": "i",
+    "type": "romaji-to-kana",
+    "options": [
+      "エ",
+      "ア",
+      "イ",
+      "ウ"
+    ],
+    "answer": "イ"
+  },
+  {
+    "question": "ウ",
+    "type": "kana-to-romaji",
+    "options": [
+      "i",
+      "u",
+      "o",
+      "a"
+    ],
+    "answer": "u"
+  },
+  {
+    "question": "e",
+    "type": "romaji-to-kana",
+    "options": [
+      "オ",
+      "エ",
+      "ア",
+      "ウ"
+    ],
+    "answer": "エ"
+  },
+  {
+    "question": "オ",
+    "type": "kana-to-romaji",
+    "options": [
+      "u",
+      "o",
+      "a",
+      "e"
+    ],
+    "answer": "o"
+  },
+  {
+    "question": "ka",
+    "type": "romaji-to-kana",
+    "options": [
+      "コ",
+      "カ",
+      "ク",
+      "キ"
+    ],
+    "answer": "カ"
+  },
+  {
+    "question": "キ",
+    "type": "kana-to-romaji",
+    "options": [
+      "ki",
+      "ku",
+      "ka",
+      "ke"
+    ],
+    "answer": "ki"
+  },
+  {
+    "question": "ku",
+    "type": "romaji-to-kana",
+    "options": [
+      "カ",
+      "ク",
+      "キ",
+      "コ"
+    ],
+    "answer": "ク"
+  },
+  {
+    "question": "ケ",
+    "type": "kana-to-romaji",
+    "options": [
+      "ki",
+      "ke",
+      "ko",
+      "ka"
+    ],
+    "answer": "ke"
+  },
+  {
+    "question": "ko",
+    "type": "romaji-to-kana",
+    "options": [
+      "ケ",
+      "ク",
+      "コ",
+      "カ"
+    ],
+    "answer": "コ"
+  },
+  {
+    "question": "サ",
+    "type": "kana-to-romaji",
+    "options": [
+      "se",
+      "so",
+      "sa",
+      "shi"
+    ],
+    "answer": "sa"
+  },
+  {
+    "question": "shi",
+    "type": "romaji-to-kana",
+    "options": [
+      "ス",
+      "シ",
+      "サ",
+      "キ"
+    ],
+    "answer": "シ"
+  },
+  {
+    "question": "ス",
+    "type": "kana-to-romaji",
+    "options": [
+      "so",
+      "se",
+      "su",
+      "tsu"
+    ],
+    "answer": "su"
+  },
+  {
+    "question": "se",
+    "type": "romaji-to-kana",
+    "options": [
+      "サ",
+      "セ",
+      "ソ",
+      "シ"
+    ],
+    "answer": "セ"
+  },
+  {
+    "question": "ソ",
+    "type": "kana-to-romaji",
+    "options": [
+      "su",
+      "se",
+      "so",
+      "sa"
+    ],
+    "answer": "so"
+  },
+  {
+    "question": "ta",
+    "type": "romaji-to-kana",
+    "options": [
+      "テ",
+      "タ",
+      "だ",
+      "ト"
+    ],
+    "answer": "タ"
+  },
+  {
+    "question": "チ",
+    "type": "kana-to-romaji",
+    "options": [
+      "shi",
+      "tsu",
+      "chi",
+      "cha"
+    ],
+    "answer": "chi"
+  },
+  {
+    "question": "tsu",
+    "type": "romaji-to-kana",
+    "options": [
+      "チ",
+      "ツ",
+      "ス",
+      "ず"
+    ],
+    "answer": "ツ"
+  },
+  {
+    "question": "テ",
+    "type": "kana-to-romaji",
+    "options": [
+      "ne",
+      "to",
+      "te",
+      "ta"
+    ],
+    "answer": "te"
+  },
+  {
+    "question": "to",
+    "type": "romaji-to-kana",
+    "options": [
+      "タ",
+      "ト",
+      "テ",
+      "ど"
+    ],
+    "answer": "ト"
+  },
+  {
+    "question": "ナ",
+    "type": "kana-to-romaji",
+    "options": [
+      "nu",
+      "ne",
+      "na",
+      "ni"
+    ],
+    "answer": "na"
+  },
+  {
+    "question": "ni",
+    "type": "romaji-to-kana",
+    "options": [
+      "ヌ",
+      "ネ",
+      "ニ",
+      "ナ"
+    ],
+    "answer": "ニ"
+  },
+  {
+    "question": "ヌ",
+    "type": "kana-to-romaji",
+    "options": [
+      "mu",
+      "nu",
+      "ni",
+      "no"
+    ],
+    "answer": "nu"
+  },
+  {
+    "question": "ne",
+    "type": "romaji-to-kana",
+    "options": [
+      "ナ",
+      "ネ",
+      "ヌ",
+      "レ"
+    ],
+    "answer": "ネ"
+  },
+  {
+    "question": "ノ",
+    "type": "kana-to-romaji",
+    "options": [
+      "nu",
+      "no",
+      "na",
+      "to"
+    ],
+    "answer": "no"
+  },
+  {
+    "question": "ha",
+    "type": "romaji-to-kana",
+    "options": [
+      "ワ",
+      "ば",
+      "ハ",
+      "ホ"
+    ],
+    "answer": "ハ"
+  },
+  {
+    "question": "ヒ",
+    "type": "kana-to-romaji",
+    "options": [
+      "fu",
+      "bi",
+      "hi",
+      "ki"
+    ],
+    "answer": "hi"
+  },
+  {
+    "question": "fu",
+    "type": "romaji-to-kana",
+    "options": [
+      "ぷ",
+      "フ",
+      "ぶ",
+      "ハ"
+    ],
+    "answer": "フ"
+  },
+  {
+    "question": "ヘ",
+    "type": "kana-to-romaji",
+    "options": [
+      "ha",
+      "he",
+      "e",
+      "ne"
+    ],
+    "answer": "he"
+  },
+  {
+    "question": "ho",
+    "type": "romaji-to-kana",
+    "options": [
+      "ヘ",
+      "ホ",
+      "ヲ",
+      "ハ"
+    ],
+    "answer": "ホ"
+  },
+  {
+    "question": "マ",
+    "type": "kana-to-romaji",
+    "options": [
+      "mu",
+      "ma",
+      "mo",
+      "na"
+    ],
+    "answer": "ma"
+  },
+  {
+    "question": "mi",
+    "type": "romaji-to-kana",
+    "options": [
+      "マ",
+      "ニ",
+      "ミ",
+      "ム"
+    ],
+    "answer": "ミ"
+  },
+  {
+    "question": "ム",
+    "type": "kana-to-romaji",
+    "options": [
+      "me",
+      "mu",
+      "nu",
+      "ma"
+    ],
+    "answer": "mu"
+  },
+  {
+    "question": "me",
+    "type": "romaji-to-kana",
+    "options": [
+      "ム",
+      "メ",
+      "マ",
+      "ネ"
+    ],
+    "answer": "メ"
+  },
+  {
+    "question": "モ",
+    "type": "kana-to-romaji",
+    "options": [
+      "ma",
+      "mu",
+      "mo",
+      "no"
+    ],
+    "answer": "mo"
+  },
+  {
+    "question": "ya",
+    "type": "romaji-to-kana",
+    "options": [
+      "ワ",
+      "ユ",
+      "ヤ",
+      "ヨ"
+    ],
+    "answer": "ヤ"
+  },
+  {
+    "question": "ユ",
+    "type": "kana-to-romaji",
+    "options": [
+      "ya",
+      "yu",
+      "yo",
+      "ru"
+    ],
+    "answer": "yu"
+  },
+  {
+    "question": "yo",
+    "type": "romaji-to-kana",
+    "options": [
+      "ロ",
+      "ヨ",
+      "ユ",
+      "ヤ"
+    ],
+    "answer": "ヨ"
+  },
+  {
+    "question": "ラ",
+    "type": "kana-to-romaji",
+    "options": [
+      "ri",
+      "ra",
+      "na",
+      "la"
+    ],
+    "answer": "ra"
+  },
+  {
+    "question": "ri",
+    "type": "romaji-to-kana",
+    "options": [
+      "レ",
+      "ラ",
+      "リ",
+      "ル"
+    ],
+    "answer": "リ"
+  },
+  {
+    "question": "ル",
+    "type": "kana-to-romaji",
+    "options": [
+      "ro",
+      "ri",
+      "ra",
+      "ru"
+    ],
+    "answer": "ru"
+  },
+  {
+    "question": "re",
+    "type": "romaji-to-kana",
+    "options": [
+      "ル",
+      "レ",
+      "ラ",
+      "リ"
+    ],
+    "answer": "レ"
+  },
+  {
+    "question": "ロ",
+    "type": "kana-to-romaji",
+    "options": [
+      "ru",
+      "ro",
+      "ra",
+      "re"
+    ],
+    "answer": "ro"
+  },
+  {
+    "question": "wa",
+    "type": "romaji-to-kana",
+    "options": [
+      "ヲ",
+      "ラ",
+      "ワ",
+      "が"
+    ],
+    "answer": "ワ"
+  },
+  {
+    "question": "ヲ",
+    "type": "kana-to-romaji",
+    "options": [
+      "o",
+      "wo",
+      "wa",
+      "mo"
+    ],
+    "answer": "wo"
+  },
+  {
+    "question": "n",
+    "type": "romaji-to-kana",
+    "options": [
+      "ヌ",
+      "ン",
+      "ム",
+      "ラ"
+    ],
+    "answer": "ン"
+  }
+]
