@@ -1,122 +1,882 @@
 [
   {
-    "question": "日",
     "type": "kanji-to-meaning",
-    "options": ["moon", "sun", "mountain", "river"],
-    "answer": "sun"
+    "question": "一",
+    "options": [
+      "fire",
+      "five",
+      "one",
+      "down"
+    ],
+    "answer": "one"
   },
   {
-    "question": "moon",
     "type": "meaning-to-kanji",
-    "options": ["日", "山", "月", "水"],
-    "answer": "月"
+    "question": "two",
+    "options": [
+      "上",
+      "母",
+      "二",
+      "万"
+    ],
+    "answer": "二"
   },
   {
-    "question": "山",
     "type": "kanji-to-meaning",
-    "options": ["river", "mountain", "sky", "tree"],
-    "answer": "mountain"
+    "question": "三",
+    "options": [
+      "ten thousand",
+      "ear",
+      "eye",
+      "three"
+    ],
+    "answer": "three"
   },
   {
-    "question": "river",
     "type": "meaning-to-kanji",
-    "options": ["山", "口", "川", "学"],
-    "answer": "川"
+    "question": "four",
+    "options": [
+      "四",
+      "母",
+      "食",
+      "口"
+    ],
+    "answer": "四"
   },
   {
+    "type": "kanji-to-meaning",
+    "question": "五",
+    "options": [
+      "drink",
+      "five",
+      "one",
+      "mountain"
+    ],
+    "answer": "five"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "six",
+    "options": [
+      "時",
+      "上",
+      "目",
+      "六"
+    ],
+    "answer": "六"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "七",
+    "options": [
+      "enter",
+      "before",
+      "seven",
+      "minute"
+    ],
+    "answer": "seven"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "eight",
+    "options": [
+      "早",
+      "何",
+      "左",
+      "八"
+    ],
+    "answer": "八"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "九",
+    "options": [
+      "after",
+      "rain",
+      "woman",
+      "nine"
+    ],
+    "answer": "nine"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "ten",
+    "options": [
+      "耳",
+      "千",
+      "木",
+      "十"
+    ],
+    "answer": "十"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "百",
+    "options": [
+      "mountain",
+      "hundred",
+      "hear",
+      "after"
+    ],
+    "answer": "hundred"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "thousand",
+    "options": [
+      "入",
+      "千",
+      "十",
+      "天"
+    ],
+    "answer": "千"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "万",
+    "options": [
+      "mountain",
+      "ten thousand",
+      "early",
+      "school"
+    ],
+    "answer": "ten thousand"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "yen",
+    "options": [
+      "耳",
+      "八",
+      "月",
+      "円"
+    ],
+    "answer": "円"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "上",
+    "options": [
+      "eye",
+      "heaven",
+      "up",
+      "nine"
+    ],
+    "answer": "up"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "down",
+    "options": [
+      "見",
+      "大",
+      "下",
+      "聞"
+    ],
+    "answer": "下"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "左",
+    "options": [
+      "left",
+      "white",
+      "what",
+      "spirit"
+    ],
+    "answer": "left"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "right",
+    "options": [
+      "後",
+      "口",
+      "右",
+      "中"
+    ],
+    "answer": "右"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "中",
+    "options": [
+      "up",
+      "middle",
+      "small",
+      "mountain"
+    ],
+    "answer": "middle"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "big",
+    "options": [
+      "大",
+      "今",
+      "早",
+      "休"
+    ],
+    "answer": "大"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "小",
+    "options": [
+      "small",
+      "father",
+      "up",
+      "two"
+    ],
+    "answer": "small"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "mountain",
+    "options": [
+      "木",
+      "山",
+      "話",
+      "上"
+    ],
+    "answer": "山"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "川",
+    "options": [
+      "rice field",
+      "spirit",
+      "name",
+      "river"
+    ],
+    "answer": "river"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "rice field",
+    "options": [
+      "入",
+      "田",
+      "男",
+      "名"
+    ],
+    "answer": "田"
+  },
+  {
+    "type": "kanji-to-meaning",
     "question": "人",
-    "type": "kanji-to-meaning",
-    "options": ["woman", "person", "man", "big"],
+    "options": [
+      "one",
+      "person",
+      "mother",
+      "electricity"
+    ],
     "answer": "person"
   },
   {
-    "question": "woman",
     "type": "meaning-to-kanji",
-    "options": ["校", "男", "女", "学"],
+    "question": "woman",
+    "options": [
+      "土",
+      "後",
+      "女",
+      "上"
+    ],
     "answer": "女"
   },
   {
-    "question": "男",
     "type": "kanji-to-meaning",
-    "options": ["gold", "man", "study", "tree"],
+    "question": "男",
+    "options": [
+      "sky",
+      "life",
+      "hundred",
+      "man"
+    ],
     "answer": "man"
   },
   {
-    "question": "study",
     "type": "meaning-to-kanji",
-    "options": ["校", "大", "学", "中"],
-    "answer": "学"
+    "question": "child",
+    "options": [
+      "子",
+      "学",
+      "父",
+      "左"
+    ],
+    "answer": "子"
   },
   {
-    "question": "校",
     "type": "kanji-to-meaning",
-    "options": ["water", "school", "mouth", "sky"],
-    "answer": "school"
+    "question": "目",
+    "options": [
+      "eye",
+      "woman",
+      "child",
+      "mother"
+    ],
+    "answer": "eye"
   },
   {
-    "question": "water",
     "type": "meaning-to-kanji",
-    "options": ["火", "金", "水", "木"],
-    "answer": "水"
+    "question": "mouth",
+    "options": [
+      "読",
+      "車",
+      "書",
+      "口"
+    ],
+    "answer": "口"
   },
   {
+    "type": "kanji-to-meaning",
+    "question": "耳",
+    "options": [
+      "three",
+      "ear",
+      "time",
+      "nine"
+    ],
+    "answer": "ear"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "hand",
+    "options": [
+      "八",
+      "十",
+      "手",
+      "一"
+    ],
+    "answer": "手"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "足",
+    "options": [
+      "foot",
+      "ten",
+      "house",
+      "year"
+    ],
+    "answer": "foot"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "power",
+    "options": [
+      "母",
+      "子",
+      "力",
+      "左"
+    ],
+    "answer": "力"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "気",
+    "options": [
+      "ten thousand",
+      "come",
+      "person",
+      "spirit"
+    ],
+    "answer": "spirit"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "heaven",
+    "options": [
+      "前",
+      "天",
+      "飲",
+      "来"
+    ],
+    "answer": "天"
+  },
+  {
+    "type": "kanji-to-meaning",
     "question": "火",
-    "type": "kanji-to-meaning",
-    "options": ["earth", "tree", "fire", "gold"],
+    "options": [
+      "ten thousand",
+      "go",
+      "fire",
+      "eight"
+    ],
     "answer": "fire"
   },
   {
-    "question": "tree",
     "type": "meaning-to-kanji",
-    "options": ["金", "木", "日", "天"],
-    "answer": "木"
+    "question": "water",
+    "options": [
+      "何",
+      "水",
+      "書",
+      "人"
+    ],
+    "answer": "水"
   },
   {
-    "question": "金",
     "type": "kanji-to-meaning",
-    "options": ["moon", "water", "gold", "earth"],
-    "answer": "gold"
+    "question": "木",
+    "options": [
+      "school",
+      "hand",
+      "heaven",
+      "tree"
+    ],
+    "answer": "tree"
   },
   {
-    "question": "earth",
     "type": "meaning-to-kanji",
-    "options": ["中", "土", "天", "金"],
-    "answer": "土"
+    "question": "gold",
+    "options": [
+      "七",
+      "母",
+      "二",
+      "金"
+    ],
+    "answer": "金"
   },
   {
-    "question": "天",
     "type": "kanji-to-meaning",
-    "options": ["tree", "sky", "middle", "exit"],
-    "answer": "sky"
+    "question": "土",
+    "options": [
+      "life",
+      "earth",
+      "previous",
+      "come"
+    ],
+    "answer": "earth"
   },
   {
-    "question": "middle",
     "type": "meaning-to-kanji",
-    "options": ["小", "日", "大", "中"],
-    "answer": "中"
+    "question": "sun",
+    "options": [
+      "日",
+      "早",
+      "山",
+      "一"
+    ],
+    "answer": "日"
   },
   {
-    "question": "大",
     "type": "kanji-to-meaning",
-    "options": ["person", "big", "small", "study"],
-    "answer": "big"
+    "question": "月",
+    "options": [
+      "fire",
+      "drink",
+      "moon",
+      "white"
+    ],
+    "answer": "moon"
   },
   {
-    "question": "small",
     "type": "meaning-to-kanji",
-    "options": ["口", "小", "月", "水"],
-    "answer": "小"
+    "question": "year",
+    "options": [
+      "八",
+      "水",
+      "子",
+      "年"
+    ],
+    "answer": "年"
   },
   {
-    "question": "口",
     "type": "kanji-to-meaning",
-    "options": ["exit", "mountain", "mouth", "fire"],
-    "answer": "mouth"
+    "question": "時",
+    "options": [
+      "eight",
+      "time",
+      "seven",
+      "shop"
+    ],
+    "answer": "time"
   },
   {
+    "type": "meaning-to-kanji",
+    "question": "minute",
+    "options": [
+      "百",
+      "家",
+      "分",
+      "八"
+    ],
+    "answer": "分"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "前",
+    "options": [
+      "down",
+      "before",
+      "go",
+      "ear"
+    ],
+    "answer": "before"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "after",
+    "options": [
+      "店",
+      "後",
+      "百",
+      "食"
+    ],
+    "answer": "後"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "午",
+    "options": [
+      "ear",
+      "earth",
+      "noon",
+      "power"
+    ],
+    "answer": "noon"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "early",
+    "options": [
+      "土",
+      "十",
+      "聞",
+      "早"
+    ],
+    "answer": "早"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "今",
+    "options": [
+      "child",
+      "ten",
+      "now",
+      "what"
+    ],
+    "answer": "now"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "see",
+    "options": [
+      "後",
+      "九",
+      "見",
+      "手"
+    ],
+    "answer": "見"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "行",
+    "options": [
+      "exit",
+      "mother",
+      "tree",
+      "go"
+    ],
+    "answer": "go"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "come",
+    "options": [
+      "円",
+      "右",
+      "力",
+      "来"
+    ],
+    "answer": "来"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "食",
+    "options": [
+      "eat",
+      "enter",
+      "fire",
+      "spirit"
+    ],
+    "answer": "eat"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "drink",
+    "options": [
+      "力",
+      "飲",
+      "男",
+      "名"
+    ],
+    "answer": "飲"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "話",
+    "options": [
+      "eat",
+      "thousand",
+      "heaven",
+      "talk"
+    ],
+    "answer": "talk"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "read",
+    "options": [
+      "読",
+      "左",
+      "力",
+      "小"
+    ],
+    "answer": "読"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "書",
+    "options": [
+      "white",
+      "up",
+      "two",
+      "write"
+    ],
+    "answer": "write"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "hear",
+    "options": [
+      "五",
+      "聞",
+      "後",
+      "母"
+    ],
+    "answer": "聞"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "校",
+    "options": [
+      "gold",
+      "before",
+      "six",
+      "school"
+    ],
+    "answer": "school"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "study",
+    "options": [
+      "手",
+      "学",
+      "円",
+      "分"
+    ],
+    "answer": "学"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "先",
+    "options": [
+      "ear",
+      "small",
+      "previous",
+      "river"
+    ],
+    "answer": "previous"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "life",
+    "options": [
+      "月",
+      "手",
+      "生",
+      "行"
+    ],
+    "answer": "生"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "友",
+    "options": [
+      "five",
+      "school",
+      "friend",
+      "noon"
+    ],
+    "answer": "friend"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "name",
+    "options": [
+      "口",
+      "金",
+      "名",
+      "時"
+    ],
+    "answer": "名"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "家",
+    "options": [
+      "heaven",
+      "moon",
+      "see",
+      "house"
+    ],
+    "answer": "house"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "car",
+    "options": [
+      "名",
+      "何",
+      "車",
+      "見"
+    ],
+    "answer": "車"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "電",
+    "options": [
+      "power",
+      "shop",
+      "electricity",
+      "river"
+    ],
+    "answer": "electricity"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "what",
+    "options": [
+      "時",
+      "何",
+      "休",
+      "飲"
+    ],
+    "answer": "何"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "母",
+    "options": [
+      "person",
+      "early",
+      "mother",
+      "rain"
+    ],
+    "answer": "mother"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "father",
+    "options": [
+      "父",
+      "家",
+      "電",
+      "一"
+    ],
+    "answer": "父"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "白",
+    "options": [
+      "earth",
+      "nine",
+      "moon",
+      "white"
+    ],
+    "answer": "white"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "sky",
+    "options": [
+      "空",
+      "行",
+      "友",
+      "金"
+    ],
+    "answer": "空"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "雨",
+    "options": [
+      "rain",
+      "mother",
+      "left",
+      "person"
+    ],
+    "answer": "rain"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "shop",
+    "options": [
+      "白",
+      "店",
+      "川",
+      "出"
+    ],
+    "answer": "店"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "会",
+    "options": [
+      "meet",
+      "tree",
+      "fire",
+      "man"
+    ],
+    "answer": "meet"
+  },
+  {
+    "type": "meaning-to-kanji",
+    "question": "rest",
+    "options": [
+      "聞",
+      "休",
+      "話",
+      "子"
+    ],
+    "answer": "休"
+  },
+  {
+    "type": "kanji-to-meaning",
+    "question": "入",
+    "options": [
+      "hundred",
+      "name",
+      "enter",
+      "fire"
+    ],
+    "answer": "enter"
+  },
+  {
+    "type": "meaning-to-kanji",
     "question": "exit",
-    "type": "meaning-to-kanji",
-    "options": ["学", "日", "出", "水"],
+    "options": [
+      "女",
+      "目",
+      "出",
+      "金"
+    ],
     "answer": "出"
   }
 ]
