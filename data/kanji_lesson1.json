@@ -1,0 +1,122 @@
+[
+  {
+    "question": "日",
+    "type": "kanji-to-meaning",
+    "options": ["moon", "sun", "mountain", "river"],
+    "answer": "sun"
+  },
+  {
+    "question": "moon",
+    "type": "meaning-to-kanji",
+    "options": ["日", "山", "月", "水"],
+    "answer": "月"
+  },
+  {
+    "question": "山",
+    "type": "kanji-to-meaning",
+    "options": ["river", "mountain", "sky", "tree"],
+    "answer": "mountain"
+  },
+  {
+    "question": "river",
+    "type": "meaning-to-kanji",
+    "options": ["山", "口", "川", "学"],
+    "answer": "川"
+  },
+  {
+    "question": "人",
+    "type": "kanji-to-meaning",
+    "options": ["woman", "person", "man", "big"],
+    "answer": "person"
+  },
+  {
+    "question": "woman",
+    "type": "meaning-to-kanji",
+    "options": ["校", "男", "女", "学"],
+    "answer": "女"
+  },
+  {
+    "question": "男",
+    "type": "kanji-to-meaning",
+    "options": ["gold", "man", "study", "tree"],
+    "answer": "man"
+  },
+  {
+    "question": "study",
+    "type": "meaning-to-kanji",
+    "options": ["校", "大", "学", "中"],
+    "answer": "学"
+  },
+  {
+    "question": "校",
+    "type": "kanji-to-meaning",
+    "options": ["water", "school", "mouth", "sky"],
+    "answer": "school"
+  },
+  {
+    "question": "water",
+    "type": "meaning-to-kanji",
+    "options": ["火", "金", "水", "木"],
+    "answer": "水"
+  },
+  {
+    "question": "火",
+    "type": "kanji-to-meaning",
+    "options": ["earth", "tree", "fire", "gold"],
+    "answer": "fire"
+  },
+  {
+    "question": "tree",
+    "type": "meaning-to-kanji",
+    "options": ["金", "木", "日", "天"],
+    "answer": "木"
+  },
+  {
+    "question": "金",
+    "type": "kanji-to-meaning",
+    "options": ["moon", "water", "gold", "earth"],
+    "answer": "gold"
+  },
+  {
+    "question": "earth",
+    "type": "meaning-to-kanji",
+    "options": ["中", "土", "天", "金"],
+    "answer": "土"
+  },
+  {
+    "question": "天",
+    "type": "kanji-to-meaning",
+    "options": ["tree", "sky", "middle", "exit"],
+    "answer": "sky"
+  },
+  {
+    "question": "middle",
+    "type": "meaning-to-kanji",
+    "options": ["小", "日", "大", "中"],
+    "answer": "中"
+  },
+  {
+    "question": "大",
+    "type": "kanji-to-meaning",
+    "options": ["person", "big", "small", "study"],
+    "answer": "big"
+  },
+  {
+    "question": "small",
+    "type": "meaning-to-kanji",
+    "options": ["口", "小", "月", "水"],
+    "answer": "小"
+  },
+  {
+    "question": "口",
+    "type": "kanji-to-meaning",
+    "options": ["exit", "mountain", "mouth", "fire"],
+    "answer": "mouth"
+  },
+  {
+    "question": "exit",
+    "type": "meaning-to-kanji",
+    "options": ["学", "日", "出", "水"],
+    "answer": "出"
+  }
+]

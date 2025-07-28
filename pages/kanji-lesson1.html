@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanji: Lesson 1</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <style>
+    .quiz-char {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .quiz-option.correct {
+      background: #33691e;
+      border-color: #558b2f;
+    }
+    .quiz-option.wrong {
+      background: #b71c1c;
+      border-color: #e53935;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Kanji: Lesson 1</h1>
+    <div id="prompt" class="quiz-char">Loading...</div>
+    <div class="options"></div>
+    <button id="next" class="button" style="display:none;margin-top:1rem;">Next</button>
+    <div id="score" style="margin-top:1rem;"></div>
+    <a href="learn-japanese.html" class="button back-button">Back</a>
+  </div>
+  <script src="../scripts/quiz.js"></script>
+  <script>
+    initQuiz('../data/kanji_lesson1.json');
+  </script>
+</body>
+</html>
