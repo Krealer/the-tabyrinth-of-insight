@@ -1,0 +1,242 @@
+[
+  {
+    "type": "kana-to-english",
+    "question": "こんにちは",
+    "options": ["Hello", "Goodbye", "Thank you", "Good night"],
+    "answer": "Hello"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Goodbye",
+    "options": ["おはよう", "ありがとう", "すみません", "さようなら"],
+    "answer": "さようなら"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "ありがとう",
+    "options": ["Please", "Excuse me", "Thank you", "Welcome"],
+    "answer": "Thank you"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Excuse me",
+    "options": ["すみません", "はい", "ごめんなさい", "ありがとう"],
+    "answer": "すみません"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "はい",
+    "options": ["No", "Yes", "Maybe", "Please"],
+    "answer": "Yes"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "No",
+    "options": ["はい", "いいえ", "おねがい", "たべもの"],
+    "answer": "いいえ"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "おはよう",
+    "options": ["Good night", "Good morning", "Good evening", "Hello"],
+    "answer": "Good morning"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Good evening",
+    "options": ["こんばんは", "おはよう", "こんにちは", "さようなら"],
+    "answer": "こんばんは"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "おやすみ",
+    "options": ["Good night", "Hello", "Goodbye", "Thank you"],
+    "answer": "Good night"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "I'm sorry",
+    "options": ["どういたしまして", "ごめんなさい", "すみません", "わかりません"],
+    "answer": "ごめんなさい"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "どういたしまして",
+    "options": ["You're welcome", "Please", "Thank you", "Excuse me"],
+    "answer": "You're welcome"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Please",
+    "options": ["おねがい", "たべもの", "のみもの", "はい"],
+    "answer": "おねがい"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "わかりません",
+    "options": ["I don't understand", "I know", "Goodbye", "Good night"],
+    "answer": "I don't understand"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Wait a moment",
+    "options": ["ちょっとまって", "おやすみ", "こんにちは", "さようなら"],
+    "answer": "ちょっとまって"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "たべもの",
+    "options": ["Drink", "Food", "Money", "Book"],
+    "answer": "Food"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Drink",
+    "options": ["のみもの", "たべもの", "どういたしまして", "いいえ"],
+    "answer": "のみもの"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "いくら",
+    "options": ["How much", "Where", "Who", "What"],
+    "answer": "How much"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Where",
+    "options": ["だれ", "どこ", "なに", "はい"],
+    "answer": "どこ"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "だれ",
+    "options": ["Who", "Where", "When", "How"],
+    "answer": "Who"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "What",
+    "options": ["どこ", "なに", "いくら", "すみません"],
+    "answer": "なに"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Hello",
+    "options": ["おやすみ", "こんにちは", "ありがとう", "いいえ"],
+    "answer": "こんにちは"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "さようなら",
+    "options": ["Goodbye", "Good night", "Thank you", "Hello"],
+    "answer": "Goodbye"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Thank you",
+    "options": ["こんばんは", "はい", "ありがとう", "すみません"],
+    "answer": "ありがとう"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "すみません",
+    "options": ["Excuse me", "Good evening", "Please", "Goodbye"],
+    "answer": "Excuse me"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Yes",
+    "options": ["いいえ", "おねがい", "はい", "わかりません"],
+    "answer": "はい"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "いいえ",
+    "options": ["No", "Yes", "Maybe", "Hello"],
+    "answer": "No"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Good morning",
+    "options": ["おはよう", "こんばんは", "こんにちは", "さようなら"],
+    "answer": "おはよう"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "こんばんは",
+    "options": ["Good evening", "Good morning", "Good night", "Goodbye"],
+    "answer": "Good evening"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Good night",
+    "options": ["おやすみ", "おはよう", "いくら", "こんばんは"],
+    "answer": "おやすみ"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "ごめんなさい",
+    "options": ["I'm sorry", "You're welcome", "Excuse me", "Thank you"],
+    "answer": "I'm sorry"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "You're welcome",
+    "options": ["どういたしまして", "こんばんは", "さようなら", "わかりません"],
+    "answer": "どういたしまして"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "おねがい",
+    "options": ["Please", "Thank you", "Drink", "Food"],
+    "answer": "Please"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "I don't understand",
+    "options": ["わかりません", "こんにちは", "すみません", "いいえ"],
+    "answer": "わかりません"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "ちょっとまって",
+    "options": ["Wait a moment", "Goodbye", "Good night", "Please"],
+    "answer": "Wait a moment"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Food",
+    "options": ["のみもの", "いくら", "たべもの", "わかりません"],
+    "answer": "たべもの"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "のみもの",
+    "options": ["Drink", "Food", "Money", "Book"],
+    "answer": "Drink"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "How much",
+    "options": ["いくら", "どこ", "はい", "なに"],
+    "answer": "いくら"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "どこ",
+    "options": ["Where", "Who", "How much", "When"],
+    "answer": "Where"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Who",
+    "options": ["なに", "どこ", "だれ", "こんばんは"],
+    "answer": "だれ"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "なに",
+    "options": ["What", "How", "Who", "Where"],
+    "answer": "What"
+  }
+]
