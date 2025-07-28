@@ -1,0 +1,242 @@
+[
+  {
+    "type": "kana-to-english",
+    "question": "コンピュータ",
+    "options": ["Computer", "Camera", "Coffee", "Taxi"],
+    "answer": "Computer"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Computer",
+    "options": ["コーヒー", "コンピュータ", "デパート", "シャツ"],
+    "answer": "コンピュータ"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "テレビ",
+    "options": ["Television", "Telephone", "Taxi", "Table"],
+    "answer": "Television"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Television",
+    "options": ["タクシー", "テレビ", "バス", "レストラン"],
+    "answer": "テレビ"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "カメラ",
+    "options": ["Camera", "Calendar", "Camel", "Car"],
+    "answer": "Camera"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Camera",
+    "options": ["シャツ", "カメラ", "アイスクリーム", "ジュース"],
+    "answer": "カメラ"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "アイスクリーム",
+    "options": ["Ice cream", "Coffee", "Beer", "Bus"],
+    "answer": "Ice cream"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Ice cream",
+    "options": ["バス", "ハンバーガー", "アイスクリーム", "ホテル"],
+    "answer": "アイスクリーム"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "サッカー",
+    "options": ["Soccer", "Soda", "Singer", "Sugar"],
+    "answer": "Soccer"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Soccer",
+    "options": ["ビール", "サッカー", "スポーツ", "コンピュータ"],
+    "answer": "サッカー"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "コーヒー",
+    "options": ["Coffee", "Cookie", "Cake", "Camera"],
+    "answer": "Coffee"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Coffee",
+    "options": ["コーヒー", "トイレ", "バス", "ホテル"],
+    "answer": "コーヒー"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "パーティー",
+    "options": ["Party", "Pasta", "Printer", "Piano"],
+    "answer": "Party"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Party",
+    "options": ["パーティー", "デパート", "カメラ", "ジュース"],
+    "answer": "パーティー"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "ジュース",
+    "options": ["Juice", "Jam", "Japan", "Jacket"],
+    "answer": "Juice"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Juice",
+    "options": ["ジュース", "シャツ", "ビール", "スポーツ"],
+    "answer": "ジュース"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "スマホ",
+    "options": ["Smartphone", "Smoothie", "Snow", "Smoke"],
+    "answer": "Smartphone"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Smartphone",
+    "options": ["スマホ", "サッカー", "テレビ", "ホテル"],
+    "answer": "スマホ"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "タクシー",
+    "options": ["Taxi", "Train", "Ticket", "Table"],
+    "answer": "Taxi"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Taxi",
+    "options": ["タクシー", "トイレ", "ノート", "バス"],
+    "answer": "タクシー"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "バス",
+    "options": ["Bus", "Bath", "Bass", "Base"],
+    "answer": "Bus"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Bus",
+    "options": ["ビール", "バス", "カメラ", "デパート"],
+    "answer": "バス"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "ホテル",
+    "options": ["Hotel", "Host", "Hot", "Hole"],
+    "answer": "Hotel"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Hotel",
+    "options": ["テレビ", "ジュース", "ホテル", "シャツ"],
+    "answer": "ホテル"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "レストラン",
+    "options": ["Restaurant", "Restroom", "Resistant", "Resident"],
+    "answer": "Restaurant"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Restaurant",
+    "options": ["レストラン", "パーティー", "ビール", "スマホ"],
+    "answer": "レストラン"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "スポーツ",
+    "options": ["Sports", "Spoons", "Spots", "Sprouts"],
+    "answer": "Sports"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Sports",
+    "options": ["スポーツ", "サッカー", "シャツ", "ホテル"],
+    "answer": "スポーツ"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "ハンバーガー",
+    "options": ["Hamburger", "Hot dog", "Hamster", "Ham"],
+    "answer": "Hamburger"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Hamburger",
+    "options": ["ビール", "ハンバーガー", "ノート", "コンピュータ"],
+    "answer": "ハンバーガー"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "ビール",
+    "options": ["Beer", "Beef", "Bear", "Belt"],
+    "answer": "Beer"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Beer",
+    "options": ["ビール", "バス", "ジュース", "スポーツ"],
+    "answer": "ビール"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "トイレ",
+    "options": ["Toilet", "Tower", "Tiger", "Ticket"],
+    "answer": "Toilet"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Toilet",
+    "options": ["タクシー", "シャツ", "トイレ", "ホテル"],
+    "answer": "トイレ"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "シャツ",
+    "options": ["Shirt", "Shoes", "Shower", "Ship"],
+    "answer": "Shirt"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Shirt",
+    "options": ["ジュース", "シャツ", "サッカー", "テレビ"],
+    "answer": "シャツ"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "ノート",
+    "options": ["Notebook", "Note", "North", "Night"],
+    "answer": "Notebook"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Notebook",
+    "options": ["ノート", "デパート", "ホテル", "ビール"],
+    "answer": "ノート"
+  },
+  {
+    "type": "kana-to-english",
+    "question": "デパート",
+    "options": ["Department store", "Party", "Airport", "Apartment"],
+    "answer": "Department store"
+  },
+  {
+    "type": "english-to-kana",
+    "question": "Department store",
+    "options": ["パーティー", "デパート", "ハンバーガー", "タクシー"],
+    "answer": "デパート"
+  }
+]
