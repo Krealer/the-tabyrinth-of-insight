@@ -63,3 +63,9 @@ h1 {
   transform: scale(0.98);
   opacity: 0.9;
 }
+
+/* Back button spacing */
+.back-button {
+  margin-top: 2rem;
+  display: inline-block;
+}
