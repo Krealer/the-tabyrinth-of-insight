@@ -95,17 +95,17 @@
     "options": ["ジュース", "シャツ", "ビール", "スポーツ"],
     "answer": "ジュース"
   },
-  {
+    {
     "type": "kana-to-english",
-    "question": "スマホ",
-    "options": ["Smartphone", "Smoothie", "Snow", "Smoke"],
-    "answer": "Smartphone"
+    "question": "バナナ",
+    "options": ["Banana", "Butter", "Button", "Bamboo"],
+    "answer": "Banana"
   },
   {
     "type": "english-to-kana",
-    "question": "Smartphone",
-    "options": ["スマホ", "サッカー", "テレビ", "ホテル"],
-    "answer": "スマホ"
+    "question": "Banana",
+    "options": ["バナナ", "ハンバーガー", "カメラ", "テーブル"],
+    "answer": "バナナ"
   },
   {
     "type": "kana-to-english",
