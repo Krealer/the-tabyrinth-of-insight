@@ -1,80 +1,68 @@
 (function(){
-  async function initQuiz(jsonPath){
-    const res = await fetch(jsonPath);
+  async function start(){
+    if(!window.QUIZ_JSON) return console.error('QUIZ_JSON not defined');
+    const res = await fetch(QUIZ_JSON);
     const questions = await res.json();
-    let current = 0;
-    let score = 0;
-    const promptEl = document.getElementById('prompt');
-    const optionsEl = document.querySelector('.options');
-    const scoreEl = document.getElementById('score');
-    const nextBtn = document.getElementById('next');
-    const manual = !!nextBtn;
+    runQuiz(questions);
+  }
+
+  function runQuiz(questions){
+    let index = 0;
+    const qEl = document.getElementById('question');
+    const choicesEl = document.getElementById('choices');
+    const nextBtn = document.getElementById('next-btn');
+
+    nextBtn.addEventListener('click', () => {
+      index++;
+      if(index < questions.length){
+        nextBtn.disabled = true;
+        nextBtn.style.display = 'none';
+        renderQuestion();
+      } else {
+        qEl.textContent = 'Quiz Complete!';
+        choicesEl.innerHTML = '';
+        nextBtn.style.display = 'none';
+      }
+    });
 
     function shuffle(arr){
       for(let i=arr.length-1;i>0;i--){
-        const j=Math.floor(Math.random()*(i+1));
-        [arr[i],arr[j]]=[arr[j],arr[i]];
+        const j = Math.floor(Math.random()*(i+1));
+        [arr[i],arr[j]] = [arr[j],arr[i]];
       }
       return arr;
     }
 
-    function showQuestion(){
-      const q = questions[current];
-      promptEl.textContent = q.question;
-      optionsEl.innerHTML = '';
-      if(manual && nextBtn){
-        nextBtn.style.display = 'none';
-        nextBtn.disabled = true;
-      }
+    function renderQuestion(){
+      const q = questions[index];
+      qEl.textContent = q.question;
+      choicesEl.innerHTML = '';
       shuffle([...q.options]).forEach(opt => {
         const btn = document.createElement('button');
-        btn.className = 'button quiz-option';
         btn.textContent = opt;
+        btn.className = 'button quiz-option';
         btn.addEventListener('click', () => select(btn, opt));
-        optionsEl.appendChild(btn);
+        choicesEl.appendChild(btn);
       });
     }
 
     function select(btn, choice){
-      const q = questions[current];
-      if(optionsEl.dataset.answered) return;
-      optionsEl.dataset.answered = '1';
-      const correct = choice === q.answer;
-      if(correct) score++;
-      document.querySelectorAll('.quiz-option').forEach(b => {
+      const q = questions[index];
+      Array.from(choicesEl.children).forEach(b => {
         b.disabled = true;
         if(b.textContent.trim() === q.answer){
           b.classList.add('correct');
         }
       });
-      if(!correct) btn.classList.add('wrong');
-      if(manual && nextBtn){
-        nextBtn.style.display = 'inline-block';
-        nextBtn.disabled = false;
-      } else {
-        setTimeout(nextQuestion, 800);
+      if(choice !== q.answer){
+        btn.classList.add('wrong');
       }
+      nextBtn.style.display = 'block';
+      nextBtn.disabled = false;
     }
 
-    function nextQuestion(){
-      optionsEl.dataset.answered = '';
-      current++;
-      if(current < questions.length){
-        showQuestion();
-      } else {
-        promptEl.textContent = `Score: ${score} / ${questions.length}`;
-        optionsEl.innerHTML = '';
-        if(manual && nextBtn){
-          nextBtn.style.display = 'none';
-        }
-      }
-    }
-
-    if(manual && nextBtn){
-      nextBtn.addEventListener('click', nextQuestion);
-    }
-    showQuestion();
+    renderQuestion();
   }
 
-  window.initQuiz = initQuiz;
+  document.addEventListener('DOMContentLoaded', start);
 })();
